@@ -198,6 +198,17 @@ function validateForm() {
 
 
 
-  
+  // obține elementul delIcon
+var delIcon = document.getElementById("delIcon");
+
+// atașează evenimentul de click
+delIcon.addEventListener("click", function() {
+  // obține elementul containerRes
+  var containerRes = document.getElementById("containerRes");
+  // elimină toate div-urile din containerRes
+  while (containerRes.firstChild) {
+    containerRes.removeChild(containerRes.firstChild);
+  }
+});
 
   
