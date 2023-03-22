@@ -162,9 +162,9 @@ function validateForm() {
       alert("Nu poți selecta aceleași echipe");
     } else {
       // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
-      var resultText = "<div class=containerRes__containerL--one>"+ subSelect1Value +"</div>" + "<div class=containerRes__containerL--two>"+ subSelect2Value +"</div>";
+      var resultText = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div><div class=containerRes__container--R><div class=containerRes__container--R__one>peste 2.5g</div> <div class=containerRes__container--R__two><img src=img/iconreload.svg alt=iconReload></div></div>";
       var resultElement = document.createElement("div");
-      resultElement.classList.add('containerRes__containerL')
+      resultElement.classList.add('containerRes__container')
       resultElement.innerHTML = resultText;
       delIcon.classList.add('showFlex');
   
