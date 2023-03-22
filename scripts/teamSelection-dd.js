@@ -51,11 +51,13 @@ options.forEach(option => {
   listItem.addEventListener("click", () => {
     const subBtn = document.getElementById('submitButton');
     const subVS = document.getElementById('VSub');
+    const tag = document.getElementById('tag');
     console.log(option);
     dropdownBtn.innerHTML = `<div class="pOne"><img src="${dict[option].img}" alt="${option}" class="dropdown-option-img"> ${option}</div><img src="img/dropdown-arrow.svg" alt="dropdown arrow" class="ddarrow">`;
     dropdownOptions.classList.remove("show");
     subBtn.classList.add('show');
     subVS.classList.add('show');
+    tag.classList.add('show');
     // aici adăugăm codul pentru a crea subdropdown-ul
     const subdropdown = document.getElementById("subdropdown");
     subdropdown.innerHTML = "";
