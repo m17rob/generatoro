@@ -27,7 +27,9 @@ body {
     margin-bottom: 5rem; }
   .heading__title {
     margin-bottom: 4.4rem;
-    max-width: 25rem; }
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .heading__title h1 {
       font-family: museomoderno, 'sans-serif';
       text-transform: uppercase;
@@ -38,7 +40,8 @@ body {
       text-transform: lowercase;
       font-size: 2.7rem;
       display: block;
-      text-align: end; }
+      text-align: end;
+      margin-left: 5.2rem; }
 
 .leagueSelection {
   display: flex;
