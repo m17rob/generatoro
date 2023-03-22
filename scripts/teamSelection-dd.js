@@ -167,11 +167,11 @@ function validateForm() {
       var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
       console.log(randomElement);
       var resultText = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div><div class=containerRes__container--R><div id=randomProno class=containerRes__container--R__one>"+ randomElement +"</div> <div class=containerRes__container--R__two><img id=pronoReload src=img/iconreload.svg alt=iconReload></div></div>";
+            delIcon.classList.add('showFlex');
       // var forVerify = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div>";
 //       var resultElement = document.createElement("div");
 //       resultElement.classList.add('containerRes__container')
 //       resultElement.innerHTML = resultText;
-//       delIcon.classList.add('showFlex');
 //       // resultforVerify.innerHTML = forVerify;
 
 
