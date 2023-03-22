@@ -14,7 +14,7 @@ html {
   src: url(/fonts/MuseoModerno-Regular.ttf) format("opentype"); }
 
 body {
-  padding: 1.2rem;
+  padding: 2rem;
   background-color: #EB455F;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,8 @@ body {
     text-align: end;
     margin-bottom: 5rem; }
   .heading__title {
-    margin-bottom: 4.4rem; }
+    margin-bottom: 4.4rem;
+    max-width: 25rem; }
     .heading__title h1 {
       font-family: museomoderno, 'sans-serif';
       text-transform: uppercase;
