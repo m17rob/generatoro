@@ -271,6 +271,7 @@ delIcon.addEventListener("click", function() {
   while (containerRes.firstChild) {
     containerRes.removeChild(containerRes.firstChild);
   }
+  this.classList.remove('showFlex');
 });
 
   
