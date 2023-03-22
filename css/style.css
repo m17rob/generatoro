@@ -239,3 +239,22 @@ body {
   justify-content: space-between; }
   #justCont img {
     margin: 0; }
+
+.deleteProno {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  margin-right: 2rem;
+  margin-top: 4rem;
+  background: rgba(43, 52, 103, 0.4);
+  border-radius: 100px;
+  padding: .3rem 1.2rem;
+  font-family: museomoderno, 'sans-serif';
+  color: #FCFFE7;
+  font-size: 1.1rem;
+  display: none; }
+  .deleteProno__txt {
+    margin-right: .8rem; }
+
+.showFlex {
+  display: flex !important; }

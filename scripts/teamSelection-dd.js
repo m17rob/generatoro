@@ -152,6 +152,7 @@ dropdownBtn.addEventListener("click", () => {
 function validateForm() {
     const subSelect1 = document.getElementById("subSelect1");
     const subSelect2 = document.getElementById("subSelect2");
+    const delIcon = document.getElementById('delIcon');
     var subSelect1Value = subSelect1.innerHTML;
     var subSelect2Value = subSelect2.innerHTML;
   
@@ -165,6 +166,7 @@ function validateForm() {
       var resultElement = document.createElement("div");
       resultElement.classList.add('containerRes__containerL')
       resultElement.innerHTML = resultText;
+      delIcon.classList.add('showFlex');
   
       // Retrieve the innerHTML of the new p element
       var newInnerHTML = resultElement.innerHTML;
