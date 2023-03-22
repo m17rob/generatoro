@@ -163,7 +163,6 @@ body {
 #subSelect1 {
   margin-bottom: 1.6rem;
   display: flex;
-  align-items: center;
   justify-content: start; }
 
 #subSelect2 {
@@ -233,3 +232,10 @@ body {
 
 .show {
   display: block !important; }
+
+#justCont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  #justCont img {
+    margin: 0; }

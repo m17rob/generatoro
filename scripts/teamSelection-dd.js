@@ -64,7 +64,7 @@ options.forEach(option => {
     const subdropdownBtn = document.createElement("button");
     subdropdownBtn.classList.add("dropdown-btn");
     subdropdownBtn.setAttribute('id', 'subSelect1');
-    subdropdownBtn.innerText = "Alege echipa";
+    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");
     subdropdownOptions.classList.add("subdropdown-options");
@@ -72,8 +72,9 @@ options.forEach(option => {
     for (const suboption in dict[option].suboptiuni) {
       const suboptionImg = dict[option].suboptiuni[suboption];
       const suboptionHTML = `<div class="dropdown-option" data-suboption="${suboption}">
+                              
                                <img src="${suboptionImg}" alt="${suboption}" class="dropdown-option-img"> 
-                               ${suboption}
+                               ${suboption} 
                              </div>`;
       subdropdownOptions.insertAdjacentHTML("beforeend", suboptionHTML);
      
@@ -100,7 +101,7 @@ subdropdown2.innerHTML = "";
 const subdropdownBtn2 = document.createElement("button");
 subdropdownBtn2.classList.add("dropdown-btn");
 subdropdownBtn2.setAttribute('id', 'subSelect2');
-subdropdownBtn2.innerText = "Alege echipa";
+subdropdownBtn2.innerHTML = ' <div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div>';
 subdropdown2.appendChild(subdropdownBtn2);
 const subdropdownOptions2 = document.createElement("div");
 subdropdownOptions2.classList.add("subdropdown-options2");
