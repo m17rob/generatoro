@@ -14,7 +14,7 @@ html {
   src: url(/fonts/MuseoModerno-Regular.ttf) format("opentype"); }
 
 body {
-  padding: 2rem;
+  padding: 1.2rem;
   background-color: #EB455F;
   display: flex;
   flex-direction: column;
@@ -51,50 +51,177 @@ body {
     .leagueSelection__tag h3 {
       font-family: museomoderno, 'sans-serif';
       color: #FCFFE7; }
-
-.test {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
-  background: #FCFFE7;
-  padding: 1rem 2rem;
-  border-radius: 100px; }
-  .test__nume {
-    margin-left: 1rem;
-    font-family: museomoderno, 'sans-serif';
-    font-size: 1.8rem;
-    color: #00235B; }
-  .test__arrow {
-    margin-left: 2rem; }
+  .leagueSelection__selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .leagueSelection__selector .dropdown-btn {
+      position: relative;
+      width: 26rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FCFFE7;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-family: museomoderno, 'sans-serif';
+      font-size: 1.8rem;
+      color: #00235B;
+      z-index: 4; }
+      .leagueSelection__selector .dropdown-btn img {
+        margin-right: 1.4rem; }
+      .leagueSelection__selector .dropdown-btn .ddarrow {
+        margin: 0 0 0 1.4rem; }
+    .leagueSelection__selector .pOne {
+      display: flex;
+      align-items: center; }
 
 #dropdown {
   position: relative; }
 
-.dropdown-btn {
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer; }
-
 .dropdown-options {
-  top: 100%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
   left: 0;
   margin-top: 5px;
+  padding-top: 3rem !important;
   padding: 0;
   list-style: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: none; }
+  background-color: #FCFFE7;
+  border: none;
+  outline: none;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  z-index: 3; }
 
 .dropdown-option {
   padding: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-family: museomoderno, 'sans-serif';
+  color: #2B3467; }
+  .dropdown-option img {
+    margin-right: 1.4rem; }
 
 .dropdown-option:hover {
   background-color: #f2f2f2; }
 
+#subSelect1, #subSelect2 {
+  z-index: 2;
+  font-size: 1.2rem;
+  width: 15rem;
+  border-radius: 10px; }
+
+#subdropdown {
+  position: relative; }
+
+.subdropdown-options {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  left: 0;
+  padding-top: 1.5rem !important;
+  padding: 0;
+  list-style: none;
+  background-color: #FCFFE7;
+  border: none;
+  outline: none;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  z-index: 3; }
+
+#subdropdown2 {
+  position: relative; }
+
+.subdropdown-options2 {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  left: 0;
+  padding-top: 1.5rem !important;
+  padding: 0;
+  list-style: none;
+  background-color: #FCFFE7;
+  border: none;
+  outline: none;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  z-index: 3; }
+
+#subSelect1 {
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: start; }
+
+#subSelect2 {
+  margin-top: 1.6rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: start; }
+
+.subselectori {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+
+.subVS {
+  font-size: 1.6rem;
+  color: #FCFFE7;
+  border: 2px #FCFFE7 solid;
+  border-radius: 8px;
+  padding: 1.2px 6px;
+  font-family: museomoderno, 'sans-serif';
+  display: none; }
+
+#containerRes {
+  width: 100vw;
+  background-color: #2B3467;
+  margin-top: 2rem; }
+
+.containerRes__containerL {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: .9rem 1rem; }
+  .containerRes__containerL:not(:last-child) {
+    border-bottom: 1px #FCFFE7 solid; }
+  .containerRes__containerL--one {
+    display: flex;
+    align-items: center;
+    color: #FCFFE7;
+    font-family: museomoderno, 'sans-serif';
+    font-size: 1.2rem;
+    margin-bottom: .2rem; }
+    .containerRes__containerL--one img {
+      margin-right: 1.2rem; }
+  .containerRes__containerL--two {
+    display: flex;
+    align-items: center;
+    color: #FCFFE7;
+    font-family: museomoderno, 'sans-serif';
+    font-size: 1.2rem; }
+    .containerRes__containerL--two img {
+      margin-right: 1.2rem; }
+
+#submitButton {
+  background-color: #FCFFE7;
+  border: none;
+  outline: none;
+  font-family: museomoderno, 'sans-serif';
+  padding: .8rem 2rem;
+  border-radius: 100px;
+  margin-top: 4rem;
+  display: none; }
+
 .show {
-  display: block; }
+  display: block !important; }

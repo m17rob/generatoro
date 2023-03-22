@@ -8,17 +8,55 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <div id="dropdown"></div>
-    <div id="subdropdown"></div>
-    <div id="subdropdown2"></div>
-    <button id="submitButton">Creează element</button>
-    <div id="containerRes"></div>
-
-
-
-
     
+    <section class="heading">
+        <div class="heading__menu">
+            <img src="img/menu-dots.svg" alt="menu">
+        </div>
+        <div class="heading__title">
+            <h1>generator <span class="heading__title--ms">pariuri sportive</span></h1>
+        </div>
+    </section>
+    <section class="leagueSelection">
+        <div class="leagueSelection__tag">
+            <h3>Alege Campionatul</h3>
+        </div>
+        <div class="leagueSelection__selector">
+            <div id="dropdown"></div>
+            <div class="subselectori">
+                <div id="subdropdown"></div>
+                <div id="VSub" class="subVS">vs</div>
+                <div id="subdropdown2"></div>
+            </div>
+
+            <button id="submitButton">genereaza pronostic</button>
+            <div id="containerRes"></div>
+        
+              
+              <div class="test">
+                <div class="test__container">
+
+                </div>
+              </div>
+        </div>
+
+          
+
+        <!-- <div class="test">
+            <div class="test__img">
+                <img src="img/premierLeagueIcon.png" alt="Premier League Icon">
+            </div>
+            <div class="test__nume">
+                Premier League
+            </div>
+            <div class="test__arrow">
+                <img src="img/dropdown-arrow.svg" alt="dropdown arrow">
+            </div>
+        </div> -->
+    </section>
+
+      
+      
     <script src="scripts/teamSelection-dd.js"></script>
 </body>
 </html>

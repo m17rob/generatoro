@@ -1,23 +1,23 @@
 var dict = {
-    "Optiune1": {
+    "Premier League": {
       "img": "img/premierLeagueIcon.png",
       "suboptiuni": {
-        "Suboptiune1": "img/premierLeagueIcon.png",
-        "Suboptiune2": "img/premierLeagueIcon.png"
+        "Man. United": "img/premierLeagueIcon.png",
+        "Arsenal": "img/premierLeagueIcon.png"
       }
     },
-    "Optiune2": {
+    "LaLiga": {
       "img": "img/premierLeagueIcon.png",
       "suboptiuni": {
-        "Suboptiune3": "img/premierLeagueIcon.png",
-        "Suboptiune4": "img/premierLeagueIcon.png"
+        "Real Madrid": "img/premierLeagueIcon.png",
+        "Sevilla": "img/premierLeagueIcon.png"
       }
     },
-    "Optiune3": {
+    "Ligue One": {
       "img": "img/premierLeagueIcon.png",
       "suboptiuni": {
-        "Suboptiune5": "img/premierLeagueIcon.png",
-        "Suboptiune6": "img/premierLeagueIcon.png"
+        "PSG": "img/premierLeagueIcon.png",
+        "Lyon": "img/premierLeagueIcon.png"
       }
     }
   };
@@ -28,7 +28,8 @@ const dropdown = document.getElementById("dropdown");
 
 // creăm butonul dropdown
 const dropdownBtn = document.createElement("button");
-dropdownBtn.textContent = "Selectează o opțiune";
+// dropdownBtn.textContent = "Alege un campionat";
+dropdownBtn.innerHTML = `Alege un campionat<img src="img/dropdown-arrow.svg" alt="dropdown arrow" class="ddarrow"> `;
 dropdownBtn.classList.add("dropdown-btn");
 dropdown.appendChild(dropdownBtn);
 
@@ -48,19 +49,23 @@ options.forEach(option => {
   listItem.insertBefore(img, listItem.firstChild);
   
   listItem.addEventListener("click", () => {
+    const subBtn = document.getElementById('submitButton');
+    const subVS = document.getElementById('VSub');
     console.log(option);
-    dropdownBtn.innerHTML = `<img src="${dict[option].img}" alt="${option}" class="dropdown-option-img"> ${option}`;
+    dropdownBtn.innerHTML = `<div class="pOne"><img src="${dict[option].img}" alt="${option}" class="dropdown-option-img"> ${option}</div><img src="img/dropdown-arrow.svg" alt="dropdown arrow" class="ddarrow">`;
     dropdownOptions.classList.remove("show");
+    subBtn.classList.add('show');
+    subVS.classList.add('show');
     // aici adăugăm codul pentru a crea subdropdown-ul
     const subdropdown = document.getElementById("subdropdown");
     subdropdown.innerHTML = "";
     const subdropdownBtn = document.createElement("button");
     subdropdownBtn.classList.add("dropdown-btn");
     subdropdownBtn.setAttribute('id', 'subSelect1');
-    subdropdownBtn.innerText = "Alege subopțiunea";
+    subdropdownBtn.innerText = "Alege echipa";
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");
-    subdropdownOptions.classList.add("dropdown-options");
+    subdropdownOptions.classList.add("subdropdown-options");
     subdropdown.appendChild(subdropdownOptions);
     for (const suboption in dict[option].suboptiuni) {
       const suboptionImg = dict[option].suboptiuni[suboption];
@@ -93,10 +98,10 @@ subdropdown2.innerHTML = "";
 const subdropdownBtn2 = document.createElement("button");
 subdropdownBtn2.classList.add("dropdown-btn");
 subdropdownBtn2.setAttribute('id', 'subSelect2');
-subdropdownBtn2.innerText = "Alege subopțiunea";
+subdropdownBtn2.innerText = "Alege echipa";
 subdropdown2.appendChild(subdropdownBtn2);
 const subdropdownOptions2 = document.createElement("div");
-subdropdownOptions2.classList.add("dropdown-options");
+subdropdownOptions2.classList.add("subdropdown-options2");
 subdropdown2.appendChild(subdropdownOptions2);
 for (const suboption2 in dict[option].suboptiuni) {
   const suboptionImg2 = dict[option].suboptiuni[suboption2];
@@ -147,23 +152,25 @@ function validateForm() {
     var subSelect1Value = subSelect1.innerHTML;
     var subSelect2Value = subSelect2.innerHTML;
   
-    if (subSelect1.innerText === "Alege subopțiunea" || subSelect2.innerText === "Alege subopțiunea") {
-      alert("Selectează subopțiunile");
+    if (subSelect1.innerText === "Alege echipa" || subSelect2.innerText === "Alege echipa") {
+      alert("Selectează echipele");
     } else if (subSelect1.innerText === subSelect2.innerText) {
-      alert("Nu poți selecta aceleași subopțiuni");
+      alert("Nu poți selecta aceleași echipe");
     } else {
-      var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
-      var resultElement = document.createElement("p");
+      // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
+      var resultText = "<div class=containerRes__containerL--one>"+ subSelect1Value +"</div>" + "<div class=containerRes__containerL--two>"+ subSelect2Value +"</div>";
+      var resultElement = document.createElement("div");
+      resultElement.classList.add('containerRes__containerL')
       resultElement.innerHTML = resultText;
   
       // Retrieve the innerHTML of the new p element
       var newInnerHTML = resultElement.innerHTML;
   
       // Check if there are any existing p elements with the same innerHTML
-      var existingElements = containerRes.querySelectorAll("p");
+      var existingElements = containerRes.querySelectorAll("div");
       for (var i = 0; i < existingElements.length; i++) {
         if (existingElements[i].innerHTML === newInnerHTML) {
-          alert("Această există deja");
+          alert("Aceast meci a fost generat deja");
           return;
         }
       }
@@ -183,3 +190,9 @@ function validateForm() {
 
 
 
+
+
+
+  
+
+  
