@@ -65,12 +65,11 @@ options.forEach(option => {
     const subdropdownBtn = document.createElement("button");
     subdropdownBtn.classList.add("dropdown-btn");
     subdropdownBtn.setAttribute('id', 'subSelect1');
-    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow1"></div></div> ';
+    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div></div> ';
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");
     subdropdownOptions.classList.add("subdropdown-options");
     subdropdown.appendChild(subdropdownOptions);
-
     for (const suboption in dict[option].suboptiuni) {
       const suboptionImg = dict[option].suboptiuni[suboption];
       const suboptionHTML = `<div class="dropdown-option" data-suboption="${suboption}">
@@ -103,7 +102,7 @@ subdropdown2.innerHTML = "";
 const subdropdownBtn2 = document.createElement("button");
 subdropdownBtn2.classList.add("dropdown-btn");
 subdropdownBtn2.setAttribute('id', 'subSelect2');
-subdropdownBtn2.innerHTML = ' <div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow2"></div></div>';
+subdropdownBtn2.innerHTML = ' <div id="justCont"><div class="teamTxt">Alege echipa</div></div>';
 subdropdown2.appendChild(subdropdownBtn2);
 const subdropdownOptions2 = document.createElement("div");
 subdropdownOptions2.classList.add("subdropdown-options2");
@@ -158,12 +157,10 @@ function validateForm() {
     const delIcon = document.getElementById('delIcon');
     var subSelect1Value = subSelect1.innerHTML;
     var subSelect2Value = subSelect2.innerHTML;
-    const img1 = subSelect1.querySelector("img");
-    const img2 = subSelect2.querySelector("img");
   
     if (subSelect1.innerText === "Alege echipa" || subSelect2.innerText === "Alege echipa") {
       alert("Selectează echipele");
-    } else if (img1.getAttribute("alt") === img2.getAttribute("alt")) {
+    } else if (subSelect1.innerText === subSelect2.innerText) {
       alert("Nu poți selecta aceleași echipe");
     } else {
       // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
