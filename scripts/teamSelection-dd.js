@@ -152,80 +152,80 @@ dropdownBtn.addEventListener("click", () => {
 
 var pronos = ["po1", "po2", "po3", "px1", "px3", "px4", "pf1", "pf2", "pl1", "pl2"];
 
-// function validateForm() {
-//     const subSelect1 = document.getElementById("subSelect1");
-//     const subSelect2 = document.getElementById("subSelect2");
-//     const delIcon = document.getElementById('delIcon');
-//     var subSelect1Value = subSelect1.innerHTML;
-//     var subSelect2Value = subSelect2.innerHTML;
-//     const img1 = subSelect1.querySelector("img");
-//     const img2 = subSelect2.querySelector("img");
+function validateForm() {
+    const subSelect1 = document.getElementById("subSelect1");
+    const subSelect2 = document.getElementById("subSelect2");
+    const delIcon = document.getElementById('delIcon');
+    var subSelect1Value = subSelect1.innerHTML;
+    var subSelect2Value = subSelect2.innerHTML;
+    const img1 = subSelect1.querySelector("img");
+    const img2 = subSelect2.querySelector("img");
   
-//     if (subSelect1.innerText === "Alege echipa" || subSelect2.innerText === "Alege echipa") {
-//       alert("Selectează echipele");
-//     } else if (img1.getAttribute("alt") === img2.getAttribute("alt")) {
-//       alert("Nu poți selecta aceleași echipe");
-//     } else {
-//       // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
-//       var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
-//       console.log(randomElement);
-//       var resultText = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div><div class=containerRes__container--R><div id=randomProno class=containerRes__container--R__one>"+ randomElement +"</div> <div class=containerRes__container--R__two><img id=pronoReload src=img/iconreload.svg alt=iconReload></div></div>";
-//             delIcon.classList.add('showFlex');
+    if (subSelect1.innerText === "Alege echipa" || subSelect2.innerText === "Alege echipa") {
+      alert("Selectează echipele");
+    } else if (img1.getAttribute("alt") === img2.getAttribute("alt")) {
+      alert("Nu poți selecta aceleași echipe");
+    } else {
+      // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
+      var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
+      console.log(randomElement);
+      var resultText = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div><div class=containerRes__container--R><div id=randomProno class=containerRes__container--R__one>"+ randomElement +"</div> <div class=containerRes__container--R__two><img id=pronoReload src=img/iconreload.svg alt=iconReload></div></div>";
+            delIcon.classList.add('showFlex');
 
-// var newDiv = document.createElement("div");
-// newDiv.classList.add('containerRes__container');
-// newDiv.innerHTML = resultText;
+var newDiv = document.createElement("div");
+newDiv.classList.add('containerRes__container');
+newDiv.innerHTML = resultText;
 
-// // selectați toate div-urile existente în containerul "containerRes"
-// var existingDivs = document.querySelectorAll('#containerRes .containerRes__container');
+// selectați toate div-urile existente în containerul "containerRes"
+var existingDivs = document.querySelectorAll('#containerRes .containerRes__container');
 
-// // verificați dacă există deja un div cu aceeași valoare a elementului "containerRes__container--L__one"
-// for (var i = 0; i < existingDivs.length; i++) {
-//   if (existingDivs[i].querySelector('.containerRes__container--L__one').textContent === newDiv.querySelector('.containerRes__container--L__one').textContent) {
-//     alert('Acest meci a fost generat deja');
-//     return;
-//   }
-// }
+// verificați dacă există deja un div cu aceeași valoare a elementului "containerRes__container--L__one"
+for (var i = 0; i < existingDivs.length; i++) {
+  if (existingDivs[i].querySelector('.containerRes__container--L__one').textContent === newDiv.querySelector('.containerRes__container--L__one').textContent) {
+    alert('Acest meci a fost generat deja');
+    return;
+  }
+}
 
   
-//       // If there are no existing elements, append the new p element
-//       containerRes.appendChild(newDiv);
+      // If there are no existing elements, append the new p element
+      containerRes.appendChild(newDiv);
 
 
-// // se adauga un eveniment de click pentru fiecare buton "pronoReload"
-// var pronoReloadButtons = document.querySelectorAll("#pronoReload");
-// pronoReloadButtons.forEach(function(button) {
-//   button.addEventListener("click", function() {
-//     // se gaseste div-ul parinte
-//     var div = button.closest(".containerRes__container--R"); // inlocuieste ".divClass" cu clasa ta de div
-//     // se gaseste elementul "randomProno" din div-ul parinte
-//     var randomPronoElement = div.querySelector(".containerRes__container--R__one"); // inlocuieste ".randomProno" cu clasa ta de element
-//     // se genereaza un element random din variabila "pronos"
-//     var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
-//     // se seteaza textul elementului "randomProno"
-//     randomPronoElement.innerText = randomElement;
-//   });
-// });
+// se adauga un eveniment de click pentru fiecare buton "pronoReload"
+var pronoReloadButtons = document.querySelectorAll("#pronoReload");
+pronoReloadButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // se gaseste div-ul parinte
+    var div = button.closest(".containerRes__container--R"); // inlocuieste ".divClass" cu clasa ta de div
+    // se gaseste elementul "randomProno" din div-ul parinte
+    var randomPronoElement = div.querySelector(".containerRes__container--R__one"); // inlocuieste ".randomProno" cu clasa ta de element
+    // se genereaza un element random din variabila "pronos"
+    var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
+    // se seteaza textul elementului "randomProno"
+    randomPronoElement.innerText = randomElement;
+  });
+});
 
 
-// // se adauga un eveniment de click pentru fiecare buton "pronoReload"
-// var randomPronoButtons = document.querySelectorAll("#randomProno");
-// randomPronoButtons.forEach(function(button) {
-//   button.addEventListener("click", function() {
-//     // se gaseste div-ul parinte
-//     var div = button.closest(".containerRes__container--R"); // inlocuieste ".divClass" cu clasa ta de div
-//     // se gaseste elementul "randomProno" din div-ul parinte
-//     var randomPronoElement = div.querySelector(".containerRes__container--R__one"); // inlocuieste ".randomProno" cu clasa ta de element
-//     // se genereaza un element random din variabila "pronos"
-//     var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
-//     // se seteaza textul elementului "randomProno"
-//     randomPronoElement.innerText = randomElement;
-//   });
-// });
+// se adauga un eveniment de click pentru fiecare buton "pronoReload"
+var randomPronoButtons = document.querySelectorAll("#randomProno");
+randomPronoButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // se gaseste div-ul parinte
+    var div = button.closest(".containerRes__container--R"); // inlocuieste ".divClass" cu clasa ta de div
+    // se gaseste elementul "randomProno" din div-ul parinte
+    var randomPronoElement = div.querySelector(".containerRes__container--R__one"); // inlocuieste ".randomProno" cu clasa ta de element
+    // se genereaza un element random din variabila "pronos"
+    var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
+    // se seteaza textul elementului "randomProno"
+    randomPronoElement.innerText = randomElement;
+  });
+});
 
 
-//     }
-//   }
+    }
+  }
 
  
   
