@@ -177,7 +177,13 @@ var existingDivs = document.querySelectorAll('#containerRes .containerRes__conta
 
 // verificați dacă există deja un div cu aceeași valoare a elementului "containerRes__container--L__one"
 for (var i = 0; i < existingDivs.length; i++) {
-  if (existingDivs[i].querySelector('.containerRes__container--L__one').textContent === newDiv.querySelector('.containerRes__container--L__one').textContent) {
+  if (
+    
+    existingDivs[i].querySelector('.containerRes__container--L__one').textContent === newDiv.querySelector('.containerRes__container--L__one').textContent ||
+    existingDivs[i].querySelector('.containerRes__container--L__two').textContent === newDiv.querySelector('.containerRes__container--L__one').textContent &&
+    existingDivs[i].querySelector('.containerRes__container--L__one').textContent === newDiv.querySelector('.containerRes__container--L__two').textContent
+  
+  ) {
     alert('Acest meci a fost generat deja');
     return;
   }
