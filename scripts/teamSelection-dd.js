@@ -65,7 +65,7 @@ options.forEach(option => {
     const subdropdownBtn = document.createElement("button");
     subdropdownBtn.classList.add("dropdown-btn");
     subdropdownBtn.setAttribute('id', 'subSelect1');
-    subdropdownBtn.innerHTML = 'Alege echipa';
+    subdropdownBtn.innerHTML = '<div id="justCont"><div id="team1" class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");
     subdropdownOptions.classList.add("subdropdown-options");
@@ -102,7 +102,7 @@ subdropdown2.innerHTML = "";
 const subdropdownBtn2 = document.createElement("button");
 subdropdownBtn2.classList.add("dropdown-btn");
 subdropdownBtn2.setAttribute('id', 'subSelect2');
-subdropdownBtn2.innerHTML = 'Alege echipa';
+subdropdownBtn2.innerHTML = ' <div id="justCont"><div id="team2" class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div>';
 subdropdown2.appendChild(subdropdownBtn2);
 const subdropdownOptions2 = document.createElement("div");
 subdropdownOptions2.classList.add("subdropdown-options2");
@@ -154,11 +154,13 @@ var pronos = ["po1", "po2", "po3", "px1", "px3", "px4", "pf1", "pf2", "pl1", "pl
 function validateForm() {
     const subSelect1 = document.getElementById("subSelect1");
     const subSelect2 = document.getElementById("subSelect2");
+    const subTeam1 = document.getElementById('team1');
+    const subTeam2 = document.getElementById('team2');
     const delIcon = document.getElementById('delIcon');
     var subSelect1Value = subSelect1.innerHTML;
     var subSelect2Value = subSelect2.innerHTML;
   
-    if (subSelect1.innerText === "Alege echipa" || subSelect2.innerText === "Alege echipa") {
+    if (subTeam1.innerText === "Alege echipa" || subTeam2.innerText === "Alege echipa") {
       alert("Selectează echipele");
     } else if (subSelect1.innerText === subSelect2.innerText) {
       alert("Nu poți selecta aceleași echipe");
