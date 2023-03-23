@@ -157,7 +157,7 @@ function validateForm() {
     var subSelect1Value = subSelect1.innerHTML;
     var subSelect2Value = subSelect2.innerHTML;
   
-    if (subSelect1.querySelector('img[src="img/teams-arrow.svg"]') || subSelect2.querySelector('img[src="img/teams-arrow.svg"]')) {
+    if (subSelect1.querySelector('div[class="teamTxt"]') || subSelect2.querySelector('div[class="teamTxt"]')) {
       alert("Selectează echipele");
     } else if (subSelect1.innerText === subSelect2.innerText) {
       alert("Nu poți selecta aceleași echipe");
