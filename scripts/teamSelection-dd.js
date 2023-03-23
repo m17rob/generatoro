@@ -168,27 +168,6 @@ function validateForm() {
       console.log(randomElement);
       var resultText = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div><div class=containerRes__container--R><div id=randomProno class=containerRes__container--R__one>"+ randomElement +"</div> <div class=containerRes__container--R__two><img id=pronoReload src=img/iconreload.svg alt=iconReload></div></div>";
             delIcon.classList.add('showFlex');
-      // var forVerify = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div>";
-//       var resultElement = document.createElement("div");
-//       resultElement.classList.add('containerRes__container')
-//       resultElement.innerHTML = resultText;
-//       // resultforVerify.innerHTML = forVerify;
-
-
-  
-//       // Retrieve the innerHTML of the new p element
-//       var newInnerHTML = resultElement.innerHTML;
-
-    
-  
-//  // Check if there are any existing p elements with the same innerHTML
-// var existingElements = containerRes.querySelectorAll(".containerRes__container--L");
-// for (var i = 0; i < existingElements.length; i++) {
-//   if (existingElements[i].innerHTML === newInnerHTML) {
-//     alert("Acest meci a fost generat deja");
-//     return;
-//   }
-// }
 
 var newDiv = document.createElement("div");
 newDiv.classList.add('containerRes__container');
