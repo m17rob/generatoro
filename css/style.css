@@ -208,7 +208,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .9rem 1rem; }
+  padding: .9rem 1.2rem .9rem 2rem; }
   .containerRes__container:not(:last-child) {
     border-bottom: 1px #FCFFE7 solid; }
   .containerRes__container--L__one {
@@ -301,3 +301,6 @@ body {
   justify-content: center;
   width: 20px;
   height: 20px; }
+
+.ml10 {
+  margin-left: 10px; }
