@@ -154,13 +154,13 @@ var pronos = ["po1", "po2", "po3", "px1", "px3", "px4", "pf1", "pf2", "pl1", "pl
 function validateForm() {
     const subSelect1 = document.getElementById("subSelect1");
     const subSelect2 = document.getElementById("subSelect2");
-    const subTeam1 = document.getElementById('team1');
-    const subTeam2 = document.getElementById('team2');
+    // const img1 = subSelect1.querySelector("img");
+    // const img2 = subSelect2.querySelector("img");
     const delIcon = document.getElementById('delIcon');
     var subSelect1Value = subSelect1.innerHTML;
     var subSelect2Value = subSelect2.innerHTML;
   
-    if (subTeam1.innerText === "Alege echipa" || subTeam2.innerText === "Alege echipa") {
+    if (subSelect1.querySelector('img[src="img/teams-arrow.svg"]') || subSelect2.querySelector('img[src="img/teams-arrow.svg"]')) {
       alert("Selectează echipele");
     } else if (subSelect1.innerText === subSelect2.innerText) {
       alert("Nu poți selecta aceleași echipe");
