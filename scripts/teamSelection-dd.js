@@ -70,6 +70,7 @@ options.forEach(option => {
     const subdropdownOptions = document.createElement("div");
     subdropdownOptions.classList.add("subdropdown-options");
     subdropdown.appendChild(subdropdownOptions);
+
     for (const suboption in dict[option].suboptiuni) {
       const suboptionImg = dict[option].suboptiuni[suboption];
       const suboptionHTML = `<div class="dropdown-option" data-suboption="${suboption}">
@@ -157,10 +158,12 @@ function validateForm() {
     const delIcon = document.getElementById('delIcon');
     var subSelect1Value = subSelect1.innerHTML;
     var subSelect2Value = subSelect2.innerHTML;
+    const img1 = subSelect1.querySelector("img");
+    const img2 = subSelect2.querySelector("img");
   
     if (subSelect1.innerText === "Alege echipa" || subSelect2.innerText === "Alege echipa") {
       alert("Selectează echipele");
-    } else if (subSelect1.innerText === subSelect2.innerText) {
+    } else if (img1.getAttribute("alt") === img2.getAttribute("alt")) {
       alert("Nu poți selecta aceleași echipe");
     } else {
       // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
