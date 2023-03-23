@@ -2,8 +2,8 @@ var dict = {
     "Premier League": {
       "img": "img/premierLeagueIcon.png",
       "suboptiuni": {
-        "Man. United": "img/premierLeagueIcon.png",
-        "Arsenal": "img/premierLeagueIcon.png"
+        "Man. United": "img/manunited.png",
+        "Arsenal": "img/arsenal.png"
       }
     },
     "LaLiga": {
