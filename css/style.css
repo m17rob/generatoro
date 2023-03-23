@@ -242,6 +242,9 @@ body {
       border-radius: 3px;
       margin-right: .6rem;
       font-size: 1.4rem; }
+    .containerRes__container--R__two {
+      display: flex;
+      align-items: center; }
 
 #submitButton {
   background-color: #FCFFE7;
