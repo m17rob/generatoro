@@ -65,18 +65,15 @@ options.forEach(option => {
     const subdropdownBtn = document.createElement("button");
     subdropdownBtn.classList.add("dropdown-btn");
     subdropdownBtn.setAttribute('id', 'subSelect1');
-    subdropdownBtn.innerHTML = '<div id="justCont"><div id="team1" class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
+    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
+    // subdropdownBtn.innerHTML = '<div id="justCont"><img src="${dict[option].suboptiuni[selectedSuboption]}" alt="${selectedSuboption}" class="dropdown-option-img"> ${selectedSuboption}</div> ';
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");
     subdropdownOptions.classList.add("subdropdown-options");
     subdropdown.appendChild(subdropdownOptions);
     for (const suboption in dict[option].suboptiuni) {
       const suboptionImg = dict[option].suboptiuni[suboption];
-      const suboptionHTML = `<div class="dropdown-option" data-suboption="${suboption}">
-                              
-                               <img src="${suboptionImg}" alt="${suboption}" class="dropdown-option-img"> 
-                               ${suboption} 
-                             </div>`;
+      const suboptionHTML = `<div class="dropdown-option" data-suboption="${suboption}"><img src="${suboptionImg}" alt="${suboption}" class="dropdown-option-img"> ${suboption} </div>`;
       subdropdownOptions.insertAdjacentHTML("beforeend", suboptionHTML);
      
     }
@@ -90,7 +87,7 @@ options.forEach(option => {
     suboptionElements.forEach(suboptionElement => {
       suboptionElement.addEventListener("click", () => {
         const selectedSuboption = suboptionElement.getAttribute("data-suboption");
-        subdropdownBtn.innerHTML = `<img src="${dict[option].suboptiuni[selectedSuboption]}" alt="${selectedSuboption}" class="dropdown-option-img"> ${selectedSuboption}`;
+        subdropdownBtn.innerHTML = `<div id="justCont"><div class="pOne"><img src="${dict[option].suboptiuni[selectedSuboption]}" alt="${selectedSuboption}" class="dropdown-option-img"> ${selectedSuboption}</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> `;
 
         subdropdownOptions.classList.remove("show");
       });
@@ -102,7 +99,7 @@ subdropdown2.innerHTML = "";
 const subdropdownBtn2 = document.createElement("button");
 subdropdownBtn2.classList.add("dropdown-btn");
 subdropdownBtn2.setAttribute('id', 'subSelect2');
-subdropdownBtn2.innerHTML = ' <div id="justCont"><div id="team2" class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div>';
+subdropdownBtn2.innerHTML = ' <div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div>';
 subdropdown2.appendChild(subdropdownBtn2);
 const subdropdownOptions2 = document.createElement("div");
 subdropdownOptions2.classList.add("subdropdown-options2");
@@ -126,7 +123,7 @@ const suboptionElements2 = subdropdownOptions2.querySelectorAll(".dropdown-optio
 suboptionElements2.forEach(suboptionElement2 => {
   suboptionElement2.addEventListener("click", () => {
     const selectedSuboption2 = suboptionElement2.getAttribute("data-suboption2");
-    subdropdownBtn2.innerHTML = `<img src="${dict[option].suboptiuni[selectedSuboption2]}" alt="${selectedSuboption2}" class="dropdown-option-img"> ${selectedSuboption2}`;
+    subdropdownBtn2.innerHTML = `<div id="justCont"><div class="pOne"><img src="${dict[option].suboptiuni[selectedSuboption2]}" alt="${selectedSuboption2}" class="dropdown-option-img"> ${selectedSuboption2}</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> `;
     subdropdownOptions2.classList.remove("show");
   });
 });

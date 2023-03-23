@@ -129,8 +129,10 @@ body {
 #subSelect1, #subSelect2 {
   z-index: 2;
   font-size: 1.2rem;
-  width: 15rem;
+  width: 18rem;
   border-radius: 10px; }
+  #subSelect1 .pOne img, #subSelect2 .pOne img {
+    margin-right: 1rem; }
 
 #subdropdown {
   position: relative; }
@@ -264,7 +266,8 @@ body {
 #justCont {
   width: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   #justCont img {
     margin: 0; }
 
