@@ -65,7 +65,7 @@ options.forEach(option => {
     const subdropdownBtn = document.createElement("button");
     subdropdownBtn.classList.add("dropdown-btn");
     subdropdownBtn.setAttribute('id', 'subSelect1');
-    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
+    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow1"></div></div> ';
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");
     subdropdownOptions.classList.add("subdropdown-options");
@@ -103,7 +103,7 @@ subdropdown2.innerHTML = "";
 const subdropdownBtn2 = document.createElement("button");
 subdropdownBtn2.classList.add("dropdown-btn");
 subdropdownBtn2.setAttribute('id', 'subSelect2');
-subdropdownBtn2.innerHTML = ' <div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div>';
+subdropdownBtn2.innerHTML = ' <div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow2"></div></div>';
 subdropdown2.appendChild(subdropdownBtn2);
 const subdropdownOptions2 = document.createElement("div");
 subdropdownOptions2.classList.add("subdropdown-options2");
