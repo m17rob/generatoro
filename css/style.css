@@ -22,6 +22,7 @@ html {
   src: url(/fonts/Jura-Bold.ttf) format("opentype"); }
 
 body {
+  position: relative;
   padding: 2rem;
   background-color: #EB455F;
   display: flex;
@@ -304,3 +305,52 @@ body {
 
 .ml10 {
   margin-left: 10px; }
+
+.bubble-parent {
+  position: fixed;
+  z-index: 20;
+  top: 3rem; }
+
+.animate__animated.animate__fadeOut {
+  --animate-duration: 5s; }
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: #FF0303;
+  border-radius: 1rem;
+  padding: 14px 16px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.875rem;
+  box-shadow: 0px 85px 34px rgba(0, 0, 0, 0.01), 0px 48px 29px rgba(0, 0, 0, 0.03), 0px 21px 21px rgba(0, 0, 0, 0.04), 0px 5px 12px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05); }
+  .bubble img {
+    margin-right: 1rem; }
+
+@media screen and (max-width: 1500px) {
+  .bubble {
+    font-size: 2rem; } }
+
+@media screen and (max-width: 1000px) {
+  .bubble {
+    font-size: 1.8rem;
+    width: 20rem; } }
+
+@media screen and (max-width: 600px) {
+  .bubble {
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 1500px) {
+  .bubble {
+    font-size: 2rem; } }
+
+@media screen and (max-width: 1000px) {
+  .bubble {
+    font-size: 1.8rem;
+    width: 20rem; } }
+
+@media screen and (max-width: 600px) {
+  .bubble {
+    font-size: 1.5rem; } }

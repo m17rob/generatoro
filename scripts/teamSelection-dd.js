@@ -21,6 +21,69 @@ var dict = {
       }
     }
   };
+
+
+  
+
+  function createBubble() {
+    const bubbleParent = document.createElement('div');
+    bubbleParent.id = 'bubble';
+    bubbleParent.classList.add('bubble-parent');
+  
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+  
+    const bubbleImg = document.createElement('img');
+    bubbleImg.id = 'bubbleImg';
+    bubbleImg.src = 'img/err.svg';
+    bubbleImg.alt = 'avertizare icon';
+  
+    const bubbleTxt = document.createElement('div');
+    bubbleTxt.id = 'bubbleTxt';
+    bubbleTxt.classList.add('bubble__txt');
+    bubbleTxt.textContent = 'eroare nedeterminata.contactati suportul';
+  
+    bubble.appendChild(bubbleImg);
+    bubble.appendChild(bubbleTxt);
+    bubbleParent.appendChild(bubble);
+  
+    document.body.appendChild(bubbleParent);
+  
+    return bubbleParent;
+  }
+  
+  
+  function animateBubbleBtn(text, imgSrc, bgColor) {
+    const bubbleBtn = createBubble();
+    const bubbleTxt = bubbleBtn.querySelector('#bubbleTxt');
+    const bubbleImg = bubbleBtn.querySelector('#bubbleImg');
+    const bubble = bubbleBtn.querySelector('.bubble');
+    
+    bubbleTxt.textContent = text;
+    bubbleImg.src = imgSrc;
+    bubble.style.backgroundColor = bgColor;
+  
+    bubbleBtn.classList.add('animate__animated', 'animate__bounceIn');
+    bubbleBtn.style.display = 'block';
+    setTimeout(function () {
+      if (bubbleBtn.classList.contains('animate__animated')) {
+        bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
+        bubbleBtn.classList.remove(
+          'animate__animated',
+          'animate__fadeOut',
+          'animate__bounceIn'
+        );
+        bubbleBtn.style.display = 'none';
+        bubbleBtn.remove(); // remove the element from the document
+      } else {
+        return;
+      }
+    }, 4000);
+  }
+  
+  
+  
+  
   
 
 // găsim elementul HTML pentru dropdown
@@ -158,10 +221,14 @@ function validateForm() {
     var subSelect2Value = subSelect2.innerHTML;
   
     if (subSelect1.querySelector('div[class="teamTxt"]') || subSelect2.querySelector('div[class="teamTxt"]')) {
-      alert("Selectează echipele");
+      // alert("Selectează echipele");
+
+      animateBubbleBtn('Selecteaza echipele', 'img/avertizare.svg', '#FF8B13');
     } else if (subSelect1.innerText === subSelect2.innerText) {
-      alert("Nu poți selecta aceleași echipe");
+      // alert("Nu poți selecta aceleași echipe");
+      animateBubbleBtn('Nu poți selecta aceleași echipe', 'img/err.svg', '#FF0303');
     } else {
+      animateBubbleBtn('Meci generat cu succes ', 'img/succes.svg', '#5D9C59');
       // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
       var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
       console.log(randomElement);
@@ -172,19 +239,23 @@ var newDiv = document.createElement("div");
 newDiv.classList.add('containerRes__container');
 newDiv.innerHTML = resultText;
 
-// selectați toate div-urile existente în containerul "containerRes"
-var existingDivs = document.querySelectorAll('#containerRes .containerRes__container');
+// Selecționează toate elementele existente care conțin meciuri
+const existingDivs = document.querySelectorAll('.containerRes__container--L');
 
-// verificați dacă există deja un div cu aceeași valoare a elementului "containerRes__container--L__one"
-for (var i = 0; i < existingDivs.length; i++) {
+// Parcurge fiecare element existent și verifică dacă conține meciul nou adăugat
+for (let i = 0; i < existingDivs.length; i++) {
+  const existingMatchup1 = existingDivs[i].querySelector('.containerRes__container--L__one').textContent.trim();
+  const existingMatchup2 = existingDivs[i].querySelector('.containerRes__container--L__two').textContent.trim();
+
+  const newMatchup1 = newDiv.querySelector('.containerRes__container--L__one').textContent.trim();
+  const newMatchup2 = newDiv.querySelector('.containerRes__container--L__two').textContent.trim();
+
   if (
-    
-    existingDivs[i].querySelector('.containerRes__container--L__one').textContent === newDiv.querySelector('.containerRes__container--L__one').textContent ||
-    existingDivs[i].querySelector('.containerRes__container--L__two').textContent === newDiv.querySelector('.containerRes__container--L__one').textContent &&
-    existingDivs[i].querySelector('.containerRes__container--L__one').textContent === newDiv.querySelector('.containerRes__container--L__two').textContent
-  
+    (existingMatchup1 === newMatchup1 && existingMatchup2 === newMatchup2) ||
+    (existingMatchup1 === newMatchup2 && existingMatchup2 === newMatchup1)
   ) {
-    alert('Acest meci a fost generat deja');
+    // alert('Acest meci a fost generat deja');
+    animateBubbleBtn('Acest meci a fost generat deja', 'img/avertizare.svg', '#FF8B13');
     return;
   }
 }
@@ -249,6 +320,7 @@ var delIcon = document.getElementById("delIcon");
 
 // atașează evenimentul de click
 delIcon.addEventListener("click", function() {
+  animateBubbleBtn('Stergerea s-a realizat cu succes', 'img/deleteIcon.svg', '#5D9C59');
   // obține elementul containerRes
   var containerRes = document.getElementById("containerRes");
   // elimină toate div-urile din containerRes
@@ -262,4 +334,28 @@ delIcon.addEventListener("click", function() {
 
 
 
-  
+  // ALERTE
+
+
+// const bubbleBtn = document.querySelector('#bubble');
+// const playVideo = document.querySelector('#apasa');
+
+// playVideo.addEventListener('click', function () {
+//   bubbleBtn.classList.add('animate__animated', 'animate__bounceIn');
+//   bubbleBtn.style.display = 'block';
+//   setTimeout(function () {
+//     if (bubbleBtn.classList.contains('animate__animated')) {
+//       bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
+//       bubbleBtn.classList.remove(
+//         'animate__animated',
+//         'animate__fadeOut',
+//         'animate__bounceIn'
+//       );
+//       bubbleBtn.style.display = 'none';
+//     } else {
+//       return;
+//     }
+//   }, 4000);
+// });
+
+
