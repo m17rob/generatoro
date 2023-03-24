@@ -346,7 +346,7 @@ var delIcon = document.getElementById("delIcon");
 
 // atașează evenimentul de click
 delIcon.addEventListener("click", function() {
-  animateBubbleBtn('Stergerea s-a realizat cu succes', 'img/deleteIcon.svg', '#5D9C59');
+  animateBubbleBtn('Stergerea s-a realizat cu succes', 'img/deleteIcon.svg', '#5D9C59', bubbleContainer);
   // obține elementul containerRes
   var containerRes = document.getElementById("containerRes");
   // elimină toate div-urile din containerRes
