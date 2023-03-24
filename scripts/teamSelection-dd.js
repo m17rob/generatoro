@@ -281,7 +281,7 @@ for (let i = 0; i < existingDivs.length; i++) {
     (existingMatchup1 === newMatchup2 && existingMatchup2 === newMatchup1)
   ) {
     // alert('Acest meci a fost generat deja');
-    animateBubbleBtn('Acest meci a fost generat deja', 'img/avertizare.svg', '#FF8B13');
+    animateBubbleBtn('Acest meci a fost generat deja', 'img/avertizare.svg', '#FF8B13', bubbleContainer);
     return;
   }
 }
