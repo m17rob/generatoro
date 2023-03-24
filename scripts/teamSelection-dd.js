@@ -1,3 +1,17 @@
+// Blochează zoom-ul pe dispozitivele mobile
+function blockZoom() {
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', (event) => {
+    const now = new Date().getTime();
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, false);
+}
+
+blockZoom();
+
 var dict = {
     "Premier League": {
       "img": "img/premierLeagueIcon.png",
