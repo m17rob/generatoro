@@ -53,7 +53,15 @@ var dict = {
   }
   
   
+  let animationInProgress = false;
+
   function animateBubbleBtn(text, imgSrc, bgColor) {
+    if (animationInProgress) {
+      return; // exit function if animation is already in progress
+    }
+    
+    animationInProgress = true; // set animation in progress
+    
     const bubbleBtn = createBubble();
     const bubbleTxt = bubbleBtn.querySelector('#bubbleTxt');
     const bubbleImg = bubbleBtn.querySelector('#bubbleImg');
@@ -62,9 +70,10 @@ var dict = {
     bubbleTxt.textContent = text;
     bubbleImg.src = imgSrc;
     bubble.style.backgroundColor = bgColor;
-  
+    
     bubbleBtn.classList.add('animate__animated', 'animate__bounceIn');
     bubbleBtn.style.display = 'block';
+    
     setTimeout(function () {
       if (bubbleBtn.classList.contains('animate__animated')) {
         bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
@@ -75,8 +84,8 @@ var dict = {
         );
         bubbleBtn.style.display = 'none';
         bubbleBtn.remove(); // remove the element from the document
-      } else {
-        return;
+        
+        animationInProgress = false; // set animation not in progress
       }
     }, 4000);
   }
