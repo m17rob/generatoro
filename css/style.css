@@ -355,3 +355,8 @@ body {
 @media screen and (max-width: 600px) {
   .bubble {
     font-size: 1.5rem; } }
+
+#bubbleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center; }

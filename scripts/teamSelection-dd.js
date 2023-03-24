@@ -67,46 +67,49 @@ var dict = {
   }
   
   
-  let animationInProgress = false;
+  let animationTimeout;
 
-  function animateBubbleBtn(text, imgSrc, bgColor) {
-    if (animationInProgress) {
-      return; // exit function if animation is already in progress
+  function animateBubbleBtn(text, imgSrc, bgColor, container) {
+    const oldBubbleBtn = container.querySelector('.bubble-btn');
+    if (oldBubbleBtn) {
+      oldBubbleBtn.classList.remove(
+        'animate__animated',
+        'animate__fadeOut',
+        'animate__bounceIn'
+      );
+      oldBubbleBtn.remove();
+      clearTimeout(animationTimeout);
     }
-    
-    animationInProgress = true; // set animation in progress
-    
+  
     const bubbleBtn = createBubble();
     const bubbleTxt = bubbleBtn.querySelector('#bubbleTxt');
     const bubbleImg = bubbleBtn.querySelector('#bubbleImg');
     const bubble = bubbleBtn.querySelector('.bubble');
-    
+  
     bubbleTxt.textContent = text;
     bubbleImg.src = imgSrc;
     bubble.style.backgroundColor = bgColor;
-    
-    bubbleBtn.classList.add('animate__animated', 'animate__bounceIn');
-    bubbleBtn.style.display = 'block';
-    
-    setTimeout(function () {
-      if (bubbleBtn.classList.contains('animate__animated')) {
-        bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
-        bubbleBtn.classList.remove(
-          'animate__animated',
-          'animate__fadeOut',
-          'animate__bounceIn'
-        );
-        bubbleBtn.style.display = 'none';
+  
+    bubbleBtn.classList.add('animate__animated', 'animate__bounceIn', 'bubble-btn');
+    container.appendChild(bubbleBtn);
+  
+    animationTimeout = setTimeout(function () {
+      bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
+      bubbleBtn.classList.remove(
+        'animate__animated',
+        'animate__fadeOut',
+        'animate__bounceIn'
+      );
+  
+      setTimeout(function () {
         bubbleBtn.remove(); // remove the element from the document
-        
-        animationInProgress = false; // set animation not in progress
-      }
+      }, 1000);
     }, 4000);
   }
   
   
   
-  
+  const bubbleContainer = document.getElementById('bubbleContainer');
   
 
 // găsim elementul HTML pentru dropdown
@@ -246,12 +249,12 @@ function validateForm() {
     if (subSelect1.querySelector('div[class="teamTxt"]') || subSelect2.querySelector('div[class="teamTxt"]')) {
       // alert("Selectează echipele");
 
-      animateBubbleBtn('Selecteaza echipele', 'img/avertizare.svg', '#FF8B13');
+      animateBubbleBtn('Selecteaza echipele', 'img/avertizare.svg', '#FF8B13', bubbleContainer);
     } else if (subSelect1.innerText === subSelect2.innerText) {
       // alert("Nu poți selecta aceleași echipe");
-      animateBubbleBtn('Nu poți selecta aceleași echipe', 'img/err.svg', '#FF0303');
+      animateBubbleBtn('Nu poți selecta aceleași echipe', 'img/err.svg', '#FF8B13', bubbleContainer);
     } else {
-      animateBubbleBtn('Meci generat cu succes ', 'img/succes.svg', '#5D9C59');
+      animateBubbleBtn('Meci generat cu succes ', 'img/succes.svg', '#5D9C59', bubbleContainer);
       // var resultText = "Au fost selectate: " + subSelect1Value + " si " + subSelect2Value;
       var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
       console.log(randomElement);
