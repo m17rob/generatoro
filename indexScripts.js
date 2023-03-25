@@ -28,6 +28,17 @@ window.addEventListener('load', function(){
         document.querySelector('#main-content').classList.add('animate__animated', 'animate__fadeIn');
         // afișează conținutul principal
         document.querySelector('#main-content').style.display = 'block';
+        // pornește timer-ul pentru #virtuale-button după ce conținutul principal este afișat
+        setTimeout(function() {
+          document.getElementById('fotbal-button').style.display = 'block';
+        }, 50);
+        setTimeout(function() {
+          document.getElementById('virtuale-button').style.display = 'block';
+        }, 1050);
+        // pornește timer-ul pentru #loterie-button după ce conținutul principal este afișat
+        setTimeout(function() {
+          document.getElementById('loterie-button').style.display = 'block';
+        }, 2050);
       }, 500);
     }, 1000);
   }, 2000);
@@ -39,5 +50,4 @@ function redirectToPage(pageUrl) {
     window.location.href = pageUrl;
   }, 400);
 }
-
 
