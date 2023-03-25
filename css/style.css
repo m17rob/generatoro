@@ -229,6 +229,9 @@ body {
   /* culoarea barei de scroll */
   border-radius: 50px; }
 
+.subdropdown-options {
+  -webkit-overflow-scrolling: touch; }
+
 #subdropdown2 {
   position: relative; }
 
@@ -263,6 +266,9 @@ body {
   background: #00235B;
   /* culoarea barei de scroll */
   border-radius: 50px; }
+
+.subdropdown-options2 {
+  -webkit-overflow-scrolling: touch; }
 
 #subSelect1 {
   margin-bottom: 1.6rem;
