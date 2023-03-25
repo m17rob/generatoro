@@ -179,7 +179,7 @@ button {
   border-bottom: 2px solid #FCFFE7;
   border-top: 2px solid #FCFFE7; }
   button:not(:last-child) {
-    margin-bottom: 2rem; }
+    margin-bottom: 4rem; }
 
 button span {
   position: relative;
