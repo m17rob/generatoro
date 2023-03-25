@@ -37,5 +37,5 @@ window.addEventListener('load', function(){
 function redirectToPage(pageUrl) {
   setTimeout(function() {
     window.location.href = pageUrl;
-  }, 500);
+  }, 400);
 }
