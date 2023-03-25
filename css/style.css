@@ -312,8 +312,8 @@ body {
   z-index: 20;
   top: 3rem; }
 
-.animate__animated.animate__fadeOut {
-  --animate-duration: 5s; }
+.animate__animated.animate__fadeInDown {
+  --animate-duration: .2s; }
 
 .bubble {
   display: flex;

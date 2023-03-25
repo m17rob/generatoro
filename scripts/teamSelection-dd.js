@@ -90,14 +90,14 @@ var dict = {
     bubbleImg.src = imgSrc;
     bubble.style.backgroundColor = bgColor;
   
-    bubbleBtn.classList.add('animate__animated', 'animate__bounceIn', 'bubble-btn');
+    bubbleBtn.classList.add('animate__animated', 'animate__fadeInDown', 'bubble-btn');
     container.appendChild(bubbleBtn);
   
     animationTimeout = setTimeout(function () {
       bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
       bubbleBtn.classList.remove(
         'animate__animated',
-        'animate__fadeOut',
+        'animate__fadeInDown',
         'animate__bounceIn'
       );
   
