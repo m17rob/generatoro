@@ -1,6 +1,6 @@
 {
-    "name": "Generatoro",
-    "short_name": "GEN",
+    "name": "Numele aplicației",
+    "short_name": "Numele scurt al aplicației",
     "icons": [
       {
         "src": "/img/iconHp.png",
@@ -10,7 +10,8 @@
     ],
     "start_url": "/",
     "display": "standalone",
+    "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "theme_color": "#000000"
+    "orientation": "portrait"
   }
   

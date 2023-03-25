@@ -52,13 +52,51 @@ function redirectToPage(pageUrl) {
 }
 
 
-document.querySelector('.cta').addEventListener('click', function() {
-  if (window.matchMedia('(display-mode: standalone)').matches) {
-    console.log('Aplicația este deja instalată!');
-  } else if (window.navigator.standalone) {
-    console.log('Aplicația este deja instalată!');
-  } else {
-    window.navigator.standalone = false;
-    window.navigator.requestAppBanner();
-  }
+// Obținem butonul din document
+var addToHomeScreenButton = document.querySelector('.cta');
+
+// Atașăm evenimentul "click" la buton
+addToHomeScreenButton.addEventListener('click', function() {
+// Verificăm dacă browser-ul suportă instalarea aplicațiilor web
+if ('getInstalledRelatedApps' in navigator) {
+  navigator.getInstalledRelatedApps().then(function(apps) {
+    // Verificăm dacă aplicația noastră web este deja instalată
+    var installed = apps.some(function(app) {
+      return app.platform === 'web' && app.url === location.href;
+    });
+    
+    // Dacă aplicația nu este instalată, afișăm butonul "Adaugă la ecranul de start"
+    if (!installed) {
+      var addToHomeScreenButton = document.createElement('button');
+      addToHomeScreenButton.innerHTML = 'Adaugă la ecranul de start';
+      addToHomeScreenButton.addEventListener('click', function() {
+        // Adăugăm aplicația la ecranul de start
+        var manifest = {
+          "name": "Numele aplicației",
+          "short_name": "Numele scurt al aplicației",
+          "icons": [
+            {
+              "src": "/img/iconHp.png",
+              "sizes": "192x192",
+              "type": "image/png"
+            }
+          ],
+          "start_url": "/",
+          "display": "standalone"
+        };
+        window.navigator['standalone'] = true;
+        window.navigator['loadApp'] = function() {};
+        window.navigator['serviceWorker'] = {
+          'register': function() {}
+        };
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'manifest');
+        link.setAttribute('href', 'data:application/json,' + encodeURIComponent(JSON.stringify(manifest)));
+        document.head.appendChild(link);
+      });
+      document.body.appendChild(addToHomeScreenButton);
+    }
+  });
+}
+
 });
