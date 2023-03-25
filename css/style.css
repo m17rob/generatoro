@@ -24,7 +24,6 @@ html {
 
 body {
   position: relative;
-  padding: 2rem;
   background-color: #EB455F;
   display: flex;
   flex-direction: column;
@@ -56,11 +55,11 @@ body {
       margin-left: 5.2rem; }
 
 .containerInfo {
-  background-color: #bc374c;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, #EB455F 0px 18px 36px -18px inset;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  position: relative;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  z-index: 888;
+  height: 100vh;
+  width: 100%;
   animation-duration: .2s !important; }
   .containerInfo .closeBtn {
     position: absolute;
@@ -70,13 +69,44 @@ body {
     display: flex;
     align-items: center; }
     .containerInfo .boxInfo .text {
-      color: #FCFFE7;
+      color: #00235B;
       font-size: 1.2rem;
       font-family: museomoderno, 'sans-serif'; }
     .containerInfo .boxInfo:not(:last-child) {
-      margin-bottom: 1rem; }
+      margin-bottom: 2rem; }
     .containerInfo .boxInfo img {
-      margin-right: .5rem; }
+      margin-right: .7rem; }
+
+.containerInfoBox {
+  width: 70%;
+  height: max-content;
+  border-radius: 10px;
+  background: #FCFFE7;
+  box-shadow: #fcffe713 0px 50px 100px -20px, #fcffe71f 0px 30px 60px -30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem; }
+
+.buttonInfo {
+  color: #ecf0f1;
+  font-size: 17px;
+  background-color: #5D9C59;
+  border: 1px solid #5D9C59;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 6px 0px #568f52;
+  transition: all .1s;
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.buttonInfo:active {
+  box-shadow: 0px 2px 0px #d35400;
+  position: absolute;
+  bottom: 3.9rem; }
 
 .leagueSelection {
   display: flex;
