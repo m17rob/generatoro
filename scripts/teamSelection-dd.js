@@ -53,7 +53,24 @@ var dict = {
       "img": "img/premierLeagueIcon.png",
       "suboptiuni": {
         "Man. United": "img/manunited.png",
-        "Arsenal": "img/arsenal.png"
+        "Arsenal": "img/arsenal.png",
+        "Aston Villa": "img/arsenal.png",
+        "Brentford": "img/arsenal.png",
+        "Brighton": "img/arsenal.png",
+        "Chelsea": "img/arsenal.png",
+        "Crystal Pal.": "img/arsenal.png",
+        "Everton": "img/arsenal.png",
+        "Leeds": "img/arsenal.png",
+        "Leicester": "img/arsenal.png",
+        "Liverpool": "img/arsenal.png",
+        "Man. City": "img/arsenal.png",
+        "Newcastle": "img/arsenal.png",
+        "Norwich": "img/arsenal.png",
+        "Southampton": "img/arsenal.png",
+        "Tottenham": "img/arsenal.png",
+        "Watford": "img/arsenal.png",
+        "West Ham": "img/arsenal.png",
+        "Wolverhampton": "img/arsenal.png"
       }
     },
     "LaLiga": {
