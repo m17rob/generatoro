@@ -51,3 +51,14 @@ function redirectToPage(pageUrl) {
   }, 400);
 }
 
+
+document.querySelector('.cta').addEventListener('click', function() {
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    console.log('Aplicația este deja instalată!');
+  } else if (window.navigator.standalone) {
+    console.log('Aplicația este deja instalată!');
+  } else {
+    window.navigator.standalone = false;
+    window.navigator.requestAppBanner();
+  }
+});
