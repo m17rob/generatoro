@@ -389,7 +389,7 @@ const mainContentInfo = document.querySelector('.leagueSelection');
 
 closeButton.addEventListener('click', function() {
   // adăugați clasele animate__animated și animate__flipOutX la containerInfo
-  containerInfo.classList.add('animate__animated', 'animate__fadeOutRight');
+  containerInfo.classList.add('animate__animated', 'animate__fadeOut');
 
   // așteptați până când animația este completă și apoi eliminați containerInfo din DOM
   containerInfo.addEventListener('animationend', function() {

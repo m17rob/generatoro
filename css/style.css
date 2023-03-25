@@ -60,7 +60,8 @@ body {
   box-shadow: inset 0px 1px 18px rgba(0, 0, 0, 0.25);
   padding: 1rem;
   margin-bottom: 1rem;
-  position: relative; }
+  position: relative;
+  animation-duration: .2s !important; }
   .containerInfo .closeBtn {
     position: absolute;
     right: 5px;
