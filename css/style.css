@@ -56,8 +56,8 @@ body {
       margin-left: 5.2rem; }
 
 .containerInfo {
-  background-color: #C5384E;
-  box-shadow: inset 0px 1px 18px rgba(0, 0, 0, 0.25);
+  background-color: #bc374c;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, #EB455F 0px 18px 36px -18px inset;
   padding: 1rem;
   margin-bottom: 1rem;
   position: relative;
