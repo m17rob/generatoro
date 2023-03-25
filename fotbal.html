@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="header finisher-header">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,7 +102,42 @@
  
 
       
-      
+      <script src="finisher-header.es5.min.js" type="text/javascript"></script> 
+      <script type="text/javascript">
+        new FinisherHeader({
+          "count": 24,
+          "size": {
+            "min": 2,
+            "max": 8,
+            "pulse": 0
+          },
+          "speed": {
+            "x": {
+              "min": 0,
+              "max": 0.4
+            },
+            "y": {
+              "min": 0,
+              "max": 0.6
+            }
+          },
+          "colors": {
+            "background": "#eb455f",
+            "particles": [
+              "#ffffff"
+            ]
+          },
+          "blending": "overlay",
+          "opacity": {
+            "center": 1,
+            "edge": 0
+          },
+          "skew": 0,
+          "shapes": [
+            "c"
+          ]
+        });
+        </script>
     <script src="scripts/teamSelection-dd.js"></script>
     <!-- <script src="test.js"></script> -->
 </body>
