@@ -90,21 +90,21 @@ var dict = {
     bubbleImg.src = imgSrc;
     bubble.style.backgroundColor = bgColor;
   
-    bubbleBtn.classList.add('animate__animated', 'animate__fadeInDown', 'bubble-btn');
+    bubbleBtn.classList.add('animate__animated', 'animate__bounceIn', 'bubble-btn');
     container.appendChild(bubbleBtn);
   
     animationTimeout = setTimeout(function () {
       bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
       bubbleBtn.classList.remove(
         'animate__animated',
-        'animate__fadeInDown',
+        'animate__fadeOut',
         'animate__bounceIn'
       );
   
       setTimeout(function () {
         bubbleBtn.remove(); // remove the element from the document
       }, 1000);
-    }, 4000);
+    }, 2000);
   }
   
   
