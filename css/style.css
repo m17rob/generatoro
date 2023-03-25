@@ -28,7 +28,8 @@ body {
   background-color: #EB455F;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  height: 100%; }
 
 .heading {
   width: 100%; }
@@ -53,6 +54,28 @@ body {
       display: block;
       text-align: end;
       margin-left: 5.2rem; }
+
+.containerInfo {
+  background-color: #C5384E;
+  box-shadow: inset 0px 1px 18px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative; }
+  .containerInfo .closeBtn {
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+  .containerInfo .boxInfo {
+    display: flex;
+    align-items: center; }
+    .containerInfo .boxInfo .text {
+      color: #FCFFE7;
+      font-size: 1.2rem;
+      font-family: museomoderno, 'sans-serif'; }
+    .containerInfo .boxInfo:not(:last-child) {
+      margin-bottom: 1rem; }
+    .containerInfo .boxInfo img {
+      margin-right: .5rem; }
 
 .leagueSelection {
   display: flex;

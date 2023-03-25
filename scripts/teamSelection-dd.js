@@ -382,6 +382,28 @@ delIcon.addEventListener("click", function() {
 });
 
 
+// selectați butonul și containerul de informații
+const closeButton = document.querySelector('.closeBtn');
+const containerInfo = document.querySelector('.containerInfo');
+const mainContentInfo = document.querySelector('.leagueSelection');
+
+closeButton.addEventListener('click', function() {
+  // adăugați clasele animate__animated și animate__flipOutX la containerInfo
+  containerInfo.classList.add('animate__animated', 'animate__flipOutX');
+
+  // așteptați până când animația este completă și apoi eliminați containerInfo din DOM
+  containerInfo.addEventListener('animationend', function() {
+    containerInfo.remove();
+
+    // adăugați clasele animate__animated și animate__fadeInUp la mainContentInfo
+    mainContentInfo.classList.add('animate__animated', 'animate__slideInUp');
+  });
+});
+
+
+
+
+
 
 
 
