@@ -31,12 +31,43 @@ body {
   align-items: center;
   height: 100%; }
 
+.animate__animated.animate__fadeInRight {
+  --animate-duration: .5s; }
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: .5s; }
+
+.menuContainer {
+  background: #FCFFE7;
+  width: 75%;
+  height: 70vh;
+  z-index: 800;
+  position: absolute;
+  right: 0;
+  display: none;
+  border-radius: 10px 0 0 10px;
+  padding: 1rem; }
+  .menuContainer__closeBtn {
+    display: flex;
+    justify-content: end; }
+    .menuContainer__closeBtn img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer; }
+
+.showMenu {
+  display: block; }
+
 .heading {
-  width: 100%; }
+  width: 100%;
+  margin-top: 2rem; }
   .heading__menu {
-    text-align: end;
     margin-bottom: 5rem;
-    margin-right: 2rem; }
+    margin-right: 2rem;
+    display: flex;
+    justify-content: end; }
+    .heading__menu #menu {
+      cursor: pointer; }
   .heading__title {
     margin-bottom: 4.4rem;
     display: flex;

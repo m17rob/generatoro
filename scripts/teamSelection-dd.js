@@ -434,28 +434,49 @@ closeButton.addEventListener('click', function() {
 
 
 
-  // ALERTE
+  // MENU
 
 
-// const bubbleBtn = document.querySelector('#bubble');
-// const playVideo = document.querySelector('#apasa');
+  const menuButton = document.getElementById("menu");
+  const closeMenuButton = document.getElementById("closeMenu");
+  const menuContainer = document.querySelector(".menuContainer");
+  const mainContentMenu = document.getElementById("main-content");
+  
+  menuButton.addEventListener("click", function() {
+    menuContainer.classList.add("showMenu", "animate__animated", "animate__fadeInRight");
+    mainContentMenu.style.filter = "blur(2px)";
+  });
+  
+  closeMenuButton.addEventListener("click", function() {
+    mainContentMenu.style.filter = "none";
+    menuContainer.classList.add("animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
+    setTimeout(function() {
 
-// playVideo.addEventListener('click', function () {
-//   bubbleBtn.classList.add('animate__animated', 'animate__bounceIn');
-//   bubbleBtn.style.display = 'block';
-//   setTimeout(function () {
-//     if (bubbleBtn.classList.contains('animate__animated')) {
-//       bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
-//       bubbleBtn.classList.remove(
-//         'animate__animated',
-//         'animate__fadeOut',
-//         'animate__bounceIn'
-//       );
-//       bubbleBtn.style.display = 'none';
-//     } else {
-//       return;
-//     }
-//   }, 4000);
+      menuContainer.classList.remove("showMenu", "animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
+     
+    }, 500); // așteaptă 1 secundă înainte de a elimina clasele pentru a permite finalizarea animației de fadeOut
+  });
+
+
+//   const menuButton = document.getElementById("menu");
+// const closeMenuButton = document.getElementById("closeMenu");
+// const menuContainer = document.querySelector(".menuContainer");
+// const mainContentMenu = document.getElementById("main-content");
+
+// // Setează stilul filter pe none în momentul în care pagina se încarcă
+// mainContentMenu.style.filter = "none";
+
+// menuButton.addEventListener("click", function() {
+//   menuContainer.classList.add("showMenu", "animate__animated", "animate__fadeInRight");
+//   mainContentMenu.style.filter = "blur(5px)";
 // });
 
+// closeMenuButton.addEventListener("click", function() {
+//   menuContainer.classList.add("animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
+//   mainContentMenu.style.filter = "none";
+//   setTimeout(function() {
+//     menuContainer.classList.remove("showMenu", "animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
+//  // Resetează stilul filter la "none" când meniul este închis
+//   }, 1000); // așteaptă 1 secundă înainte de a elimina clasele pentru a permite finalizarea animației de fadeOut
+// });
 

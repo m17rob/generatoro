@@ -45,12 +45,17 @@
         <button id="closeBtn" class="buttonInfo">Continua</button>
 </div>
       
+  <div class="menuContainer">
+    <div class="menuContainer__closeBtn">
+      <img id="closeMenu" src="img/closeMenu.svg" alt="close button">
+    </div>
+  </div>
       
       <div id="main-content">
         <div id="bubbleContainer"></div>
         <section class="heading">
             <div class="heading__menu">
-                <img src="img/menu-dots.svg" alt="menu">
+                <img id="menu" src="img/menu-dots.svg" alt="menu">
             </div>
             <div class="heading__title">
                 <h1>generator <span class="heading__title--ms">pariuri sportive</span></h1>
@@ -61,7 +66,8 @@
         </section>
         <section class="leagueSelection">
             <div id="apasa" class="leagueSelection__tag">
-                <h3>Alege Campionatul</h3>
+                <h3 >Alege Campionatul</h3>
+           
             </div>
             <div class="leagueSelection__selector">
                 <div id="dropdown"></div>
@@ -168,7 +174,6 @@
           ]
         });
         </script>
-    <script src="scripts/teamSelection-dd.js"></script>
-    <!-- <script src="test.js"></script> -->
+        <script src="scripts/teamSelection-dd.js"></script>
 </body>
 </html>
