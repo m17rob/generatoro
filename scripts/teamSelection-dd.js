@@ -445,6 +445,8 @@ closeButton.addEventListener('click', function() {
   menuButton.addEventListener("click", function() {
     menuContainer.classList.add("showMenu", "animate__animated", "animate__fadeInRight");
     mainContentMenu.style.filter = "blur(2px)";
+
+    document.addEventListener("click", closeMenu);
   });
   
   closeMenuButton.addEventListener("click", function() {
@@ -455,28 +457,22 @@ closeButton.addEventListener('click', function() {
       menuContainer.classList.remove("showMenu", "animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
      
     }, 500); // așteaptă 1 secundă înainte de a elimina clasele pentru a permite finalizarea animației de fadeOut
+
+    document.removeEventListener("click", closeMenu);
   });
 
+// Funcția pentru închiderea meniului
+function closeMenu(event) {
+  // Verifică dacă elementul apăsat este în afara meniului
+  if (!menuContainer.contains(event.target) && event.target !== menuButton) {
+    menuContainer.classList.add("animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
+    mainContentMenu.style.filter = "none"; // Resetează stilul filter la "none" când meniul este închis
+    setTimeout(function() {
+      menuContainer.classList.remove("showMenu", "animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
+    
+    }, 500); // așteaptă 1 secundă înainte de a elimina clasele pentru a permite finalizarea animației de fadeOut
 
-//   const menuButton = document.getElementById("menu");
-// const closeMenuButton = document.getElementById("closeMenu");
-// const menuContainer = document.querySelector(".menuContainer");
-// const mainContentMenu = document.getElementById("main-content");
-
-// // Setează stilul filter pe none în momentul în care pagina se încarcă
-// mainContentMenu.style.filter = "none";
-
-// menuButton.addEventListener("click", function() {
-//   menuContainer.classList.add("showMenu", "animate__animated", "animate__fadeInRight");
-//   mainContentMenu.style.filter = "blur(5px)";
-// });
-
-// closeMenuButton.addEventListener("click", function() {
-//   menuContainer.classList.add("animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
-//   mainContentMenu.style.filter = "none";
-//   setTimeout(function() {
-//     menuContainer.classList.remove("showMenu", "animate__animated", "animate__fadeOutRight", "animate__fadeInLeft");
-//  // Resetează stilul filter la "none" când meniul este închis
-//   }, 1000); // așteaptă 1 secundă înainte de a elimina clasele pentru a permite finalizarea animației de fadeOut
-// });
-
+    // Dezactivează evenimentul de clic pe elementul document atunci când meniul este închis
+    document.removeEventListener("click", closeMenu);
+  }
+}
