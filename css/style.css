@@ -144,36 +144,55 @@ body {
       border-radius: 5px;
       transition: all 0.3s; }
     .menuContainer__Btns .btnG {
-      --b: 3px;
-      /* border thickness */
-      --s: .30em;
-      /* size of the corner */
-      --color: #00235B;
-      --color2: #5bd43db6;
+      z-index: 2;
+      display: block;
+      width: fit-content;
+      height: auto;
+      outline: none;
+      border: none;
+      background-color: inherit;
+      font-size: 1.6rem;
       font-weight: bold;
-      padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-      color: var(--color);
-      --_p: var(--s);
-      background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color2) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-      transition: .3s linear, color 0s, background-color 0s;
-      outline: var(--b) solid #0000;
-      outline-offset: .6em;
-      font-size: 16px;
-      border: 0;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      margin-bottom: 2rem;
-      cursor: pointer;
-      margin: 0 3rem; }
-    .menuContainer__Btns .btnG:hover,
-    .menuContainer__Btns .btnG:focus-visible {
-      --_p: 0px;
-      outline-color: #B3FFAE;
-      outline-offset: .05em; }
-    .menuContainer__Btns .btnG:active {
-      background: #B3FFAE;
-      color: var(--color); }
+      color: #00235B;
+      padding: 10px 20px;
+      position: relative;
+      cursor: pointer; }
+    .menuContainer__Btns .btnG::before {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 100%;
+      z-index: 3;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      transform: scaleX(0.2) scaleY(0.4) translate(720%, 100%);
+      border-top: solid 5px #67c431;
+      border-left: solid 10px #67c431;
+      transition: all .4s ease-in-out; }
+    .menuContainer__Btns .btnG::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 100%;
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-45%, -50%) scaleX(0.2) scaleY(0.4);
+      border-bottom: solid 5px #67c431;
+      border-right: solid 10px #67c431;
+      transition: all .4s ease-in-out; }
+    .menuContainer__Btns .btnG:hover::before {
+      width: 100%;
+      transform: translate(0%, 0%) scaleX(1) scaleY(1);
+      border-top: solid 3px #67c431;
+      border-left: solid 3px #67c431; }
+    .menuContainer__Btns .btnG:hover::after {
+      width: 100%;
+      transform: scaleX(1) scaleY(1) translate(0%, 0%);
+      border-bottom: solid 3px #67c431;
+      border-right: solid 3px #67c431; }
   .menuContainer__oth {
     position: absolute;
     bottom: 5rem;
