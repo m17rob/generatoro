@@ -156,7 +156,9 @@ body {
       color: #00235B;
       padding: 10px 20px;
       position: relative;
-      cursor: pointer; }
+      cursor: pointer;
+      margin: 0 2.5rem;
+      margin-bottom: 2rem; }
     .menuContainer__Btns .btnG::before {
       content: "";
       display: block;
@@ -179,7 +181,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(-45%, -50%) scaleX(0.2) scaleY(0.4);
+      transform: translate(-42%, -50%) scaleX(0.2) scaleY(0.4);
       border-bottom: solid 5px #67c431;
       border-right: solid 10px #67c431;
       transition: all .4s ease-in-out; }
