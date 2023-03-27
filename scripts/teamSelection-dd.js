@@ -481,6 +481,8 @@ function closeMenu(event) {
 const btnHome = document.getElementById("btnHome");
 
 btnHome.addEventListener("click", function() {
-  window.location.assign("/");
+  setTimeout(function() {
+    window.location.assign("/");
+  }, 400); // timpul de întârziere în milisecunde
 });
 
