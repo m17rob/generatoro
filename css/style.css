@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%; }
+  height: 100vh; }
 
 .animate__animated.animate__fadeInRight {
   --animate-duration: .5s; }
@@ -40,7 +40,7 @@ body {
 .menuContainer {
   background: #FCFFE7;
   width: 90vw;
-  height: 100vh;
+  height: 100%;
   z-index: 800;
   position: absolute;
   right: 0;
@@ -49,62 +49,62 @@ body {
   padding: 1rem 1rem 0 2rem; }
   .menuContainer__closeBtn {
     display: flex;
-    justify-content: end; }
+    justify-content: space-between; }
     .menuContainer__closeBtn img {
       width: 32px;
       height: 32px;
       cursor: pointer; }
-  .menuContainer__content #btnHome {
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none; }
-  .menuContainer__content #btnHome {
-    --primary-color: #111;
-    --hovered-color: #c84747;
-    position: relative;
-    display: flex;
-    font-weight: 600;
-    font-size: 1.6rem;
-    gap: 0.5rem;
-    align-items: center;
-    cursor: pointer; }
-  .menuContainer__content #btnHome p {
-    margin: 0;
-    position: relative;
-    font-size: 1.6rem;
-    color: #00235B; }
-  .menuContainer__content #btnHome::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    left: 0;
-    bottom: -7px;
-    background: #EB455F;
-    height: 2px;
-    transition: 0.3s ease-out; }
-  .menuContainer__content #btnHome p::before {
-    position: absolute;
-    /*   box-sizing: border-box; */
-    content: "Acasa";
-    width: 0%;
-    inset: 0;
-    color: #EB455F;
-    overflow: hidden;
-    transition: 0.3s ease-out; }
-  .menuContainer__content #btnHome:hover::after {
-    width: 100%; }
-  .menuContainer__content #btnHome:hover p::before {
-    width: 100%; }
-  .menuContainer__content #btnHome:hover svg {
-    color: #EB455F; }
-  .menuContainer__content #btnHome svg {
-    color: #00235B;
-    transition: 0.2s;
-    position: relative;
-    width: 12px;
-    transition-delay: 0.2s;
-    transform: rotate(180deg); }
+    .menuContainer__closeBtn #btnHome {
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none; }
+    .menuContainer__closeBtn #btnHome {
+      --primary-color: #111;
+      --hovered-color: #c84747;
+      position: relative;
+      display: flex;
+      font-weight: 600;
+      font-size: 1.6rem;
+      gap: 0.5rem;
+      align-items: center;
+      cursor: pointer; }
+    .menuContainer__closeBtn #btnHome p {
+      margin: 0;
+      position: relative;
+      font-size: 1.6rem;
+      color: #00235B; }
+    .menuContainer__closeBtn #btnHome::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      left: 0;
+      bottom: -7px;
+      background: #EB455F;
+      height: 2px;
+      transition: 0.3s ease-out; }
+    .menuContainer__closeBtn #btnHome p::before {
+      position: absolute;
+      /*   box-sizing: border-box; */
+      content: "Acasa";
+      width: 0%;
+      inset: 0;
+      color: #EB455F;
+      overflow: hidden;
+      transition: 0.3s ease-out; }
+    .menuContainer__closeBtn #btnHome:hover::after {
+      width: 100%; }
+    .menuContainer__closeBtn #btnHome:hover p::before {
+      width: 100%; }
+    .menuContainer__closeBtn #btnHome:hover svg {
+      color: #EB455F; }
+    .menuContainer__closeBtn #btnHome svg {
+      color: #00235B;
+      transition: 0.2s;
+      position: relative;
+      width: 12px;
+      transition-delay: 0.2s;
+      transform: rotate(180deg); }
   .menuContainer__Btns {
     height: 50%;
     position: relative;
