@@ -54,62 +54,57 @@ body {
       width: 32px;
       height: 32px;
       cursor: pointer; }
-  .menuContainer__content .cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 5px;
-    text-decoration: none;
-    font-family: museomoderno, sans-serif;
-    font-size: 1.2rem;
-    color: #FCFFE7;
-    background: #2B3467;
-    transition: 1s;
-    box-shadow: 4px 4px 0 black;
-    transform: skewX(5deg);
+  .menuContainer__content #btnHome {
+    padding: 0;
+    margin: 0;
     border: none;
-    margin-top: 1rem; }
-  .menuContainer__content .cta:focus {
-    outline: none; }
-  .menuContainer__content .cta:hover {
-    transition: 0.5s;
-    box-shadow: 5px 5px 0 #EB455F; }
-  .menuContainer__content .cta .second {
-    transition: 0.5s;
-    margin-right: 0px; }
-  .menuContainer__content .cta:hover .second {
-    transition: 0.5s;
-    margin-left: 30px; }
-  .menuContainer__content .span {
-    transform: skewX(-15deg); }
-  .menuContainer__content .second {
-    width: 20px;
-    margin-left: 20px;
+    background: none; }
+  .menuContainer__content #btnHome {
+    --primary-color: #111;
+    --hovered-color: #c84747;
     position: relative;
-    top: 12%;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.6rem;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer; }
+  .menuContainer__content #btnHome p {
+    margin: 0;
+    position: relative;
+    font-size: 1.6rem;
+    color: #00235B; }
+  .menuContainer__content #btnHome::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: #EB455F;
+    height: 2px;
+    transition: 0.3s ease-out; }
+  .menuContainer__content #btnHome p::before {
+    position: absolute;
+    /*   box-sizing: border-box; */
+    content: "Acasa";
+    width: 0%;
+    inset: 0;
+    color: #EB455F;
+    overflow: hidden;
+    transition: 0.3s ease-out; }
+  .menuContainer__content #btnHome:hover::after {
+    width: 100%; }
+  .menuContainer__content #btnHome:hover p::before {
+    width: 100%; }
+  .menuContainer__content #btnHome:hover svg {
+    color: #EB455F; }
+  .menuContainer__content #btnHome svg {
+    color: #00235B;
+    transition: 0.2s;
+    position: relative;
+    width: 12px;
+    transition-delay: 0.2s;
     transform: rotate(180deg); }
-  .menuContainer__content .one {
-    transition: 0.4s;
-    transform: translateX(-60%); }
-  .menuContainer__content .two {
-    transition: 0.5s;
-    transform: translateX(-30%); }
-  .menuContainer__content .cta:hover .three {
-    animation: color_anim 1s infinite 0.2s; }
-  .menuContainer__content .cta:hover .one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s; }
-  .menuContainer__content .cta:hover .two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s; }
-
-@keyframes color_anim {
-  0% {
-    fill: white; }
-  50% {
-    fill: #EB455F; }
-  100% {
-    fill: white; } }
 
 .showMenu {
   display: block; }

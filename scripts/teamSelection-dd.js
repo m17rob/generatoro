@@ -476,3 +476,11 @@ function closeMenu(event) {
     document.removeEventListener("click", closeMenu);
   }
 }
+
+
+const btnHome = document.getElementById("btnHome");
+
+btnHome.addEventListener("click", function() {
+  window.location.assign("/");
+});
+
