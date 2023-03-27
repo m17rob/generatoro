@@ -414,8 +414,11 @@ body {
   border-radius: 0 0 5px 5px;
   display: none;
   z-index: 5;
-  animation: test1 .3s linear;
-  -webkit-animation: test1 .3s linear; }
+  animation: test1 .2s linear;
+  -webkit-animation: test1 .2s linear; }
+  .dropdown-options li {
+    animation: test2 .2s ease-in;
+    -webkit-animation: test2 .2s ease-in; }
 
 @keyframes test1 {
   from {
@@ -423,6 +426,12 @@ body {
     opacity: 0; }
   to {
     height: 20rem;
+    opacity: 1; } }
+
+@keyframes test2 {
+  from {
+    opacity: 0; }
+  to {
     opacity: 1; } }
 
 .dropdown-option {
