@@ -175,7 +175,10 @@ body {
       color: var(--color); }
   .menuContainer__oth {
     position: absolute;
-    bottom: 5rem; }
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start; }
     .menuContainer__oth p {
       font-size: 1.2rem;
       font-family: museomoderno, 'sans-serif';
