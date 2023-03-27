@@ -414,7 +414,8 @@ body {
   border-radius: 0 0 5px 5px;
   display: none;
   z-index: 5;
-  animation: test1 .3s linear; }
+  animation: test1 .3s linear;
+  -webkit-animation: test1 .3s linear; }
 
 @keyframes test1 {
   from {
