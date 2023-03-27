@@ -39,8 +39,8 @@ body {
 
 .menuContainer {
   background: #FCFFE7;
-  width: max-content;
-  height: 70vh;
+  width: 90vw;
+  height: 100vh;
   z-index: 800;
   position: absolute;
   right: 0;
@@ -168,7 +168,7 @@ body {
       position: absolute;
       top: 0%;
       left: 0%;
-      transform: scaleX(0.2) scaleY(0.4) translate(720%, 100%);
+      transform: scaleX(0.2) scaleY(0.4) translate(710%, 100%);
       border-top: solid 5px #67c431;
       border-left: solid 10px #67c431;
       transition: all .4s ease-in-out; }
@@ -181,7 +181,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(-42%, -50%) scaleX(0.2) scaleY(0.4);
+      transform: translate(-42%, -40%) scaleX(0.2) scaleY(0.4);
       border-bottom: solid 5px #67c431;
       border-right: solid 10px #67c431;
       transition: all .4s ease-in-out; }
