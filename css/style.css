@@ -776,3 +776,6 @@ footer {
     font-size: 1.4rem;
     color: #FCFFE7;
     font-family: museomoderno, 'sans-serif'; }
+
+#footer {
+  display: none; }

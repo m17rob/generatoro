@@ -28,7 +28,7 @@ window.addEventListener('load', function(){
         document.querySelector('#main-content').classList.add('animate__animated', 'animate__fadeIn');
         // afișează conținutul principal
         document.querySelector('#main-content').style.display = 'block';
-
+        document.querySelector('#footer').style.display = 'block';
         // întârzie afișarea elementului containerInfo cu 1 secundă
         setTimeout(function() {
           // afișează elementul containerInfo
