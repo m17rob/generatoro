@@ -30,6 +30,9 @@ window.addEventListener('load', function(){
         document.querySelector('#main-content').style.display = 'block';
         // pornește timer-ul pentru #virtuale-button după ce conținutul principal este afișat
         setTimeout(function() {
+          document.querySelector('#footer').style.display = 'block';
+        }, 500);
+        setTimeout(function() {
           document.getElementById('fotbal-button').style.display = 'block';
         }, 50);
         setTimeout(function() {
