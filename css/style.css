@@ -351,12 +351,14 @@ body {
     .leagueSelection {
       width: 1010px;
       border: 4px solid #FCFFE7;
+      box-shadow: inset 0 0 0.3em 0 #FCFFE7, 0 0 0.3em 0 #FCFFE7;
       padding-top: 2rem;
       padding-bottom: 2rem;
       border-radius: 10px; } }
   @media only screen and (min-width: 1440px) {
     .leagueSelection {
-      width: 1420px; } }
+      width: 1420px;
+      box-shadow: inset 0 0 0.3em 0 #FCFFE7, 0 0 0.3em 0 #FCFFE7; } }
   .leagueSelection__tag {
     background: rgba(43, 52, 103, 0.3);
     padding: .3rem 1.2rem;
