@@ -39,7 +39,7 @@ body {
 
 .menuContainer {
   background: #FCFFE7;
-  width: 75%;
+  width: max-content;
   height: 70vh;
   z-index: 800;
   position: absolute;
