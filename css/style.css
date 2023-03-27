@@ -28,8 +28,8 @@ body {
   background-color: #EB455F;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100vh; }
+  justify-content: space-between;
+  align-items: center; }
 
 .animate__animated.animate__fadeInRight {
   --animate-duration: .5s; }
@@ -39,8 +39,8 @@ body {
 
 .menuContainer {
   background: #FCFFE7;
-  width: 90vw;
-  height: 100%;
+  width: 80vw;
+  height: 90vh;
   z-index: 800;
   position: absolute;
   right: 0;
@@ -747,3 +747,13 @@ body {
 
 #main-content {
   display: none; }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem; }
+  footer p {
+    font-size: 1.4rem;
+    color: #FCFFE7;
+    font-family: museomoderno, 'sans-serif'; }
