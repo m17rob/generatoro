@@ -47,6 +47,10 @@ body {
   display: none;
   border-radius: 10px 0 0 10px;
   padding: 1rem 1rem 0 2rem; }
+  @media only screen and (min-width: 640px) {
+    .menuContainer {
+      width: 40rem;
+      top: 5rem; } }
   .menuContainer__closeBtn {
     display: flex;
     justify-content: space-between; }
@@ -307,12 +311,15 @@ body {
       margin-right: .7rem; }
 
 .containerInfoBox {
-  width: 70%;
+  width: 80%;
   height: max-content;
   border-radius: 10px;
   background: #FCFFE7;
   box-shadow: #fcffe713 0px 50px 100px -20px, #fcffe71f 0px 30px 60px -30px;
   padding: 2rem; }
+  @media only screen and (min-width: 620px) {
+    .containerInfoBox {
+      width: 47rem; } }
 
 .buttonInfo {
   color: #ecf0f1;
@@ -324,7 +331,8 @@ body {
   box-shadow: 0px 6px 0px #568f52;
   transition: all .1s;
   margin-top: 3.5rem;
-  font-family: museomoderno, 'sans-serif'; }
+  font-family: museomoderno, 'sans-serif';
+  cursor: pointer; }
 
 .buttonInfo:active {
   box-shadow: 0px 2px 0px #d35400;
@@ -336,6 +344,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media only screen and (min-width: 1010px) {
+    .leagueSelection {
+      width: 1010px;
+      border: 4px solid #FCFFE7;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-radius: 10px; } }
+  @media only screen and (min-width: 1440px) {
+    .leagueSelection {
+      width: 1420px; } }
   .leagueSelection__tag {
     background: rgba(43, 52, 103, 0.3);
     padding: .3rem 1.2rem;
@@ -495,6 +513,9 @@ body {
   display: flex;
   justify-content: start;
   z-index: 4; }
+  @media only screen and (min-width: 430px) {
+    #subSelect1 {
+      margin: 0; } }
 
 #subSelect2 {
   margin-top: 1.6rem;
@@ -503,12 +524,18 @@ body {
   align-items: center;
   justify-content: start;
   z-index: 2; }
+  @media only screen and (min-width: 430px) {
+    #subSelect2 {
+      margin: 0; } }
 
 .subselectori {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (min-width: 430px) {
+    .subselectori {
+      flex-direction: row; } }
 
 .subVS {
   font-size: 1.6rem;
@@ -518,11 +545,20 @@ body {
   padding: 1.2px 6px;
   font-family: museomoderno, 'sans-serif';
   display: none; }
+  @media only screen and (min-width: 430px) {
+    .subVS {
+      margin: 0 1rem; } }
 
 #containerRes {
   width: 100vw;
   background-color: #2B3467;
   margin-top: 2rem; }
+  @media only screen and (min-width: 1010px) {
+    #containerRes {
+      width: 1010px; } }
+  @media only screen and (min-width: 1440px) {
+    #containerRes {
+      width: 1420px; } }
 
 .containerRes__container {
   display: flex;
@@ -643,36 +679,18 @@ body {
   padding: 14px 16px;
   text-align: center;
   color: #fff;
-  font-size: 1.875rem;
+  font-size: 1.8rem;
   box-shadow: 0px 85px 34px rgba(0, 0, 0, 0.01), 0px 48px 29px rgba(0, 0, 0, 0.03), 0px 21px 21px rgba(0, 0, 0, 0.04), 0px 5px 12px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05); }
   .bubble img {
     margin-right: 1rem; }
-
-@media screen and (max-width: 1500px) {
-  .bubble {
-    font-size: 2rem; } }
-
-@media screen and (max-width: 1000px) {
-  .bubble {
-    font-size: 1.8rem;
-    width: 20rem; } }
-
-@media screen and (max-width: 600px) {
-  .bubble {
-    font-size: 1.5rem; } }
-
-@media screen and (max-width: 1500px) {
-  .bubble {
-    font-size: 2rem; } }
-
-@media screen and (max-width: 1000px) {
-  .bubble {
-    font-size: 1.8rem;
-    width: 20rem; } }
-
-@media screen and (max-width: 600px) {
-  .bubble {
-    font-size: 1.5rem; } }
+  @media only screen and (min-width: 320px) {
+    .bubble {
+      margin: 0;
+      font-size: 1.3rem; } }
+  @media only screen and (min-width: 1010px) {
+    .bubble {
+      margin: 0;
+      font-size: 1.5rem; } }
 
 #bubbleContainer {
   width: 100%;

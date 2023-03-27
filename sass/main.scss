@@ -65,6 +65,10 @@ body {
   border-radius: 10px 0 0 10px;
   padding: 1rem 1rem 0 2rem;
 
+  @media only screen and (min-width: 640px) {
+    width: 40rem;
+    top: 5rem;
+     }
 
   &__closeBtn {
     display: flex;
@@ -451,7 +455,7 @@ body {
 }
 
 .containerInfoBox {
-  width: 70%;
+  width: 80%;
   height: max-content;
   border-radius: 10px;
   background: $color-white;
@@ -461,6 +465,10 @@ body {
   // left: 50%;
   // transform: translate(-50%, -50%);
   padding: 2rem;
+
+  @media only screen and (min-width: 620px) {
+    width: 47rem;
+     }
 }
 
 .buttonInfo {
@@ -478,6 +486,7 @@ body {
   // bottom: 4rem;
   // left: 50%;
   // transform: translateX(-50%);
+  cursor: pointer;
  }
  
  .buttonInfo:active {
@@ -493,7 +502,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+
+    @media only screen and (min-width: 1010px) {
+      width: 1010px;
+      border: 4px solid $color-white;
+      // margin: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-radius: 10px;
+       }
+       @media only screen and (min-width: 1440px) {
+        width: 1420px;
+  
+         }
 
     &__tag {
         background: rgba(43, 52, 103, 0.3);
@@ -605,6 +626,7 @@ body {
     border-radius: 0 0 5px 5px;
     display: none;
     z-index: 5;
+
   }
 
 
@@ -742,6 +764,10 @@ body {
     display: flex;
     justify-content: start;
     z-index: 4;
+
+    @media only screen and (min-width: 430px) {
+      margin: 0;
+       }
   }
 
   #subSelect2 {
@@ -751,6 +777,10 @@ body {
     align-items: center;
     justify-content: start;
     z-index: 2;
+
+    @media only screen and (min-width: 430px) {
+      margin: 0;
+       }
   }
 
   .subselectori {
@@ -758,6 +788,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (min-width: 430px) {
+      flex-direction: row;
+       }
   }
   
   .subVS {
@@ -768,6 +802,11 @@ body {
     padding: 1.2px 6px;
     font-family: museomoderno, 'sans-serif';
     display: none;
+
+
+    @media only screen and (min-width: 430px) {
+      margin: 0 1rem;
+       }
   }
 
  
@@ -780,6 +819,15 @@ body {
     background-color: $color-darkBlue;
     margin-top: 2rem;
 
+
+    @media only screen and (min-width: 1010px) {
+     width: 1010px;
+       }
+
+       @media only screen and (min-width: 1440px) {
+        width: 1420px;
+
+         }
   }
 
 
@@ -964,33 +1012,24 @@ cursor: pointer;
   padding: 14px 16px;
   text-align: center;
   color: #fff;
-  font-size: 1.875rem;
+  font-size: 1.8rem;
   box-shadow: 0px 85px 34px rgba(0, 0, 0, 0.01), 0px 48px 29px rgba(0, 0, 0, 0.03), 0px 21px 21px rgba(0, 0, 0, 0.04), 0px 5px 12px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
 
   img {
     margin-right: 1rem;
   }
+
+  @media only screen and (min-width: 320px) {
+    margin: 0;
+    font-size: 1.3rem;
+     }
+
+     @media only screen and (min-width: 1010px) {
+      margin: 0;
+      font-size: 1.5rem;
+       }
 }
-  @media screen and (max-width: 1500px) {
-    .bubble {
-      font-size: 2rem; } }
-  @media screen and (max-width: 1000px) {
-    .bubble {
-      font-size: 1.8rem;
-      width: 20rem; } }
-  @media screen and (max-width: 600px) {
-    .bubble {
-      font-size: 1.5rem; } }
-  @media screen and (max-width: 1500px) {
-    .bubble {
-      font-size: 2rem; } }
-  @media screen and (max-width: 1000px) {
-    .bubble {
-      font-size: 1.8rem;
-      width: 20rem; } }
-  @media screen and (max-width: 600px) {
-    .bubble {
-      font-size: 1.5rem; } }
+
 
 
 #bubbleContainer {
@@ -1093,6 +1132,8 @@ cursor: pointer;
   #main-content {
     // padding: 2rem;
   display: none;
+
+
   }
 
 
