@@ -164,7 +164,8 @@ body {
       -webkit-user-select: none;
       touch-action: manipulation;
       margin-bottom: 2rem;
-      cursor: pointer; }
+      cursor: pointer;
+      margin: 0 3rem; }
     .menuContainer__Btns .btnG:hover,
     .menuContainer__Btns .btnG:focus-visible {
       --_p: 0px;
