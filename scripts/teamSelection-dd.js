@@ -205,12 +205,17 @@ options.forEach(option => {
     dropdownOptions.classList.remove("show");
     subBtn.classList.add('show');
     subVS.classList.add('show');
-    tag.classList.add('show');
+    tag.classList.add('show', 'animate__animated', 'animate__fadeIn');
     // aici adăugăm codul pentru a crea subdropdown-ul
     const subdropdown = document.getElementById("subdropdown");
     subdropdown.innerHTML = "";
     const subdropdownBtn = document.createElement("button");
     subdropdownBtn.classList.add("dropdown-btn");
+    document.querySelector('.subselectori').classList.add('animate__animated', 'animate__fadeIn');
+    subBtn.classList.add('animate__animated', 'animate__fadeIn');
+      setTimeout(function() {
+        subBtn.classList.add('blob', 'white');
+      }, 1000); // timpul de întârziere în milisecunde
     subdropdownBtn.setAttribute('id', 'subSelect1');
     subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
     // subdropdownBtn.innerHTML = '<div id="justCont"><img src="${dict[option].suboptiuni[selectedSuboption]}" alt="${selectedSuboption}" class="dropdown-option-img"> ${selectedSuboption}</div> ';

@@ -623,8 +623,7 @@ body {
   color: #00235B;
   font-weight: 600;
   cursor: pointer;
-  font-size: 1.6rem;
-  animation: pulse-white 2s infinite; }
+  font-size: 1.6rem; }
 
 .blob.white {
   background: white;
