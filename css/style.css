@@ -624,7 +624,8 @@ body {
 .blob.white {
   background: white;
   box-shadow: 0 0 0 0 white;
-  animation: pulse-white 2s infinite; }
+  animation: pulse-white 2s infinite;
+  -webkit-animation: pulse-white 2s infinite; }
 
 @keyframes pulse-white {
   0% {

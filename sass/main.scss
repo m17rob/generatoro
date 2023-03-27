@@ -933,6 +933,7 @@ margin-right: 0;
     background: white;
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
     animation: pulse-white 2s infinite;
+    -webkit-animation: pulse-white 2s infinite;
   }
   
   @keyframes pulse-white {
