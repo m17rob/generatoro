@@ -395,12 +395,14 @@ body {
       align-items: center; }
 
 #dropdown {
-  position: relative; }
+  position: relative;
+  transform-origin: center; }
 
 .dropdown-options {
   position: absolute;
   top: 20%;
   width: 100%;
+  height: 20rem;
   left: 0;
   margin-top: 5px;
   padding-top: 3rem !important;
@@ -411,7 +413,16 @@ body {
   outline: none;
   border-radius: 0 0 5px 5px;
   display: none;
-  z-index: 5; }
+  z-index: 5;
+  animation: test1 .3s linear; }
+
+@keyframes test1 {
+  from {
+    height: 0px;
+    opacity: 0; }
+  to {
+    height: 20rem;
+    opacity: 1; } }
 
 .dropdown-option {
   padding: 10px;
@@ -603,7 +614,8 @@ body {
       font-size: 1.4rem; }
     .containerRes__container--R__two {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      cursor: pointer; }
 
 #submitButton {
   background-color: #FCFFE7;
