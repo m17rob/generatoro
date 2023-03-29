@@ -258,10 +258,73 @@ body {
     margin-bottom: 5rem;
     margin-right: 2rem;
     display: flex;
-    justify-content: end; }
+    align-items: center;
+    justify-content: end;
+    position: relative; }
     @media only screen and (min-width: 1010px) {
       .heading__menu {
         margin-right: 0; } }
+    .heading__menu #bell-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 4rem;
+      position: relative;
+      cursor: pointer; }
+      .heading__menu #bell-icon img {
+        cursor: pointer; }
+      .heading__menu #bell-icon #dot {
+        display: none; }
+      .heading__menu #bell-icon .blob {
+        background: black;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 black;
+        height: 10px;
+        width: 10px;
+        transform: scale(1);
+        animation: pulse-green 2s infinite;
+        position: absolute;
+        top: 0;
+        right: 1px; }
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7); }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(51, 217, 178, 0); }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0); } }
+      .heading__menu #bell-icon .blob.green {
+        background: #33d9b2;
+        box-shadow: 0 0 0 0 #33d9b2;
+        animation: pulse-green 2s infinite; }
+    .heading__menu .card {
+      background: #FCFFE7;
+      padding: 2rem;
+      position: absolute;
+      top: 5rem;
+      border-radius: 5px;
+      height: 15rem;
+      width: 15rem; }
+      .heading__menu .card__title {
+        color: #00235B;
+        font-family: museomoderno, 'sans-serif';
+        opacity: .6;
+        align-self: center;
+        font-size: 1.4rem;
+        margin-bottom: 1rem; }
+      .heading__menu .card__content p {
+        border: 2px solid #00235B;
+        border-radius: 2px;
+        font-size: 1.6rem;
+        font-family: museomoderno, 'sans-serif';
+        padding: .2rem 1rem;
+        color: #00235B; }
+      .heading__menu .card__content :not(:last-child) {
+        margin-bottom: 1.2rem; }
     .heading__menu #menu {
       cursor: pointer; }
   .heading__title {
@@ -808,3 +871,9 @@ footer {
 
 .rotate {
   transform: rotate(180deg); }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
