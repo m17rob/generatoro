@@ -22,8 +22,14 @@ function onClick() {
 
 document.getElementById("bell-icon").addEventListener("click", onClick);
 
-
-
 document.querySelector('#bell-icon').addEventListener('click', function() {
     document.querySelector('.card').classList.toggle('hide');
   });
+  
+  document.body.addEventListener('click', function(event) {
+    if (!event.target.closest('.card') && !event.target.closest('#bell-icon')) {
+      document.querySelector('.card').classList.add('hide');
+    }
+  });
+  
+  
