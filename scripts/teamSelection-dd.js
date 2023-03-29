@@ -232,6 +232,8 @@ options.forEach(option => {
     // adăugăm evenimentul click pentru butonul subdropdown-ului
     subdropdownBtn.addEventListener("click", () => {
       subdropdownOptions.classList.toggle("show");
+      document.querySelector(".subdropdown-options2").classList.remove("show");
+      document.querySelector(".dropdown-options").classList.remove("show");
     });
     
 
@@ -269,6 +271,8 @@ for (const suboption2 in dict[option].suboptiuni) {
 // adăugăm evenimentul click pentru butonul subdropdown2-ului
 subdropdownBtn2.addEventListener("click", () => {
   subdropdownOptions2.classList.toggle("show");
+  document.querySelector(".subdropdown-options").classList.remove("show");
+  document.querySelector(".dropdown-options").classList.remove("show");
 });
 
 // adăugăm evenimentul click pentru fiecare subopțiune din subdropdown2
@@ -297,6 +301,8 @@ dropdown.appendChild(dropdownOptions);
 // adăugăm evenimentul click la butonul dropdown
 dropdownBtn.addEventListener("click", () => {
   dropdownOptions.classList.toggle("show");
+  document.querySelector(".subdropdown-options").classList.remove("show");
+  document.querySelector(".subdropdown-options2").classList.remove("show");
 });
 
 // var pronos = ["po1", "po2", "po3", "px1", "px3", "px4", "pf1", "pf2", "pl1", "pl2"];

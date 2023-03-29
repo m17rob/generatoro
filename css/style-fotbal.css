@@ -634,7 +634,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .9rem 1.2rem .9rem 2rem; }
+  padding: .9rem 1.2rem .9rem 2rem;
+  position: relative;
+  z-index: -1; }
   .containerRes__container:not(:last-child) {
     border-bottom: 1px #FCFFE7 solid; }
   .containerRes__container--L__one {
