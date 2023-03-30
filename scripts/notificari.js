@@ -1,4 +1,4 @@
-let count = 4;
+let count = 5;
 let countCheck = parseInt(localStorage.getItem("countCheck")) || 1;
 let buttonPressed = false;
 
