@@ -368,7 +368,8 @@ body {
             @media only screen and (max-width: 410px) {
               .heading__menu .card__content .cardNot__right--title {
                 font-size: 1.4rem;
-                line-height: 15px; } }
+                line-height: 15px;
+                -webkit-line-height: 15px; } }
           .heading__menu .card__content .cardNot__right--txt {
             font-size: .9rem;
             color: #00235B;
