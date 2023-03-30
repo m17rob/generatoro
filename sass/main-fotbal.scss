@@ -1443,6 +1443,18 @@ cursor: pointer;
   flex-direction: column;
   // display: none;
 
+  @media only screen and (min-width: 1010px) {
+    width: 102rem;
+    // top: 17%;
+    border-radius: 5px;
+             }
+
+             @media only screen and (min-width: 1440px) {
+              width: 144rem;
+              // top: 17%;
+              border-radius: 5px;
+                       }
+
 
   #closeContent {
     align-self: end;
@@ -1481,6 +1493,10 @@ cursor: pointer;
     text-align: start;
     color: $color-darkBlue;
     font-family: museomoderno, 'sans-serif';
+
+    @media only screen and (min-width: 1010px) {
+    width: 50%;
+               }
   }
 
   &__ref {
@@ -1492,11 +1508,19 @@ cursor: pointer;
 
     img {
       width: 20%;
+
+      @media only screen and (min-width: 1010px) {
+     width: 8%;
+                 }
     }
 
     :nth-child(2) {
       width: 8%;
       margin-left: 2rem;
+
+      @media only screen and (min-width: 1010px) {
+        width: 3%;
+                 }
     }
   }
 }
@@ -1515,6 +1539,10 @@ cursor: pointer;
   border-radius: 10px;
   margin-top: 2rem;
   cursor: pointer;
+
+  @media only screen and (min-width: 1010px) {
+   width: 60%;
+             }
 
   }
 

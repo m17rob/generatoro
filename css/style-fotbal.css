@@ -957,6 +957,14 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column; }
+  @media only screen and (min-width: 1010px) {
+    .bileteContent {
+      width: 102rem;
+      border-radius: 5px; } }
+  @media only screen and (min-width: 1440px) {
+    .bileteContent {
+      width: 144rem;
+      border-radius: 5px; } }
   .bileteContent #closeContent {
     align-self: end;
     margin-top: 1rem;
@@ -988,6 +996,9 @@ footer {
     text-align: start;
     color: #2B3467;
     font-family: museomoderno, 'sans-serif'; }
+    @media only screen and (min-width: 1010px) {
+      .bileteContent__para {
+        width: 50%; } }
   .bileteContent__ref {
     display: flex;
     align-items: center;
@@ -995,9 +1006,15 @@ footer {
     margin-top: 1.5rem; }
     .bileteContent__ref img {
       width: 20%; }
+      @media only screen and (min-width: 1010px) {
+        .bileteContent__ref img {
+          width: 8%; } }
     .bileteContent__ref :nth-child(2) {
       width: 8%;
       margin-left: 2rem; }
+      @media only screen and (min-width: 1010px) {
+        .bileteContent__ref :nth-child(2) {
+          width: 3%; } }
 
 #content {
   width: 100%;
@@ -1012,6 +1029,9 @@ footer {
   border-radius: 10px;
   margin-top: 2rem;
   cursor: pointer; }
+  @media only screen and (min-width: 1010px) {
+    .cardW {
+      width: 60%; } }
 
 .cardW__left {
   display: flex;

@@ -120,6 +120,7 @@ const closeContent = document.querySelector('#closeContent');
 
 btnG.addEventListener('click', () => {
     bileteContent.classList.replace('hideB', 'showFlex');
+    document.querySelector('.menuContainer').classList.remove('showMenu')
     bileteContent.classList.add('animate__animated', 'animate__fadeIn');
   bileteContent.classList.remove('animate__fadeOutUpBig');
 });
