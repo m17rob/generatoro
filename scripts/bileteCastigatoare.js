@@ -1,6 +1,6 @@
 const data = {
     "div1": {
-        "matchCount": "10",
+        "matchCount": "3",
         "utilizator": "@andreiC...",
         "data": "30.05.2023",
         "matches": [
@@ -18,7 +18,7 @@ const data = {
         "cotaTotala": "20.15"
     },
     "div2": {
-        "matchCount": "5",
+        "matchCount": "2",
         "utilizator": "@mariaD...",
         "data": "01.06.2023",
         "matches": [
@@ -71,39 +71,45 @@ for (const key in data) {
     const centerDiv = cardW.querySelector(".center");
     cardW.addEventListener("click", function() {
         // Închide div-ul curent, dacă există
-      // Închide ultimul div deschis dacă există
-if (currentDiv !== null && currentDiv !== centerDiv) {
-    currentDiv.classList.add("hidden");
+        if (currentDiv !== null && currentDiv !== centerDiv) {
+          currentDiv.classList.add("hidden");
+          currentDiv.parentElement.style.boxShadow = "";
+        }
+      
+        // Deschide sau închide div-ul curent
+        centerDiv.classList.toggle("hidden");
+        if (!centerDiv.classList.contains("hidden")) {
+          centerDiv.parentElement.style.boxShadow = "inset 0 0 0.3em 0 #5FD068, 0 0 0.3em 0 #5FD068";
+        } else {
+          centerDiv.parentElement.style.boxShadow = "";
+        }
+      
+        // Actualizează div-ul curent
+        currentDiv = centerDiv;
+      });
+      
+
+    // Adaugă div-ul în array-ul containers
+    containers.push(cardW);
+
+    // Adaugă meciurile în centru
+    const center = cardW.querySelector(".center");
+    const matches = data[key].matches;
+    for (const matchKey in matches) {
+        const match = matches[matchKey];
+        const cardMw = document.createElement("div");
+        cardMw.classList.add("cardMw");
+        cardMw.innerHTML = `
+            <div class="cardMw__match">${match.match}</div>
+            <div class="cardMw__datas">
+                <div class="cardMw__datas--prono">${match.prono}</div>
+                <div class="cardMw__datas--odd">${match.odd}</div>
+            </div>
+        `;
+        center.appendChild(cardMw);
+    }
 }
 
-// Deschide sau închide div-ul curent
-centerDiv.classList.toggle("hidden");
-
-// Actualizează div-ul curent
-currentDiv = centerDiv;
-
-        });
-
-        // Adaugă div-ul în array-ul containers
-containers.push(cardW);
-
-// Adaugă meciurile în centru
-const center = cardW.querySelector(".center");
-const matches = data[key].matches;
-for (const matchKey in matches) {
-    const match = matches[matchKey];
-    const cardMw = document.createElement("div");
-    cardMw.classList.add("cardMw");
-    cardMw.innerHTML = `
-        <div class="cardMw__match">${match.match}</div>
-        <div class="cardMw__datas">
-            <div class="cardMw__datas--prono">${match.prono}</div>
-            <div class="cardMw__datas--odd">${match.odd}</div>
-        </div>
-    `;
-    center.appendChild(cardMw);
-}
-}
 // Adaugă array-ul containers în HTML
 contentDiv.append(...containers);
 
