@@ -113,9 +113,17 @@ const bileteContent = document.querySelector('.bileteContent');
 const closeContent = document.querySelector('#closeContent');
 
 btnG.addEventListener('click', () => {
-  bileteContent.classList.replace('hideB', 'showFlex');
+    bileteContent.classList.replace('hideB', 'showFlex');
+    bileteContent.classList.add('animate__animated', 'animate__fadeIn');
+  bileteContent.classList.remove('animate__fadeOutUpBig');
 });
 
 closeContent.addEventListener('click', () => {
-    bileteContent.classList.replace('showFlex', 'hideB')
-})
+  bileteContent.classList.add('animate__animated', 'animate__fadeOutUpBig');
+  setTimeout(() => {
+    bileteContent.classList.replace('showFlex', 'hideB');
+    bileteContent.classList.remove('animate__animated', 'animate__fadeOutUpBig', 'animate__fadeIn');
+  }, 1000); // timpul în milisecunde (în acest exemplu este 1 secundă)
+});
+
+  
