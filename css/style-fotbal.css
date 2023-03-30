@@ -1005,16 +1005,12 @@ footer {
     justify-content: center;
     margin-top: 1.5rem; }
     .bileteContent__ref img {
-      width: 20%; }
-      @media only screen and (min-width: 1010px) {
-        .bileteContent__ref img {
-          width: 8%; } }
+      border: 2px solid #00235b6e;
+      padding: .7rem;
+      border-radius: 10px;
+      cursor: pointer; }
     .bileteContent__ref :nth-child(2) {
-      width: 8%;
       margin-left: 2rem; }
-      @media only screen and (min-width: 1010px) {
-        .bileteContent__ref :nth-child(2) {
-          width: 3%; } }
 
 #content {
   width: 100%;

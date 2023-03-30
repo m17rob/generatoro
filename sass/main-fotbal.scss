@@ -1506,21 +1506,18 @@ cursor: pointer;
     justify-content: center;
     margin-top: 1.5rem;
 
-    img {
-      width: 20%;
 
-      @media only screen and (min-width: 1010px) {
-     width: 8%;
-                 }
+    img {
+      border: 2px solid #00235b6e;
+      padding: .7rem;
+      border-radius: 10px;
+      cursor: pointer;
     }
 
     :nth-child(2) {
-      width: 8%;
       margin-left: 2rem;
 
-      @media only screen and (min-width: 1010px) {
-        width: 3%;
-                 }
+
     }
   }
 }

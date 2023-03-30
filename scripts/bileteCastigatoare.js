@@ -1,6 +1,6 @@
 const data = {
     "div1": {
-        "matchCount": "3",
+        "matchCount": "2",
         "utilizator": "@andreiC...",
         "data": "30.05.2023",
         "matches": [
@@ -18,7 +18,7 @@ const data = {
         "cotaTotala": "20.15"
     },
     "div2": {
-        "matchCount": "2",
+        "matchCount": "3",
         "utilizator": "@mariaD...",
         "data": "01.06.2023",
         "matches": [
