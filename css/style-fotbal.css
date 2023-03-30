@@ -364,17 +364,18 @@ body {
             font-size: 1.4rem;
             font-family: museomoderno, 'sans-serif';
             color: #00235B;
-            font-weight: 700; }
+            font-weight: 700;
+            line-height: 15px;
+            -webkit-line-height: 15px; }
             @media only screen and (max-width: 410px) {
               .heading__menu .card__content .cardNot__right--title {
-                font-size: 1.4rem;
-                line-height: 15px;
-                -webkit-line-height: 15px; } }
+                font-size: 1.4rem; } }
           .heading__menu .card__content .cardNot__right--txt {
             font-size: .9rem;
             color: #00235B;
             font-family: museomoderno, 'sans-serif';
-            opacity: .8; }
+            opacity: .8;
+            margin-top: .5rem; }
             @media only screen and (max-width: 410px) {
               .heading__menu .card__content .cardNot__right--txt {
                 margin-top: .5rem; } }

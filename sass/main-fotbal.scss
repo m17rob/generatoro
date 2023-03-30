@@ -524,12 +524,11 @@ margin-right: 0;
                   font-family: museomoderno, 'sans-serif';
                   color: $color-BlueDarky;
                   font-weight: 700;
-
+                  line-height: 15px;
+                  -webkit-line-height: 15px;
                   @media only screen and (max-width: 410px) {
                     font-size: 1.4rem;
-                    line-height: 15px;
 
-                    -webkit-line-height: 15px;
                     // position: absolute;
                              }
                 }
@@ -539,6 +538,7 @@ margin-right: 0;
                   color: $color-BlueDarky;
                   font-family: museomoderno, 'sans-serif';
                   opacity: .8;
+                  margin-top: .5rem;
 
                   @media only screen and (max-width: 410px) {
                     margin-top: .5rem;
