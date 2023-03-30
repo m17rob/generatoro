@@ -32,4 +32,96 @@ document.querySelector('#bell-icon').addEventListener('click', function() {
     }
   });
   
+
+
+
+// Definim un obiect gol in care sa stocam informatiile
+var cardInfo = {};
+
+// Functia pentru a adauga un element "cardNot" si actualizarea dictionarului
+function addCardNot(day, month, author, title, description, time) {
+  // Gasim elementul ".card__content"
+  var cardContent = document.querySelector(".card__content");
+
+  // Creem elementul "cardNot" nou
+  var cardNot = document.createElement("div");
+  cardNot.classList.add("cardNot");
+
+  // Creem elementul "left"
+  var left = document.createElement("div");
+  left.classList.add("left");
+
+  // Creem elementul "cardNot__timeC"
+  var cardTimeC = document.createElement("div");
+  cardTimeC.classList.add("cardNot__timeC");
+
+  // Creem elementele pentru ziua si luna
+  var cardDay = document.createElement("div");
+  cardDay.classList.add("card__timeC--day");
+  cardDay.textContent = day;
+  var cardMonth = document.createElement("div");
+  cardMonth.classList.add("card__timeC__month");
+  cardMonth.textContent = month;
+
+  // Adaugam elementele pentru ziua si luna in elementul "cardNot__timeC"
+  cardTimeC.appendChild(cardDay);
+  cardTimeC.appendChild(cardMonth);
+
+  // Adaugam elementul "cardNot__timeC" in elementul "left"
+  left.appendChild(cardTimeC);
+
+  // Creem elementul "cardNot__left" pentru autor
+  var cardLeft = document.createElement("div");
+  cardLeft.classList.add("cardNot__left");
+  cardLeft.textContent = author;
+
+  // Adaugam elementul "cardNot__left" in elementul "left"
+  left.appendChild(cardLeft);
+
+  // Creem elementul "cardNot__right" pentru titlu si descriere
+  var cardRight = document.createElement("div");
+  cardRight.classList.add("cardNot__right");
+  var cardTitle = document.createElement("div");
+  cardTitle.classList.add("cardNot__right--title");
+  cardTitle.textContent = title;
+  var cardDescription = document.createElement("div");
+  cardDescription.classList.add("cardNot__right--txt");
+  cardDescription.textContent = description;
+  cardRight.appendChild(cardTitle);
+  cardRight.appendChild(cardDescription);
+
+  // Adaugam elementul "cardNot__right" in elementul "left"
+  left.appendChild(cardRight);
+
+  // Adaugam elementul "left" in elementul "cardNot"
+  cardNot.appendChild(left);
+
+  // Creem elementul "cardNot__time" pentru ora
+  var cardTime = document.createElement("div");
+  cardTime.classList.add("cardNot__time");
+  cardTime.textContent = time;
+
+  // Adaugam elementul "cardNot__time" in elementul "cardNot"
+  cardNot.appendChild(cardTime);
+
+  // Adaugam elementul "cardNot" in elementul ".card__content"
+  cardContent.appendChild(cardNot);
+
+  // Actualizam dictionarul
+  var index = Object.keys(cardInfo).length;
+  cardInfo[index] = {
+    "day": day,
+    "month": month,
+    "author": author,
+    "title": title,
+    "description": description,
+    "time": time
+  };
+}
+
+
+// Exemplu de adaugare a unui element nou
+addCardNot("30", "Mar.", "ADMIN", "Noi campionate adaugate", "Premier league, Ligue One, La Liga", "17:50")
+addCardNot("30", "Mar.", "ADMIN", "Noua stire", "test", "17:49")
+
   

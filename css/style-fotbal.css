@@ -309,6 +309,9 @@ body {
       right: -2rem;
       border-radius: 5px;
       z-index: 10; }
+      .heading__menu .card .left {
+        display: flex;
+        align-items: center; }
       .heading__menu .card__title {
         color: #00235B;
         font-family: museomoderno, 'sans-serif';
@@ -321,6 +324,7 @@ body {
       .heading__menu .card__content .cardNot {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding-bottom: 1rem; }
         .heading__menu .card__content .cardNot:not(:last-child) {
           margin-bottom: 2rem;

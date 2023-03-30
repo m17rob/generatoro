@@ -443,6 +443,12 @@ margin-right: 0;
           z-index: 10;
 
 
+          .left {
+            display: flex;
+            align-items: center;
+          }
+
+
 
           &__title {
             color: $color-BlueDarky;
@@ -467,7 +473,9 @@ margin-right: 0;
             .cardNot {
               display: flex;
               align-items: center;
+              justify-content: space-between;
               padding-bottom: 1rem;
+              
 
               &:not(:last-child) {
                 margin-bottom: 2rem;
@@ -505,6 +513,7 @@ margin-right: 0;
                 border-radius: 50%;
                 font-family: 'Poppins', 'sans-serif';
                 background: #00235b98;
+
 
 
                 @media only screen and (max-width: 410px) {
@@ -556,6 +565,12 @@ margin-right: 0;
                 border-radius: 3px;
                 font-family: museomoderno, 'sans-serif';
                 font-weight: 700;
+                // margin-left: auto;
+                // justify-self: end;
+                // text-align: end;
+                // align-self: end;
+
+
 
 
                 @media only screen and (max-width: 410px) {
