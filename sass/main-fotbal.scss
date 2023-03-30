@@ -1430,3 +1430,160 @@ cursor: pointer;
 .show {
   display: block;
 }
+
+
+.bileteContent {
+  width: 100%;
+  height: 100%;
+  background: $color-white;
+  position: absolute;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // display: none;
+
+
+  #closeContent {
+    align-self: end;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
+    font-family: museomoderno, 'sans-serif';
+    color: $color-BlueDarky;
+    font-weight: 700;
+  }
+
+  &__month {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: museomoderno, 'sans-serif';
+    background: $color-red;
+    color: $color-white;
+    font-weight: 700;
+    padding: .2rem 1rem;
+    border-radius: 5px;
+  }
+
+  &__para {
+    width: 70%;
+    background-color: #aaaaaab2;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-align: start;
+    color: $color-darkBlue;
+    font-family: museomoderno, 'sans-serif';
+  }
+
+  &__ref {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+    img {
+      width: 20%;
+    }
+
+    :nth-child(2) {
+      width: 8%;
+      margin-left: 2rem;
+    }
+  }
+}
+
+#content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardW {
+  width: 90%;
+  background: greenyellow;
+  padding: 1rem .2rem 0 .2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  
+  
+  }
+  
+  .cardW__left {
+      display: flex;
+      align-items: center;
+  }
+  
+  .cardW__left--matchCount {
+      margin-right: .5rem;
+      background: red;
+      padding: .2rem;
+      border-radius: 50%;
+      font-size: 10px;
+      color: #eee;
+  }
+  
+  .cardW__left--utilizator {
+      font-size: 12px;
+  }
+  
+  .cardW__right {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: red;
+  }
+  
+  .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+  }
+  
+  .bottom {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .cardW__bottom {
+      background: gray;
+      color: #eee;
+      padding: .3rem;
+      border-radius: 5px 5px 0 0;
+  }
+  
+  .cardW__left--data {
+      font-size: 14px;
+  }
+  
+  
+  .cardMw {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: blueviolet;
+      margin-right: -.2rem;
+      margin-left: -.2rem;
+      margin-bottom: 1rem;
+      color: #eee;
+  }
+
+
+  .hidden {
+    display: none; /* ascunde lista inițial */
+}
+
+
+
+
+.hideB {
+  display: none;
+}
