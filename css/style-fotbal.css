@@ -966,7 +966,7 @@ footer {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-family: museomoderno, 'sans-serif';
     color: #00235B;
     font-weight: 700; }
@@ -981,9 +981,10 @@ footer {
     border-radius: 5px; }
   .bileteContent__para {
     width: 70%;
-    background-color: #aaaaaab2;
+    background-color: #2b346733;
     padding: 1rem 2rem;
     border-radius: 10px;
+    font-size: 1.1rem;
     text-align: start;
     color: #2B3467;
     font-family: museomoderno, 'sans-serif'; }
@@ -1006,8 +1007,8 @@ footer {
 
 .cardW {
   width: 90%;
-  background: greenyellow;
-  padding: 1rem .2rem 0 .2rem;
+  background: #5FD068;
+  padding: 1rem .5rem 0 .5rem;
   border-radius: 10px;
   margin-top: 2rem; }
 
@@ -1017,34 +1018,46 @@ footer {
 
 .cardW__left--matchCount {
   margin-right: .5rem;
-  background: red;
+  background: #EB455F;
+  width: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13px;
   padding: .2rem;
   border-radius: 50%;
   font-size: 10px;
-  color: #eee; }
+  color: #FCFFE7;
+  font-family: museomoderno, 'sans-serif';
+  align-self: start; }
 
 .cardW__left--utilizator {
-  font-size: 12px; }
+  font-size: 1.1rem;
+  font-family: museomoderno, 'sans-serif';
+  color: #2B3467; }
 
-.cardW__right {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: red; }
+.cardW__left--data {
+  font-size: 1.1rem;
+  color: #2B3467;
+  font-family: museomoderno, 'sans-serif'; }
 
 .top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem; }
+  align-items: center;
+  margin-bottom: .5rem; }
 
 .bottom {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 2rem; }
 
 .cardW__bottom {
-  background: gray;
-  color: #eee;
-  padding: .3rem;
+  background: #2B3467;
+  font-size: 1.4rem;
+  font-family: museomoderno, 'sans-serif';
+  color: #FCFFE7;
+  padding: .3rem 1.2rem;
   border-radius: 5px 5px 0 0; }
 
 .cardW__left--data {
@@ -1054,11 +1067,32 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: blueviolet;
-  margin-right: -.2rem;
-  margin-left: -.2rem;
-  margin-bottom: 1rem;
+  background: #2B3467;
+  margin-right: -.5rem;
+  margin-left: -.5rem;
+  padding: .5rem 1rem;
   color: #eee; }
+  .cardMw:not(:last-child) {
+    border-bottom: 1px solid #FCFFE7; }
+  .cardMw__match {
+    font-family: museomoderno, 'sans-serif';
+    color: #FCFFE7;
+    font-size: 1.1rem; }
+  .cardMw__datas {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .cardMw__datas--prono {
+      font-size: 1.2rem;
+      font-family: museomoderno, 'sans-serif';
+      color: #FCFFE7;
+      margin-bottom: .3rem; }
+    .cardMw__datas--odd {
+      font-size: 1.1rem;
+      font-family: museomoderno, 'sans-serif';
+      background: #EB455F;
+      padding: .1rem 1rem;
+      border-radius: 5px; }
 
 .hidden {
   display: none;

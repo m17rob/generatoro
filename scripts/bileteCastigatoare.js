@@ -39,29 +39,6 @@ const data = {
             }
         ],
         "cotaTotala": "30.50"
-    },
-    "div3": {
-        "matchCount": "5",
-        "utilizator": "@mariaD...",
-        "data": "01.06.2023",
-        "matches": [
-            {
-                "match": "Liverpool - Chelsea",
-                "prono": "1",
-                "odd": "1.80"
-            },
-            {
-                "match": "Paris Saint-Germain - Bayern Munich",
-                "prono": "2",
-                "odd": "2.25"
-            },
-            {
-                "match": "Manchester United - Manchester City",
-                "prono": "1X",
-                "odd": "1.70"
-            }
-        ],
-        "cotaTotala": "30.50"
     }
 };
 
@@ -81,18 +58,9 @@ for (const key in data) {
                     <div class="cardW__left--data">${data[key].data}</div>
                 </div>
             </div>
-            <div class="cardW__right"></div>
+            <div class="cardW__right"><img src="img/dropdown-arrow.svg" alt="icon"></div>
         </div>
         <div class="center hidden">
-            ${data[key].matches.map(match => `
-                <div class="cardMw">
-                    <div class="cardMw__match">${match.match}</div>
-                    <div class="cardMw__datas">
-                        <div class="cardMw__datas--prono">${match.prono}</div>
-                        <div class="cardMw__datas--odd">${match.odd}</div>
-                    </div>
-                </div>
-            `).join('')}
         </div>
         <div class="bottom">
             <div class="cardW__bottom">Cota totala: ${data[key].cotaTotala}</div>
