@@ -163,7 +163,8 @@ body {
       background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
       color: #00235B;
       box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
-      margin-bottom: 1rem; }
+      margin-bottom: 5rem;
+      cursor: pointer; }
     .menuContainer__Btns .btnG:hover {
       color: #00235B;
       box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2); }
@@ -178,152 +179,6 @@ body {
       background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%); }
     .menuContainer__Btns .btnG:hover:before {
       transform: translateX(25em); }
-    .menuContainer__Btns .btn1 {
-      display: inline-block;
-      padding: 0.9rem 1.8rem;
-      font-size: 16px;
-      font-weight: 700;
-      color: #00235B;
-      border: 3px solid #fc4664;
-      cursor: pointer;
-      position: relative;
-      background-color: transparent;
-      text-decoration: none;
-      overflow: hidden;
-      z-index: 1;
-      font-family: inherit;
-      margin-bottom: 1rem; }
-    .menuContainer__Btns .btn1::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #fc4664;
-      transform: translateX(-100%);
-      transition: all .3s;
-      z-index: -1; }
-    .menuContainer__Btns .btn1:hover {
-      color: #FCFFE7; }
-    .menuContainer__Btns .btn1:hover::before {
-      transform: translateX(0); }
-    .menuContainer__Btns .btn2 {
-      height: 45px;
-      font-size: 23px;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      background: transparent;
-      color: #00235B;
-      font-family: museomoderno, 'sans-serif';
-      font-weight: 700;
-      position: relative;
-      transition: all 0.5s;
-      z-index: 1;
-      padding: 0 1rem; }
-    .menuContainer__Btns .btn2::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background-color: #EB455F;
-      z-index: -1;
-      transition: all 0.5s; }
-    .menuContainer__Btns .btn2:hover::before {
-      width: 100%; }
-    .menuContainer__Btns .btn2:hover {
-      color: #FCFFE7; }
-    .menuContainer__Btns .btn2:active:before {
-      background: #b9b9b9; }
-    .menuContainer__Btns .fancy {
-      background-color: transparent;
-      border: 2px solid #EB455F;
-      border-radius: 0;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      display: inline-block;
-      float: right;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      margin: 0;
-      outline: none;
-      overflow: visible;
-      padding: 1.25em 2em;
-      position: relative;
-      text-align: center;
-      text-decoration: none;
-      text-transform: none;
-      transition: all 0.3s ease-in-out;
-      user-select: none;
-      font-size: 13px;
-      margin-top: 2rem;
-      margin-top: 2rem;
-      font-family: museomoderno, 'sans-serif'; }
-    .menuContainer__Btns .fancy::before {
-      content: " ";
-      width: 1.5625rem;
-      height: 2px;
-      background: #EB455F;
-      top: 50%;
-      left: 1.5em;
-      position: absolute;
-      transform: translateY(-50%);
-      transform-origin: center;
-      transition: background 0.3s linear, width 0.3s linear; }
-    .menuContainer__Btns .fancy .text {
-      font-size: 1.125em;
-      line-height: 1.33333em;
-      padding-left: 2em;
-      display: block;
-      text-align: left;
-      transition: all 0.3s ease-in-out;
-      text-decoration: none;
-      color: #00235B;
-      font-weight: 800; }
-    .menuContainer__Btns .fancy .top-key {
-      height: 2px;
-      width: 1.5625rem;
-      top: -2px;
-      left: 0.625rem;
-      position: absolute;
-      background: #FCFFE7;
-      transition: width 0.5s ease-out, left 0.3s ease-out; }
-    .menuContainer__Btns .fancy .bottom-key-1 {
-      height: 2px;
-      width: 1.5625rem;
-      right: 1.875rem;
-      bottom: -2px;
-      position: absolute;
-      background: #FCFFE7;
-      transition: width 0.5s ease-out, right 0.3s ease-out; }
-    .menuContainer__Btns .fancy .bottom-key-2 {
-      height: 2px;
-      width: 0.625rem;
-      right: 0.625rem;
-      bottom: -2px;
-      position: absolute;
-      background: #FCFFE7;
-      transition: width 0.5s ease-out, right 0.3s ease-out; }
-    .menuContainer__Btns .fancy:hover {
-      color: #FCFFE7;
-      background: #EB455F; }
-    .menuContainer__Btns .fancy:hover::before {
-      width: 0.9375rem;
-      background: #FCFFE7; }
-    .menuContainer__Btns .fancy:hover .text {
-      color: #FCFFE7;
-      padding-left: 1.5em; }
-    .menuContainer__Btns .fancy:hover .top-key {
-      left: -2px;
-      width: 0px; }
-    .menuContainer__Btns .fancy:hover .bottom-key-1,
-    .menuContainer__Btns .fancy:hover .bottom-key-2 {
-      right: 0;
-      width: 0; }
   .menuContainer__oth {
     position: absolute;
     bottom: 5rem;
@@ -1198,10 +1053,10 @@ footer {
   margin-top: 2rem; }
 
 .cardW__bottom {
-  background: #5FD068;
+  background: #2B3467;
   font-size: 1.4rem;
   font-family: museomoderno, 'sans-serif';
-  color: #00235B;
+  color: #FCFFE7;
   padding: .3rem 1.2rem;
   border-radius: 5px 5px 0 0; }
 
