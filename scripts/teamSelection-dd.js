@@ -567,3 +567,8 @@ dropdownBtn1.addEventListener("click", function() {
 
 
 
+const btnG = document.querySelector(".btnG");
+
+btnG.addEventListener("click", () => {
+  window.location.href = "/bilete-castigatoare.html";
+});

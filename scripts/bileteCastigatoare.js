@@ -58,7 +58,7 @@ for (const key in data) {
                     <div class="cardW__left--data">${data[key].data}</div>
                 </div>
             </div>
-            <div class="cardW__right"><img src="img/dropdown-arrow.svg" alt="icon"></div>
+            <div class="cardW__right"><img src="img/dropdown-arrowMatch.svg" alt="icon"></div>
         </div>
         <div class="center hidden">
         </div>
@@ -114,23 +114,9 @@ for (const key in data) {
 contentDiv.append(...containers);
 
 
-const btnG = document.querySelector('.btnG');
-const bileteContent = document.querySelector('.bileteContent');
-const closeContent = document.querySelector('#closeContent');
+const closeContent = document.querySelector("#closeContent");
 
-btnG.addEventListener('click', () => {
-    bileteContent.classList.replace('hideB', 'showFlex');
-    document.querySelector('.menuContainer').classList.remove('showMenu')
-    bileteContent.classList.add('animate__animated', 'animate__fadeIn');
-  bileteContent.classList.remove('animate__fadeOutUpBig');
+closeContent.addEventListener("click", () => {
+  window.location.href = "/fotbal.html";
 });
-
-closeContent.addEventListener('click', () => {
-  bileteContent.classList.add('animate__animated', 'animate__fadeOutUpBig');
-  setTimeout(() => {
-    bileteContent.classList.replace('showFlex', 'hideB');
-    bileteContent.classList.remove('animate__animated', 'animate__fadeOutUpBig', 'animate__fadeIn');
-  }, 1000); // timpul în milisecunde (în acest exemplu este 1 secundă)
-});
-
   

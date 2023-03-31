@@ -930,21 +930,13 @@ footer {
 
 .bileteContent {
   width: 100%;
-  height: 100%;
-  background: #FCFFE7;
+  height: 100vh;
+  background: #00235B;
   position: absolute;
   z-index: 900;
   display: flex;
   align-items: center;
   flex-direction: column; }
-  @media only screen and (min-width: 1010px) {
-    .bileteContent {
-      width: 102rem;
-      border-radius: 5px; } }
-  @media only screen and (min-width: 1440px) {
-    .bileteContent {
-      width: 144rem;
-      border-radius: 5px; } }
   .bileteContent #closeContent {
     align-self: end;
     margin-top: 1rem;
@@ -956,7 +948,7 @@ footer {
     margin-bottom: 1rem;
     font-size: 2rem;
     font-family: museomoderno, 'sans-serif';
-    color: #00235B;
+    color: #FCFFE7;
     font-weight: 700; }
   .bileteContent__month {
     margin-bottom: 1rem;
@@ -969,7 +961,7 @@ footer {
     border-radius: 5px; }
   .bileteContent__para {
     width: 70%;
-    background-color: #2b346733;
+    background-color: #BAD7E9;
     padding: 1rem 2rem;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -985,7 +977,7 @@ footer {
     justify-content: center;
     margin-top: 1.5rem; }
     .bileteContent__ref img {
-      border: 2px solid #00235b6e;
+      border: 2px solid #FCFFE7;
       padding: .7rem;
       border-radius: 10px;
       cursor: pointer; }
@@ -1006,7 +998,7 @@ footer {
   cursor: pointer;
   border: 2px solid #5FD068;
   background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
-  color: #00235B;
+  color: #FCFFE7;
   box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1); }
   @media only screen and (min-width: 1010px) {
     .cardW {
@@ -1034,11 +1026,11 @@ footer {
 .cardW__left--utilizator {
   font-size: 1.1rem;
   font-family: museomoderno, 'sans-serif';
-  color: #2B3467; }
+  color: #FCFFE7; }
 
 .cardW__left--data {
   font-size: 1.1rem;
-  color: #2B3467;
+  color: #FCFFE7;
   font-family: museomoderno, 'sans-serif'; }
 
 .top {
@@ -1053,7 +1045,7 @@ footer {
   margin-top: 2rem; }
 
 .cardW__bottom {
-  background: #2B3467;
+  background: #EB455F;
   font-size: 1.4rem;
   font-family: museomoderno, 'sans-serif';
   color: #FCFFE7;
@@ -1067,16 +1059,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2B3467;
+  background: #FCFFE7;
   margin-right: -.5rem;
   margin-left: -.5rem;
   padding: .5rem 1rem;
-  color: #eee; }
+  color: #FCFFE7; }
   .cardMw:not(:last-child) {
-    border-bottom: 1px solid #FCFFE7; }
+    border-bottom: 1px solid #00235B; }
   .cardMw__match {
     font-family: museomoderno, 'sans-serif';
-    color: #FCFFE7;
+    color: #00235B;
     font-size: 1.1rem; }
   .cardMw__datas {
     display: flex;
@@ -1085,7 +1077,7 @@ footer {
     .cardMw__datas--prono {
       font-size: 1.2rem;
       font-family: museomoderno, 'sans-serif';
-      color: #FCFFE7;
+      color: #00235B;
       margin-bottom: .3rem; }
     .cardMw__datas--odd {
       font-size: 1.1rem;
