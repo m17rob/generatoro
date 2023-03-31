@@ -902,6 +902,9 @@ body {
   50% {
     transform: scale(1.2, 1); } }
 
+#main-content {
+  display: none; }
+
 footer {
   display: flex;
   align-items: center;
