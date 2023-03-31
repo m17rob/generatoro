@@ -961,7 +961,7 @@ footer {
     border-radius: 5px; }
   .bileteContent__para {
     width: 70%;
-    background-color: #BAD7E9;
+    background-color: #FCFFE7;
     padding: 1rem 2rem;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -1059,16 +1059,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FCFFE7;
+  background: #5fd069;
   margin-right: -.5rem;
   margin-left: -.5rem;
   padding: .5rem 1rem;
   color: #FCFFE7; }
   .cardMw:not(:last-child) {
-    border-bottom: 1px solid #00235B; }
+    border-bottom: 1px solid #FCFFE7; }
   .cardMw__match {
     font-family: museomoderno, 'sans-serif';
-    color: #00235B;
+    color: #000000;
     font-size: 1.1rem; }
   .cardMw__datas {
     display: flex;
