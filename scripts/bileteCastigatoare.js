@@ -115,12 +115,14 @@ for (const key in data) {
 contentDiv.append(...containers);
 
 
-const closeContent = document.querySelector("#closeContent");
+const closeContent = document.querySelector("#btnHomeS");
 
 closeContent.addEventListener("click", () => {
-  window.location.href = "/fotbal.html";
+  setTimeout(() => {
+    window.location.href = "/fotbal.html";
+  }, 500); // 500ms = 0.5s
 });
-  
+
 
 
 window.addEventListener('load', function(){
