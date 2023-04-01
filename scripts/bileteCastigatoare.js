@@ -15,7 +15,7 @@ const data = {
                 "odd": "2.10"
             }
         ],
-        "cotaTotala": "20.15"
+        "cotaTotala": ""
     },
     "div2": {
         "matchCount": "3",
@@ -36,17 +36,52 @@ const data = {
                 "match": "Manchester United - Manchester City",
                 "prono": "1X",
                 "odd": "1.70"
+            },
+            {
+                "match": "Manchester United - Arsenal",
+                "prono": "X",
+                "odd": "3.50"
             }
+            
         ],
-        "cotaTotala": "30.50"
+        "cotaTotala": ""
     }
 };
+
+// for (let divKey in data) {
+//   let matches = data[divKey].matches;
+//   let totalOdd = 1;
+  
+//   for (let i = 0; i < matches.length; i++) {
+//     let odd = parseFloat(matches[i].odd);
+//     totalOdd *= odd;
+//   }
+  
+//   let cotaTotala = totalOdd.toFixed(2);
+//   data[divKey].cotaTotala = cotaTotala;
+// }
+
 
 const contentDiv = document.getElementById("content");
 const containers = [];
 let currentDiv = null;
 
+for (let divKey in data) {
+  let matches = data[divKey].matches;
+  let totalOdd = 1;
+  
+  for (let i = 0; i < matches.length; i++) {
+    let odd = parseFloat(matches[i].odd);
+    totalOdd *= odd;
+  }
+  
+  let cotaTotala = totalOdd.toFixed(2);
+  data[divKey].cotaTotala = cotaTotala;
+}
+
+
 for (const key in data) {
+  
     const cardW = document.createElement("div");
     cardW.classList.add("cardW");
     cardW.innerHTML = `
@@ -120,7 +155,7 @@ const closeContent = document.querySelector("#btnHomeS");
 closeContent.addEventListener("click", () => {
   setTimeout(() => {
     window.location.href = "/fotbal.html";
-  }, 500); // 500ms = 0.5s
+  }, 300); // 500ms = 0.5s
 });
 
 
