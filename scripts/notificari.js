@@ -63,12 +63,24 @@ function addCardNot(day, month, author, title, description, time) {
   cardMonth.classList.add("card__timeC__month");
   cardMonth.textContent = month;
 
+    // Creem elementul "cardNot__time" pentru ora
+    var cardTime = document.createElement("div");
+    cardTime.classList.add("cardNot__time");
+    cardTime.textContent = time;
+
   // Adaugam elementele pentru ziua si luna in elementul "cardNot__timeC"
   cardTimeC.appendChild(cardDay);
   cardTimeC.appendChild(cardMonth);
+   // Adaugam elementul "cardNot__time" in elementul "cardNot"
+   cardTimeC.appendChild(cardTime);
 
   // Adaugam elementul "cardNot__timeC" in elementul "left"
   left.appendChild(cardTimeC);
+
+  var bgCard = document.createElement("div");
+  bgCard.classList.add("bgCard");
+
+  
 
   // Creem elementul "cardNot__left" pentru autor
   var cardLeft = document.createElement("div");
@@ -76,7 +88,7 @@ function addCardNot(day, month, author, title, description, time) {
   cardLeft.textContent = author;
 
   // Adaugam elementul "cardNot__left" in elementul "left"
-  left.appendChild(cardLeft);
+  bgCard.appendChild(cardLeft);
 
   // Creem elementul "cardNot__right" pentru titlu si descriere
   var cardRight = document.createElement("div");
@@ -91,18 +103,14 @@ function addCardNot(day, month, author, title, description, time) {
   cardRight.appendChild(cardDescription);
 
   // Adaugam elementul "cardNot__right" in elementul "left"
-  left.appendChild(cardRight);
+  bgCard.appendChild(cardRight);
 
   // Adaugam elementul "left" in elementul "cardNot"
   cardNot.appendChild(left);
+  cardNot.appendChild(bgCard);
 
-  // Creem elementul "cardNot__time" pentru ora
-  var cardTime = document.createElement("div");
-  cardTime.classList.add("cardNot__time");
-  cardTime.textContent = time;
 
-  // Adaugam elementul "cardNot__time" in elementul "cardNot"
-  cardNot.appendChild(cardTime);
+ 
 
   // Adaugam elementul "cardNot" in elementul ".card__content"
   cardContent.appendChild(cardNot);
@@ -121,7 +129,7 @@ function addCardNot(day, month, author, title, description, time) {
 
 
 // Exemplu de adaugare a unui element nou
-addCardNot("30", "Mar.", "ADMIN", "Noi campionate adaugate", "Premier league, Ligue One, La Liga", "17:50")
+addCardNot("30", "Mar.", "ADMIN", "Noi campionate", "Noi campionate adaugate: Premier league, Ligue One, La Liga", "17:50")
 addCardNot("30", "Mar.", "ADMIN", "Noua stire", "test", "17:49")
 
   

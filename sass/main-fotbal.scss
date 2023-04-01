@@ -344,6 +344,8 @@ body {
       justify-content: end;
       position: relative;
 
+
+
       @media only screen and (min-width: 1010px) {
 margin-right: 0;
          }
@@ -424,6 +426,17 @@ margin-right: 0;
           .left {
             display: flex;
             align-items: center;
+            justify-content: center;
+          }
+
+          .bgCard {
+            background: $color-BlueDarky;
+            padding: .7rem 2rem .7rem .7rem;
+            border-radius: 100px;
+            width: 100%;
+            max-width: 30rem;
+            display: flex;
+            align-items: center;
           }
 
 
@@ -433,25 +446,21 @@ margin-right: 0;
             font-family: museomoderno, 'sans-serif';
             // opacity: .6;
             align-self: center;
-            text-align: center;
+            // text-align: center;
             font-size: 1.4rem;
-            margin-bottom: .2rem;
+            margin-bottom: 1.4rem;
+            // opacity: .7;
 
          
           }
 
-          hr {
-
-            margin-bottom: 1.4rem;
-            
-          }
 
           &__content {
             // width: 30rem;
             .cardNot {
               display: flex;
               align-items: center;
-              justify-content: space-between;
+              // justify-content: space-between;
               padding-bottom: 1rem;
               
 
@@ -468,14 +477,22 @@ margin-right: 0;
                 margin-right: 1rem;
                 font-size: .9rem;
                 font-family: museomoderno, 'sans-serif';
-                color: #5e5d5de5;
+                color: $color-BlueDarky;
                 line-height: 10px;
                 // margin-left: 2rem;
+               
+
+              
 
                 @media only screen and (max-width: 410px) {
                   font-size: .7rem;
                   margin-right: .5rem;
                            }
+              }
+
+
+              .cardNot__timeC--month {
+                margin-bottom: .5rem;
               }
 
               &__left {
@@ -486,11 +503,11 @@ margin-right: 0;
                 align-items: center;
                 font-weight: 500;
                 justify-content: center;
-                color: $color-white;
+                color: $color-BlueDarky;
                 padding: 1.8rem;
                 border-radius: 50%;
                 font-family: 'Poppins', 'sans-serif';
-                background: #00235b98;
+                background: $color-white;
 
 
 
@@ -509,7 +526,7 @@ margin-right: 0;
                 &--title {
                   font-size: 1.4rem;
                   font-family: museomoderno, 'sans-serif';
-                  color: $color-BlueDarky;
+                  color: $color-white;
                   font-weight: 700;
                   line-height: 15px;
                   -webkit-line-height: 15px;
@@ -522,7 +539,7 @@ margin-right: 0;
 
                 &--txt {
                   font-size: .9rem;
-                  color: $color-BlueDarky;
+                  color: $color-white;
                   font-family: museomoderno, 'sans-serif';
                   opacity: .8;
                   margin-top: .5rem;
@@ -534,7 +551,7 @@ margin-right: 0;
               }
 
               &__time {
-                margin-left: 4rem;
+                // margin-left: 4rem;
                 background: $color-red;
                 // margin-right: 2rem;
                 color: $color-white;
@@ -1366,7 +1383,7 @@ cursor: pointer;
   
   #main-content {
 
-  display: none;
+  // display: none;
 
 
   }

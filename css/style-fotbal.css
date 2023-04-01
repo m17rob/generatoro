@@ -291,20 +291,25 @@ body {
       z-index: 10; }
       .heading__menu .card .left {
         display: flex;
+        align-items: center;
+        justify-content: center; }
+      .heading__menu .card .bgCard {
+        background: #00235B;
+        padding: .7rem 2rem .7rem .7rem;
+        border-radius: 100px;
+        width: 100%;
+        max-width: 30rem;
+        display: flex;
         align-items: center; }
       .heading__menu .card__title {
         color: #00235B;
         font-family: museomoderno, 'sans-serif';
         align-self: center;
-        text-align: center;
         font-size: 1.4rem;
-        margin-bottom: .2rem; }
-      .heading__menu .card hr {
         margin-bottom: 1.4rem; }
       .heading__menu .card__content .cardNot {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         padding-bottom: 1rem; }
         .heading__menu .card__content .cardNot:not(:last-child) {
           margin-bottom: 2rem;
@@ -316,12 +321,14 @@ body {
           margin-right: 1rem;
           font-size: .9rem;
           font-family: museomoderno, 'sans-serif';
-          color: #5e5d5de5;
+          color: #00235B;
           line-height: 10px; }
           @media only screen and (max-width: 410px) {
             .heading__menu .card__content .cardNot__timeC {
               font-size: .7rem;
               margin-right: .5rem; } }
+        .heading__menu .card__content .cardNot .cardNot__timeC--month {
+          margin-bottom: .5rem; }
         .heading__menu .card__content .cardNot__left {
           width: 1rem;
           height: 1rem;
@@ -330,11 +337,11 @@ body {
           align-items: center;
           font-weight: 500;
           justify-content: center;
-          color: #FCFFE7;
+          color: #00235B;
           padding: 1.8rem;
           border-radius: 50%;
           font-family: 'Poppins', 'sans-serif';
-          background: #00235b98; }
+          background: #FCFFE7; }
           @media only screen and (max-width: 410px) {
             .heading__menu .card__content .cardNot__left {
               width: .4rem;
@@ -347,7 +354,7 @@ body {
           .heading__menu .card__content .cardNot__right--title {
             font-size: 1.4rem;
             font-family: museomoderno, 'sans-serif';
-            color: #00235B;
+            color: #FCFFE7;
             font-weight: 700;
             line-height: 15px;
             -webkit-line-height: 15px; }
@@ -356,7 +363,7 @@ body {
                 font-size: 1.4rem; } }
           .heading__menu .card__content .cardNot__right--txt {
             font-size: .9rem;
-            color: #00235B;
+            color: #FCFFE7;
             font-family: museomoderno, 'sans-serif';
             opacity: .8;
             margin-top: .5rem; }
@@ -364,7 +371,6 @@ body {
               .heading__menu .card__content .cardNot__right--txt {
                 margin-top: .5rem; } }
         .heading__menu .card__content .cardNot__time {
-          margin-left: 4rem;
           background: #EB455F;
           color: #FCFFE7;
           font-size: 1rem;
@@ -901,9 +907,6 @@ body {
     transform: scale(1, 1); }
   50% {
     transform: scale(1.2, 1); } }
-
-#main-content {
-  display: none; }
 
 footer {
   display: flex;
