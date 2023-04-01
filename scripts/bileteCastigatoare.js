@@ -2,7 +2,7 @@ const data = {
     "div1": {
         "matchCount": "2",
         "utilizator": "@andreiC...",
-        "data": "30.05.2023",
+        "data": "joi 30",
         "matches": [
             {
                 "match": "Milan - Arsenal",
@@ -20,7 +20,7 @@ const data = {
     "div2": {
         "matchCount": "3",
         "utilizator": "@mariaD...",
-        "data": "01.06.2023",
+        "data": "joi 30",
         "matches": [
             {
                 "match": "Liverpool - Chelsea",
@@ -54,8 +54,9 @@ for (const key in data) {
             <div class="cardW__left">
                 <div class="cardW__left--matchCount">${data[key].matchCount}</div>
                 <div class="data">
+                <div class="cardW__left--data">${data[key].data}</div>
                     <div class="cardW__left--utilizator">${data[key].utilizator}</div>
-                    <div class="cardW__left--data">${data[key].data}</div>
+                
                 </div>
             </div>
             <div class="cardW__right"><img src="img/dropdown-arrowMatch.svg" alt="icon"></div>
@@ -63,7 +64,7 @@ for (const key in data) {
         <div class="center hidden">
         </div>
         <div class="bottom">
-            <div class="cardW__bottom">Cota totala: ${data[key].cotaTotala}</div>
+            <div class="cardW__bottom">Cota totala: <span>${data[key].cotaTotala}</span></div>
         </div>
     `;
     contentDiv.appendChild(cardW);

@@ -973,7 +973,7 @@ footer {
     font-family: museomoderno, 'sans-serif'; }
     @media only screen and (min-width: 1010px) {
       .bileteContent__para {
-        width: 50%; } }
+        width: 50rem; } }
   .bileteContent__ref {
     display: flex;
     align-items: center;
@@ -1005,23 +1005,31 @@ footer {
   box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1); }
   @media only screen and (min-width: 1010px) {
     .cardW {
-      width: 60%; } }
+      width: 99rem; } }
+  @media only screen and (min-width: 1440px) {
+    .cardW {
+      width: 141rem; } }
 
 .cardW__left {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-left: 1rem; }
+  .cardW__left .data {
+    display: flex; }
+  .cardW__left :first-child {
+    margin-right: 1rem; }
 
 .cardW__left--matchCount {
   margin-right: .5rem;
   background: #EB455F;
-  width: 13px;
+  width: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 13px;
+  height: 16px;
   padding: .2rem;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 1.2rem;
   color: #FCFFE7;
   font-family: museomoderno, 'sans-serif';
   align-self: start; }
@@ -1032,7 +1040,7 @@ footer {
   color: #FCFFE7; }
 
 .cardW__left--data {
-  font-size: 1.1rem;
+  font-size: 1.2rem !important;
   color: #FCFFE7;
   font-family: museomoderno, 'sans-serif'; }
 
@@ -1048,12 +1056,19 @@ footer {
   margin-top: 2rem; }
 
 .cardW__bottom {
-  background: #EB455F;
-  font-size: 1.4rem;
+  border-top: 2px solid #5fd069;
+  border-left: 2px solid #5fd069;
+  border-right: 2px solid #5fd069;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  font-size: 1.2rem;
   font-family: museomoderno, 'sans-serif';
   color: #FCFFE7;
   padding: .3rem 1.2rem;
   border-radius: 5px 5px 0 0; }
+  .cardW__bottom span {
+    font-size: 1.4rem;
+    color: #FCFFE7;
+    font-weight: 700; }
 
 .cardW__left--data {
   font-size: 14px; }
@@ -1062,17 +1077,17 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #5fd069;
   margin-right: -.5rem;
   margin-left: -.5rem;
   padding: .5rem 1rem;
   color: #FCFFE7; }
   .cardMw:not(:last-child) {
-    border-bottom: 1px solid #FCFFE7; }
+    border-bottom: 1px solid #5fd069; }
   .cardMw__match {
     font-family: museomoderno, 'sans-serif';
-    color: #000000;
-    font-size: 1.1rem; }
+    color: #FCFFE7;
+    font-weight: 700;
+    font-size: 1.2rem; }
   .cardMw__datas {
     display: flex;
     flex-direction: column;
@@ -1080,14 +1095,16 @@ footer {
     .cardMw__datas--prono {
       font-size: 1.2rem;
       font-family: museomoderno, 'sans-serif';
-      color: #00235B;
-      margin-bottom: .3rem; }
+      color: #FCFFE7;
+      margin-bottom: .3rem;
+      font-weight: 700; }
     .cardMw__datas--odd {
       font-size: 1.1rem;
       font-family: museomoderno, 'sans-serif';
       background: #EB455F;
       padding: .1rem 1rem;
-      border-radius: 5px; }
+      border-radius: 5px;
+      font-weight: 700; }
 
 .hidden {
   display: none;
@@ -1098,3 +1115,62 @@ footer {
 
 .selected {
   box-shadow: inset 0 0 0.3em 0 #5FD068, 0 0 0.3em 0 #5FD068; }
+
+#btnHomeS {
+  padding: 1rem;
+  margin: 0;
+  border: none;
+  background: none;
+  align-self: flex-start; }
+
+#btnHomeS {
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 1.6rem;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer; }
+
+#btnHomeS p {
+  margin: 0;
+  position: relative;
+  font-size: 1.6rem;
+  color: #FCFFE7; }
+
+#btnHomeS::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: #EB455F;
+  height: 2px;
+  transition: 0.3s ease-out; }
+
+#btnHomeS p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Inapoi";
+  width: 0%;
+  inset: 0;
+  color: #EB455F;
+  overflow: hidden;
+  transition: 0.3s ease-out; }
+
+#btnHomeS:hover::after {
+  width: 100%; }
+
+#btnHomeS:hover p::before {
+  width: 100%; }
+
+#btnHomeS:hover svg {
+  color: #EB455F; }
+
+#btnHomeS svg {
+  color: #FCFFE7;
+  transition: 0.2s;
+  position: relative;
+  width: 12px;
+  transition-delay: 0.2s;
+  transform: rotate(180deg); }
