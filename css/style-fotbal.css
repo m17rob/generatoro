@@ -1013,7 +1013,7 @@ footer {
 .cardW__left {
   display: flex;
   align-items: center;
-  margin-left: 1rem; }
+  margin-left: .4rem; }
   .cardW__left .data {
     display: flex; }
   .cardW__left :first-child {
