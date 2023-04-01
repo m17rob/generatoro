@@ -296,7 +296,7 @@ body {
       .heading__menu .card .bgCard {
         background: #00235B;
         padding: .7rem 2rem .7rem .7rem;
-        border-radius: 100px;
+        border-radius: 5px;
         width: 100%;
         max-width: 30rem;
         display: flex;
@@ -309,11 +309,9 @@ body {
         margin-bottom: 1.4rem; }
       .heading__menu .card__content .cardNot {
         display: flex;
-        align-items: center;
-        padding-bottom: 1rem; }
+        align-items: center; }
         .heading__menu .card__content .cardNot:not(:last-child) {
-          margin-bottom: 2rem;
-          border-bottom: .5px solid #5e5d5d54; }
+          border-bottom: 1px solid #FCFFE7; }
         .heading__menu .card__content .cardNot__timeC {
           display: flex;
           flex-direction: column;

@@ -432,7 +432,7 @@ margin-right: 0;
           .bgCard {
             background: $color-BlueDarky;
             padding: .7rem 2rem .7rem .7rem;
-            border-radius: 100px;
+            border-radius: 5px;
             width: 100%;
             max-width: 30rem;
             display: flex;
@@ -461,12 +461,12 @@ margin-right: 0;
               display: flex;
               align-items: center;
               // justify-content: space-between;
-              padding-bottom: 1rem;
+              // padding-bottom: 1rem;
               
 
               &:not(:last-child) {
-                margin-bottom: 2rem;
-                border-bottom: .5px solid #5e5d5d54;
+                // margin-bottom: 2rem;
+                border-bottom: 1px solid $color-white;
               }
 
 
