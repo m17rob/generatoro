@@ -414,6 +414,7 @@ margin-right: 0;
         .card {
           background: $color-white;
           padding: .5rem 2rem 2rem 2rem;
+          // padding-bottom: 0;
           position: absolute;
           top: 5rem;
           right: -2rem;
@@ -421,7 +422,7 @@ margin-right: 0;
           // height: 15rem;
           // width: 15rem;
           z-index: 10;
-
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 
           .left {
             display: flex;
@@ -430,13 +431,13 @@ margin-right: 0;
           }
 
           .bgCard {
-            background: $color-BlueDarky;
-            padding: .7rem 2rem .7rem .7rem;
-            border-radius: 5px;
+            // background: $color-BlueDarky;
+            padding: 0 2rem .7rem .7rem;
+            // border-radius: 5px;
             width: 100%;
             max-width: 30rem;
             display: flex;
-            align-items: center;
+            // align-items: center;
           }
 
 
@@ -459,14 +460,24 @@ margin-right: 0;
             // width: 30rem;
             .cardNot {
               display: flex;
-              align-items: center;
+              // align-items: center;
+              
               // justify-content: space-between;
               // padding-bottom: 1rem;
-              
+              padding: 0 2rem;
+              margin-right: -2rem;
+              margin-left: -2rem;
+              padding-bottom: 1rem;
 
               &:not(:last-child) {
-                // margin-bottom: 2rem;
-                border-bottom: 1px solid $color-white;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid $color-BlueDarky;
+
+              }
+
+              &:last-child{
+                padding-bottom: 0;
+                
               }
 
 
@@ -482,6 +493,7 @@ margin-right: 0;
                 // margin-left: 2rem;
                
 
+          
               
 
                 @media only screen and (max-width: 410px) {
@@ -491,9 +503,7 @@ margin-right: 0;
               }
 
 
-              .cardNot__timeC--month {
-                margin-bottom: .5rem;
-              }
+             
 
               &__left {
                 width: 1rem;
@@ -507,7 +517,8 @@ margin-right: 0;
                 padding: 1.8rem;
                 border-radius: 50%;
                 font-family: 'Poppins', 'sans-serif';
-                background: $color-white;
+                background: $color-BlueDarky;
+                border: 2px solid $color-BlueDarky;
 
 
 
@@ -526,7 +537,7 @@ margin-right: 0;
                 &--title {
                   font-size: 1.4rem;
                   font-family: museomoderno, 'sans-serif';
-                  color: $color-white;
+                  color: $color-BlueDarky;
                   font-weight: 700;
                   line-height: 15px;
                   -webkit-line-height: 15px;
@@ -539,7 +550,7 @@ margin-right: 0;
 
                 &--txt {
                   font-size: .9rem;
-                  color: $color-white;
+                  color: $color-BlueDarky;
                   font-family: museomoderno, 'sans-serif';
                   opacity: .8;
                   margin-top: .5rem;
@@ -609,6 +620,10 @@ margin-right: 0;
             margin-left: 5.2rem;
         }
     }
+}
+
+.card__timeC--month {
+  margin-bottom: .5rem;
 }
 
 .vizibil {

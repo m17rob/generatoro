@@ -60,7 +60,7 @@ function addCardNot(day, month, author, title, description, time) {
   cardDay.classList.add("card__timeC--day");
   cardDay.textContent = day;
   var cardMonth = document.createElement("div");
-  cardMonth.classList.add("card__timeC__month");
+  cardMonth.classList.add("card__timeC--month");
   cardMonth.textContent = month;
 
     // Creem elementul "cardNot__time" pentru ora
@@ -83,12 +83,12 @@ function addCardNot(day, month, author, title, description, time) {
   
 
   // Creem elementul "cardNot__left" pentru autor
-  var cardLeft = document.createElement("div");
-  cardLeft.classList.add("cardNot__left");
-  cardLeft.textContent = author;
+  // var cardLeft = document.createElement("div");
+  // cardLeft.classList.add("cardNot__left");
+  // cardLeft.textContent = author;
 
   // Adaugam elementul "cardNot__left" in elementul "left"
-  bgCard.appendChild(cardLeft);
+  // bgCard.appendChild(cardLeft);
 
   // Creem elementul "cardNot__right" pentru titlu si descriere
   var cardRight = document.createElement("div");
