@@ -1,6 +1,6 @@
 const data = {
     "div1": {
-        "matchCount": "2",
+        "matchCount": "",
         "utilizator": "@andreiC...",
         "data": "joi 30",
         "matches": [
@@ -18,7 +18,7 @@ const data = {
         "cotaTotala": ""
     },
     "div2": {
-        "matchCount": "3",
+        "matchCount": "",
         "utilizator": "@mariaD...",
         "data": "joi 30",
         "matches": [
@@ -48,20 +48,6 @@ const data = {
     }
 };
 
-// for (let divKey in data) {
-//   let matches = data[divKey].matches;
-//   let totalOdd = 1;
-  
-//   for (let i = 0; i < matches.length; i++) {
-//     let odd = parseFloat(matches[i].odd);
-//     totalOdd *= odd;
-//   }
-  
-//   let cotaTotala = totalOdd.toFixed(2);
-//   data[divKey].cotaTotala = cotaTotala;
-// }
-
-
 const contentDiv = document.getElementById("content");
 const containers = [];
 let currentDiv = null;
@@ -78,6 +64,14 @@ for (let divKey in data) {
   let cotaTotala = totalOdd.toFixed(2);
   data[divKey].cotaTotala = cotaTotala;
 }
+
+for (let divKey in data) {
+  let matches = data[divKey].matches;
+  let matchCount = matches.length;
+  
+  data[divKey].matchCount = matchCount.toString();
+}
+
 
 
 for (const key in data) {
@@ -177,17 +171,6 @@ window.addEventListener('load', function(){
           document.querySelector('#preloader').style.display = 'none';
           // adaugă clasele animate__animated animate__zoomIn la conținutul principal
 
-  
-          setTimeout(function() {
-            document.querySelector('#footer').style.display = 'block';
-          }, 500);
-  
-          // întârzie afișarea elementului containerInfo cu 1 secundă
-          setTimeout(function() {
-            // afișează elementul containerInfo
-            // document.querySelector('.containerInfo').style.display = 'block';
-            document.querySelector('.containerInfo').classList.add('animate__animated', 'animate__fadeIn', 'vizibil');
-          }, 1000);
   
         }, 500);
       }, 1000);
