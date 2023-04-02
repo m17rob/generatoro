@@ -611,5 +611,17 @@ document.addEventListener('click', function(event) {
 const addToHomeButton = document.querySelector('.add-to-home-button');
 
 addToHomeButton.addEventListener('click', () => {
-  alert('Apăsați butonul "Share" și selectați "Adăugați la ecranul principal".');
+  if (navigator.share) { // Verificăm dacă funcția navigator.share() este disponibilă
+    navigator.share({
+      title: 'Generatoro',
+      url: 'https://generatoro.netlify.app/'
+    }).then(() => {
+      console.log('Succesul împărtășirii!');
+    }).catch((error) => {
+      console.error('Eroare la împărtășire:', error);
+    });
+  } else {
+    alert('Apăsați butonul "Share" și selectați "Adăugați la ecranul principal".');
+  }
 });
+
