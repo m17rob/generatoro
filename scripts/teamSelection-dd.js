@@ -9,41 +9,41 @@ function blockZoom() {
     lastTouchEnd = now;
   }, false);
 }
-// window.addEventListener('load', function(){
-//   // afișează preloader-ul
-//   document.querySelector('#preloader').style.display = 'block';
-//   // întârzie afișarea conținutului principal cu 2 secunde
-//   setTimeout(function() {
-//     // adaugă clasele animate__animated animate__zoomOut la preloader
-//     document.querySelector('#preloader').classList.add('animate__animated', 'animate__fadeOut');
-//     // așteaptă 1 secundă ca animația să se încheie
-//     setTimeout(function() {
-//       // adaugă opacitatea 0 pentru preloader
-//       document.querySelector('#preloader').style.opacity = '0';
-//       // așteaptă 0,5 secunde ca opacitatea să scadă la 0
-//       setTimeout(function() {
-//         // ascunde preloader-ul
-//         document.querySelector('#preloader').style.display = 'none';
-//         // adaugă clasele animate__animated animate__zoomIn la conținutul principal
-//         document.querySelector('#main-content').classList.add('animate__animated', 'animate__fadeIn');
-//         // afișează conținutul principal
-//         document.querySelector('#main-content').style.display = 'block';
+window.addEventListener('load', function(){
+  // afișează preloader-ul
+  document.querySelector('#preloader').style.display = 'block';
+  // întârzie afișarea conținutului principal cu 2 secunde
+  setTimeout(function() {
+    // adaugă clasele animate__animated animate__zoomOut la preloader
+    document.querySelector('#preloader').classList.add('animate__animated', 'animate__fadeOut');
+    // așteaptă 1 secundă ca animația să se încheie
+    setTimeout(function() {
+      // adaugă opacitatea 0 pentru preloader
+      document.querySelector('#preloader').style.opacity = '0';
+      // așteaptă 0,5 secunde ca opacitatea să scadă la 0
+      setTimeout(function() {
+        // ascunde preloader-ul
+        document.querySelector('#preloader').style.display = 'none';
+        // adaugă clasele animate__animated animate__zoomIn la conținutul principal
+        document.querySelector('#main-content').classList.add('animate__animated', 'animate__fadeIn');
+        // afișează conținutul principal
+        document.querySelector('#main-content').style.display = 'block';
 
-//         setTimeout(function() {
-//           document.querySelector('#footer').style.display = 'block';
-//         }, 500);
+        setTimeout(function() {
+          document.querySelector('#footer').style.display = 'block';
+        }, 500);
 
-//         // întârzie afișarea elementului containerInfo cu 1 secundă
-//         setTimeout(function() {
-//           // afișează elementul containerInfo
-//           // document.querySelector('.containerInfo').style.display = 'block';
-//           document.querySelector('.containerInfo').classList.add('animate__animated', 'animate__fadeIn', 'vizibil');
-//         }, 1000);
+        // întârzie afișarea elementului containerInfo cu 1 secundă
+        setTimeout(function() {
+          // afișează elementul containerInfo
+          // document.querySelector('.containerInfo').style.display = 'block';
+          document.querySelector('.containerInfo').classList.add('animate__animated', 'animate__fadeIn', 'vizibil');
+        }, 1000);
 
-//       }, 500);
-//     }, 1000);
-//   }, 2000);
-// });
+      }, 500);
+    }, 1000);
+  }, 2000);
+});
 
 
 

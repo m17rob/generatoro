@@ -170,7 +170,10 @@ window.addEventListener('load', function(){
           // ascunde preloader-ul
           document.querySelector('#preloader').style.display = 'none';
           // adaugă clasele animate__animated animate__zoomIn la conținutul principal
-
+          document.querySelector('#contentShow').classList.add('animate__animated', 'animate__fadeIn');
+          // afișează conținutul principal
+          document.querySelector('#contentShow').style.display = 'block';
+  
   
         }, 500);
       }, 1000);
