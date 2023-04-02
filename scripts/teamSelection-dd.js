@@ -605,3 +605,21 @@ document.addEventListener('click', function(event) {
     subdropdown2.classList.remove('show');
   }
 });
+
+
+
+function addToHomeScreen() {
+  if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+    var addToHomeScreen = confirm("Doriți să adăugați această pagină la ecranul principal?");
+    if (addToHomeScreen) {
+      var img = 'path/to/icon.png';
+      var addToHomeScreenConfig = {
+        autostart: false,
+        appleTouchIcon: img,
+        arrow: true,
+        message: 'Puteți adăuga această pagină la ecranul principal apăsând pe butonul "Adaugă" de jos.'
+      };
+      addToHomescreen(addToHomeScreenConfig);
+    }
+  }
+}
