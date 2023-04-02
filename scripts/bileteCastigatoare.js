@@ -174,6 +174,10 @@ window.addEventListener('load', function(){
           // afișează conținutul principal
           document.querySelector('#contentShow').style.display = 'block';
   
+          setTimeout(function() {
+            document.querySelector('#footer').style.display = 'block';
+          }, 500);
+  
   
         }, 500);
       }, 1000);
