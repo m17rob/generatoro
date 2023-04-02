@@ -575,3 +575,10 @@ btnG.addEventListener("click", () => {
 
 
 
+const disBtn = document.querySelector("#dis");
+
+dis.addEventListener("click", () => {
+  setTimeout(() => {
+    window.location.href = "/disclaimer.html";
+  }, 300); // 500ms = 0.5s
+});
