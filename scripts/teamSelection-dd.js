@@ -608,32 +608,17 @@ document.addEventListener('click', function(event) {
 
 
 
-let deferredPrompt;
+const addToHomeButton = document.querySelector('.add-to-home-button');
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Stocăm evenimentul de instalare amânat pentru a-l putea apela ulterior
-  deferredPrompt = e;
-
-  // Afișăm butonul "Adaugă la ecranul principal"
-  const addToHomeButton = document.querySelector('.add-to-home-button');
-  addToHomeButton.style.display = 'block';
-
-  // Ascultăm evenimentul de clic pe buton și apelăm metoda prompt() a obiectului evenimentului
-  addToHomeButton.addEventListener('click', () => {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('Utilizatorul a acceptat instalarea.');
-      } else {
-        console.log('Utilizatorul a refuzat instalarea.');
-      }
-      deferredPrompt = null;
-    });
-  });
+addToHomeButton.addEventListener('click', () => {
+  const isIos = /(iPhone|iPad|iPod)/i.test(navigator.userAgent);
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  
+  if (isIos && isSafari) {
+    const addToHomeScreen = window.addToHomeScreen();
+    addToHomeScreen.show();
+  } else {
+    alert('Apăsați butonul "Share" și selectați "Adăugați la ecranul principal".');
+  }
 });
-
-window.addEventListener('appinstalled', (evt) => {
-  console.log('A fost instalată o aplicație web.');
-});
-
 
