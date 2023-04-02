@@ -612,7 +612,7 @@ function addToHomeScreen() {
   if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
     var addToHomeScreen = confirm("Doriți să adăugați această pagină la ecranul principal?");
     if (addToHomeScreen) {
-      var img = 'path/to/icon.png';
+      var img = 'img/icon.png';
       var addToHomeScreenConfig = {
         autostart: false,
         appleTouchIcon: img,
