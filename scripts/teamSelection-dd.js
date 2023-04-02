@@ -236,6 +236,10 @@ options.forEach(option => {
       document.querySelector(".dropdown-options").classList.remove("show");
     });
     
+    document.querySelector('.dropdown-btn').addEventListener("click", () => {
+      document.querySelector('.subdropdown-options2').classList.remove('show');
+      document.querySelector('.subdropdown-options').classList.remove('show');
+    })
 
     // adăugăm evenimentul click pentru fiecare subopțiune
     const suboptionElements = subdropdownOptions.querySelectorAll(".dropdown-option");
@@ -581,4 +585,23 @@ dis.addEventListener("click", () => {
   setTimeout(() => {
     window.location.href = "/disclaimer.html";
   }, 300); // 500ms = 0.5s
+});
+
+
+document.addEventListener('click', function(event) {
+  var dropdown = document.querySelector('.dropdown-options.show');
+  var subdropdown = document.querySelector('.subdropdown-options.show');
+  var subdropdown2 = document.querySelector('.subdropdown-options2.show');
+
+  if (dropdown && !dropdown.contains(event.target) && !event.target.matches('.dropdown-btn, .dropdown-btn *')) {
+    dropdown.classList.remove('show');
+  }
+
+  if (subdropdown && !subdropdown.contains(event.target) && !event.target.matches('#subSelect1, #subSelect1 *')) {
+    subdropdown.classList.remove('show');
+  }
+
+  if (subdropdown2 && !subdropdown2.contains(event.target) && !event.target.matches('#subSelect2, #subSelect2 *')) {
+    subdropdown2.classList.remove('show');
+  }
 });
