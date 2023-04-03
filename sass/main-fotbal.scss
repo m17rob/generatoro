@@ -340,6 +340,10 @@ body {
       // justify-content: center;
       // margin-bottom: 5rem;
       margin-right: auto;
+
+      @media only screen and (max-width: 1010px) {
+        margin-left: 2rem;
+         }
     }
 
     &__menu {

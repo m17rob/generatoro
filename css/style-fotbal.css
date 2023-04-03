@@ -236,6 +236,9 @@ body {
   margin-top: 2rem; }
   .heading__logo {
     margin-right: auto; }
+    @media only screen and (max-width: 1010px) {
+      .heading__logo {
+        margin-left: 2rem; } }
   .heading__menu {
     margin-bottom: 5rem;
     margin-right: 2rem;
