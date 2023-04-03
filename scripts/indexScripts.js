@@ -39,9 +39,6 @@ window.addEventListener('load', function(){
           document.getElementById('virtuale-button').style.display = 'block';
         }, 1050);
         // pornește timer-ul pentru #loterie-button după ce conținutul principal este afișat
-        setTimeout(function() {
-          document.getElementById('loterie-button').style.display = 'block';
-        }, 2050);
       }, 500);
     }, 1000);
   }, 2000);
