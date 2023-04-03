@@ -608,17 +608,3 @@ document.addEventListener('click', function(event) {
 
 
 
-const addToHomeButton = document.querySelector('.add-to-home-button');
-
-addToHomeButton.addEventListener('click', () => {
-  const isIos = /(iPhone|iPad|iPod)/i.test(navigator.userAgent);
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  
-  if (isIos && isSafari) {
-    const addToHomeScreen = window.addToHomeScreen();
-    addToHomeScreen.show();
-  } else {
-    alert('Apăsați butonul "Share" și selectați "Adăugați la ecranul principal".');
-  }
-});
-
