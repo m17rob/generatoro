@@ -234,6 +234,8 @@ body {
 .heading {
   width: 100%;
   margin-top: 2rem; }
+  .heading__logo {
+    margin-right: auto; }
   .heading__menu {
     margin-bottom: 5rem;
     margin-right: 2rem;
