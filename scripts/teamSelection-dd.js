@@ -638,10 +638,15 @@ delIcon.addEventListener("click", function() {
   animateBubbleBtn('Stergerea s-a realizat cu succes', 'img/deleteIcon.svg', '#5D9C59', bubbleContainer);
   // obține elementul containerRes
   var containerRes = document.getElementById("containerRes");
-  // elimină toate div-urile din containerRes
-  while (containerRes.firstChild) {
-    containerRes.removeChild(containerRes.firstChild);
+  // salvează primul div într-o variabilă
+  var firstDiv = containerRes.firstElementChild;
+  // elimină toate div-urile din containerRes, în afara de primul div
+  while (containerRes.children.length > 1) {
+    containerRes.removeChild(containerRes.lastChild);
   }
+  // re-adaugă primul div înapoi în containerRes
+  containerRes.appendChild(firstDiv);
+  
 
   this.classList.remove('showFlex');
 
