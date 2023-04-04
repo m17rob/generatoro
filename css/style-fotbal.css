@@ -859,7 +859,12 @@ body {
 #bubbleContainer {
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 820; }
 
 #preloader {
   position: fixed;

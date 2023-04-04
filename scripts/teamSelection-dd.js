@@ -512,11 +512,12 @@ closeButton.addEventListener('click', function() {
   const closeMenuButton = document.getElementById("closeMenu");
   const menuContainer = document.querySelector(".menuContainer");
   const mainContentMenu = document.getElementById("main-content");
+  const bubbleBlur = document.querySelector("#bubbleContainer")
   
   menuButton.addEventListener("click", function() {
     menuContainer.classList.add("showMenu", "animate__animated", "animate__fadeInRight");
     mainContentMenu.style.filter = "blur(2px)";
-
+    bubbleBlur.style.filter = "blur(0px)";
     document.addEventListener("click", closeMenu);
   });
   

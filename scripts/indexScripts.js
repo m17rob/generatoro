@@ -52,3 +52,75 @@ function redirectToPage(pageUrl) {
 }
 
 
+
+function createBubble() {
+  const bubbleParent = document.createElement('div');
+  bubbleParent.id = 'bubble';
+  bubbleParent.classList.add('bubble-parent');
+
+  const bubble = document.createElement('div');
+  bubble.classList.add('bubble');
+
+  const bubbleImg = document.createElement('img');
+  bubbleImg.id = 'bubbleImg';
+  bubbleImg.src = 'img/err.svg';
+  bubbleImg.alt = 'avertizare icon';
+
+  const bubbleTxt = document.createElement('div');
+  bubbleTxt.id = 'bubbleTxt';
+  bubbleTxt.classList.add('bubble__txt');
+  bubbleTxt.textContent = 'eroare nedeterminata.contactati suportul';
+
+  bubble.appendChild(bubbleImg);
+  bubble.appendChild(bubbleTxt);
+  bubbleParent.appendChild(bubble);
+
+  document.body.appendChild(bubbleParent);
+
+  return bubbleParent;
+}
+
+
+let animationTimeout;
+
+function animateBubbleBtn(text, imgSrc, bgColor, container) {
+  const oldBubbleBtn = container.querySelector('.bubble-btn');
+  if (oldBubbleBtn) {
+    oldBubbleBtn.classList.remove(
+      'animate__animated',
+      'animate__fadeOut',
+      'animate__bounceIn'
+    );
+    oldBubbleBtn.remove();
+    clearTimeout(animationTimeout);
+  }
+
+  const bubbleBtn = createBubble();
+  const bubbleTxt = bubbleBtn.querySelector('#bubbleTxt');
+  const bubbleImg = bubbleBtn.querySelector('#bubbleImg');
+  const bubble = bubbleBtn.querySelector('.bubble');
+
+  bubbleTxt.textContent = text;
+  bubbleImg.src = imgSrc;
+  bubble.style.backgroundColor = bgColor;
+
+  bubbleBtn.classList.add('animate__animated', 'animate__bounceIn', 'bubble-btn');
+  container.appendChild(bubbleBtn);
+
+  animationTimeout = setTimeout(function () {
+    bubbleBtn.classList.add('animate__animated', 'animate__fadeOut');
+    bubbleBtn.classList.remove(
+      'animate__animated',
+      'animate__fadeOut',
+      'animate__bounceIn'
+    );
+
+    setTimeout(function () {
+      bubbleBtn.remove(); // remove the element from the document
+    }, 1000);
+  }, 2000);
+}
+
+
+
+const bubbleContainer = document.getElementById('bubbleContainer');
