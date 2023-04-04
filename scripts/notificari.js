@@ -1,4 +1,4 @@
-let count = 5;
+let count = 6;
 let countCheck = parseInt(localStorage.getItem("countCheck")) || 1;
 let buttonPressed = false;
 
@@ -129,6 +129,7 @@ function addCardNot(day, month, author, title, description, time) {
 
 
 // Exemplu de adaugare a unui element nou
+addCardNot("5", "Apr.", "ADMIN", "Salut", "test", "00:00")
 addCardNot("30", "Mar.", "ADMIN", "Noi campionate", "Noi campionate adaugate: Premier league, Ligue One, La Liga", "17:50")
 addCardNot("30", "Mar.", "ADMIN", "Noua stire", "test", "17:49")
 
