@@ -175,7 +175,7 @@ var dict = {
         "Cremonese": "img/serieA/t20.png"
       }
     },
-    "Liga 1 RO": {
+    "Liga 1 - Superliga": {
       "img": "img/liga1/liga1.png",
       "suboptiuni": {
         "Farul Constanța": "img/liga1/t1.png",
@@ -196,6 +196,19 @@ var dict = {
         "CS Mioveni": "img/liga1/t16.png"
       }
     },
+    "Champions League": {
+      "img": "img/championsLeague/championsLeague.png",
+      "suboptiuni": {
+        "Benfica": "img/championsLeague/t1.png",
+        "Inter": "img/championsLeague/t2.png",
+        "Man. City": "img/championsLeague/t3.png",
+        "Bayern": "img/championsLeague/t4.png",
+        "AC Milan": "img/championsLeague/t5.png",
+        "Napoli": "img/championsLeague/t6.png",
+        "Real Madrid": "img/championsLeague/t7.png",
+        "Chelsea": "img/championsLeague/t8.png"
+      }
+    }
   };
 
 
