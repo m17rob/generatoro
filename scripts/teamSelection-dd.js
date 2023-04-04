@@ -339,7 +339,7 @@ function validateForm() {
       // alert("Nu poți selecta aceleași echipe");
       animateBubbleBtn('Nu poți selecta aceleași echipe', 'img/err.svg', '#FF8B13', bubbleContainer);
     } else {
-      animateBubbleBtn('Meci generat cu succes (Vezi mai jos👇)', 'img/succes.svg', '#5D9C59', bubbleContainer);
+      animateBubbleBtn('Meci generat cu succes 👇', 'img/succes.svg', '#5D9C59', bubbleContainer);
       // var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
       // console.log(randomElement);
       var probabilitateTotala = pronos.reduce((acc, curr) => acc + curr.probabilitate, 0);
