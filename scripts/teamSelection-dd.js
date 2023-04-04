@@ -126,6 +126,29 @@ var dict = {
         "AC Ajaccio": "img/ligue1/t19.png",
         "Angers": "img/ligue1/t20.png"
       }
+    },
+    "Bundesliga": {
+      "img": "img/bundesliga/bundesliga.png",
+      "suboptiuni": {
+        "Bayern": "img/bundesliga/t1.png",
+        "Dortmund": "img/bundesliga/t2.png",
+        "Union Berlin": "img/bundesliga/t3.png",
+        "Freiburg": "img/bundesliga/t4.png",
+        "RB Leipzig": "img/bundesliga/t5.png",
+        "Frankfurt": "img/bundesliga/t6.png",
+        "Leverkusen": "img/bundesliga/t7.png",
+        "Mainz": "img/bundesliga/t8.png",
+        "Wolfsburg": "img/bundesliga/t9.png",
+        "Monchengladbach": "img/bundesliga/t10.png",
+        "Bremen": "img/bundesliga/t11.png",
+        "Augsburg": "img/bundesliga/t12.png",
+        "Köln": "img/bundesliga/t13.png",
+        "Bochum": "img/bundesliga/t14.png",
+        "Hoffenheim": "img/bundesliga/t15.png",
+        "Hertha": "img/bundesliga/t16.png",
+        "Schalke": "img/bundesliga/t17.png",
+        "Stuttgart": "img/bundesliga/t18.png"
+      }
     }
   };
 
