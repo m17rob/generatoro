@@ -314,16 +314,62 @@ dropdownBtn.addEventListener("click", () => {
 
 // var pronos = ["po1", "po2", "po3", "px1", "px3", "px4", "pf1", "pf2", "pl1", "pl2"];
 var pronos = [
-  { pronume: "po1", probabilitate: 0.1 },
-  { pronume: "po2", probabilitate: 0.2 },
-  { pronume: "po3", probabilitate: 0.05 },
-  { pronume: "px1", probabilitate: 0.15 },
-  { pronume: "px3", probabilitate: 0.1 },
-  { pronume: "px4", probabilitate: 0.05 },
-  { pronume: "pf1", probabilitate: 0.1 },
-  { pronume: "pf2", probabilitate: 0.1 },
-  { pronume: "pl1", probabilitate: 0.1 },
-  { pronume: "pl2", probabilitate: 0.5 }
+  { prono: "1", probabilitate: 0.33 },
+  { prono: "X", probabilitate: 0.30 },
+  { prono: "2", probabilitate: 0.37 },
+  { prono: "1X", probabilitate: 0.70 },
+  { prono: "X2", probabilitate: 0.68 },
+  { prono: "12", probabilitate: 0.83 },
+  { prono: "GG", probabilitate: 0.60 },
+  { prono: "PsF 1", probabilitate: 0.55 },
+  { prono: "PsF 2", probabilitate: 0.45 },
+  { prono: "PsF X", probabilitate: 0.25 },
+  { prono: "peste 1.5g", probabilitate: 0.70 },
+  { prono: "peste 2.5g", probabilitate: 0.45 },
+  { prono: "peste 3.5g", probabilitate: 0.20 },
+  { prono: "sub 2.5g", probabilitate: 0.50 },
+  { prono: "sub 3.5g", probabilitate: 0.82 },
+  { prono: "gazde +0.5g", probabilitate: 0.70 },
+  { prono: "gazde +1.5g", probabilitate: 0.60 },
+  { prono: "oaspeti +0.5g", probabilitate: 0.70 },
+  { prono: "oaspeti +1.5g", probabilitate: 0.45 },
+  { prono: "1-3 goluri", probabilitate: 0.70 },
+  { prono: "2-3 goluri", probabilitate: 0.65 },
+  { prono: "2-4 goluri", probabilitate: 0.60 },
+  { prono: "3-4 goluri", probabilitate: 0.30 },
+  { prono: "3-5 goluri", probabilitate: 0.35 },
+  { prono: "gazde 1-2g", probabilitate: 0.30 },
+  { prono: "gazde 1-3g", probabilitate: 0.50 },
+  { prono: "gazde 2-3g", probabilitate: 0.40 },
+  { prono: "oaspeti 1-2g", probabilitate: 0.40 },
+  { prono: "oaspeti 1-3g", probabilitate: 0.50 },
+  { prono: "oaspeti 2-3g", probabilitate: 0.35 },
+  { prono: "GG&3+", probabilitate: 0.40 },
+  { prono: "NuGG&3+", probabilitate: 0.25 },
+  { prono: "1/1", probabilitate: 0.02 },
+  { prono: "2/2", probabilitate: 0.01 },
+  { prono: "1/2", probabilitate: 0.03 },
+  { prono: "2/1", probabilitate: 0.015 },
+  { prono: "1&+1.5g", probabilitate: 0.60 },
+  { prono: "2&+1.5g", probabilitate: 0.45 },
+  { prono: "1&-3.5g", probabilitate: 0.60 },
+  { prono: "2&-3.5g", probabilitate: 0.60 },
+  { prono: "1X&+1.5g", probabilitate: 0.60 },
+  { prono: "X2&+1.5g", probabilitate: 0.50 },
+  { prono: "1X&-3.5g", probabilitate: 0.70 },
+  { prono: "X2&-3.5g", probabilitate: 0.60 },
+  { prono: "Gol 1-gazde", probabilitate: 0.30 },
+  { prono: "Gol 1-oaspeti", probabilitate: 0.30 },
+  { prono: "Rep1 1X", probabilitate: 0.50 },
+  { prono: "Rep1 X2", probabilitate: 0.40 },
+  { prono: "Rep1 12", probabilitate: 0.50 },
+  { prono: "Rep2 1X", probabilitate: 0.50 },
+  { prono: "Rep2 X2", probabilitate: 0.25 },
+  { prono: "Rep2 12", probabilitate: 0.50 },
+  { prono: "Rep1 +0.5g", probabilitate: 0.70 },
+  { prono: "Rep1 +1.5g", probabilitate: 0.55 },
+  { prono: "Rep2 +0.5g", probabilitate: 0.75 },
+  { prono: "Rep2 +1.5g", probabilitate: 0.60 }
 ];
 
 
@@ -351,7 +397,7 @@ var pronumeAleator;
 
 for (var i = 0; i < pronos.length; i++) {
   if (numarAleator < pronos[i].probabilitate) {
-    pronumeAleator = pronos[i].pronume;
+    pronumeAleator = pronos[i].prono;
     break;
   }
   numarAleator -= pronos[i].probabilitate;
@@ -409,7 +455,7 @@ pronoReloadButtons.forEach(function(button) {
 
 for (var i = 0; i < pronos.length; i++) {
   if (numarAleator < pronos[i].probabilitate) {
-    pronumeAleator = pronos[i].pronume;
+    pronumeAleator = pronos[i].prono;
     break;
   }
   numarAleator -= pronos[i].probabilitate;
@@ -438,7 +484,7 @@ var pronumeAleator;
 
 for (var i = 0; i < pronos.length; i++) {
   if (numarAleator < pronos[i].probabilitate) {
-    pronumeAleator = pronos[i].pronume;
+    pronumeAleator = pronos[i].prono;
     break;
   }
   numarAleator -= pronos[i].probabilitate;
