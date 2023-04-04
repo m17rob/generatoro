@@ -1259,6 +1259,14 @@ footer {
 
 #disclaimer {
   display: block; }
+  @media only screen and (min-width: 1010px) {
+    #disclaimer {
+      width: 101rem;
+      margin: auto; } }
+  @media only screen and (min-width: 1440px) {
+    #disclaimer {
+      width: 144rem;
+      margin: auto; } }
   #disclaimer .title {
     background: #EB455F;
     padding: 2rem;
@@ -1272,6 +1280,9 @@ footer {
     font-size: 1.4rem;
     font-family: 'Poppins', 'sans-serif';
     padding: 1rem; }
+    @media only screen and (min-width: 1010px) {
+      #disclaimer .para {
+        font-size: 1.8rem; } }
 
 .disclaimer {
   text-decoration: none;

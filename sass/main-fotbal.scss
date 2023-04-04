@@ -1875,6 +1875,21 @@ cursor: pointer;
   // align-items: start;
   display: block;
 
+
+  @media only screen and (min-width: 1010px) {
+     
+   width: 101rem;
+  //  text-align: center;
+   margin: auto;
+      }
+
+      @media only screen and (min-width: 1440px) {
+     
+        width: 144rem;
+        // text-align: center;
+        margin: auto;
+           }
+
   .title {
     background: $color-red;
     // width: 100%;
@@ -1892,6 +1907,11 @@ cursor: pointer;
     font-size: 1.4rem;
     font-family: 'Poppins', 'sans-serif';
     padding: 1rem;
+
+    @media only screen and (min-width: 1010px) {
+     font-size: 1.8rem;
+         }
+
   }
 }
 
