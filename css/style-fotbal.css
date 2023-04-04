@@ -518,7 +518,8 @@ body {
       z-index: 6;
       margin-bottom: 4rem; }
       .leagueSelection__selector .dropdown-btn img {
-        margin-right: 1.4rem; }
+        margin-right: 1.4rem;
+        width: 24px; }
       .leagueSelection__selector .dropdown-btn .ddarrow {
         margin: 0 0 0 1.4rem; }
     .leagueSelection__selector .pOne {
@@ -555,7 +556,8 @@ body {
   font-family: museomoderno, 'sans-serif';
   color: #2B3467; }
   .dropdown-option img {
-    margin-right: 1.4rem; }
+    margin-right: 1.4rem;
+    width: 24px; }
 
 .dropdown-option:hover {
   background-color: #f2f2f2; }
@@ -1309,3 +1311,9 @@ footer {
 #pronoReload {
   cursor: pointer;
   position: relative; }
+
+.dropdown-option-img {
+  width: 20px; }
+
+.arrow {
+  width: 14px !important; }

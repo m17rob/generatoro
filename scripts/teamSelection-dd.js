@@ -54,7 +54,7 @@ blockZoom();
 
 var dict = {
     "Premier League": {
-      "img": "img/premierLeagueIcon.png",
+      "img": "img/premierLeague/premierLeagueIcon.png",
       "suboptiuni": {
         "Man. United": "img/premierLeague/t1.png",
         "Arsenal": "img/premierLeague/t3.png",
@@ -78,17 +78,53 @@ var dict = {
       }
     },
     "LaLiga": {
-      "img": "img/premierLeagueIcon.png",
+      "img": "img/laLiga/laLiga.png",
       "suboptiuni": {
-        "Real Madrid": "img/premierLeagueIcon.png",
-        "Sevilla": "img/premierLeagueIcon.png"
+        "Barcelona": "img/laLiga/t1.png",
+        "Real Madrin": "img/laLiga/t2.png",
+        "Atl. Madrid": "img/laLiga/t3.png",
+        "Real Sociedad": "img/laLiga/t4.png",
+        "Betis": "img/laLiga/t5.png",
+        "Villarreal": "img/laLiga/t6.png",
+        "Ath. Bilbao": "img/laLiga/t7.png",
+        "Vallecano": "img/laLiga/t8.png",
+        "Osasuna": "img/laLiga/t9.png",
+        "Celta Vigo": "img/laLiga/t10.png",
+        "Girona": "img/laLiga/t11.png",
+        "Mallorca": "img/laLiga/t12.png",
+        "Sevilla": "img/laLiga/t13.png",
+        "Getafe": "img/laLiga/t14.png",
+        "Cadiz": "img/laLiga/t15.png",
+        "Valladolid": "img/laLiga/t16.png",
+        "Valencia": "img/laLiga/t17.png",
+        "Espanyol": "img/laLiga/t18.png",
+        "Almeria": "img/laLiga/t19.png",
+        "Elche": "img/laLiga/t20.png"
       }
     },
-    "Ligue One": {
-      "img": "img/premierLeagueIcon.png",
+    "Ligue 1": {
+      "img": "img/ligue1/ligue1.png",
       "suboptiuni": {
-        "PSG": "img/premierLeagueIcon.png",
-        "Lyon": "img/premierLeagueIcon.png"
+        "PSG": "img/ligue1/t1.png",
+        "Lens": "img/ligue1/t2.png",
+        "Marseille": "img/ligue1/t3.png",
+        "Monaco": "img/ligue1/t4.png",
+        "Lille": "img/ligue1/t5.png",
+        "Rennes": "img/ligue1/t6.png",
+        "Reims": "img/ligue1/t7.png",
+        "Nice": "img/ligue1/t8.png",
+        "Lyon": "img/ligue1/t9.png",
+        "Lorient": "img/ligue1/t10.png",
+        "Montpellier": "img/ligue1/t11.png",
+        "Clermont": "img/ligue1/t12.png",
+        "Toulouse": "img/ligue1/t13.png",
+        "Nantes": "img/ligue1/t14.png",
+        "Brest": "img/ligue1/t15.png",
+        "Strasbourg": "img/ligue1/t16.png",
+        "Auxerre": "img/ligue1/t17.png",
+        "Troyes": "img/ligue1/t18.png",
+        "AC Ajaccio": "img/ligue1/t19.png",
+        "Angers": "img/ligue1/t20.png"
       }
     }
   };
@@ -217,7 +253,7 @@ options.forEach(option => {
         subBtn.classList.add('blob', 'white');
       }, 1000); // timpul de întârziere în milisecunde
     subdropdownBtn.setAttribute('id', 'subSelect1');
-    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
+    subdropdownBtn.innerHTML = '<div id="justCont"><div class="teamTxt">Alege echipa</div><div class="teamArrow"><img class="arrow" src="img/teams-arrow.svg" alt="team arrow"></div></div> ';
     // subdropdownBtn.innerHTML = '<div id="justCont"><img src="${dict[option].suboptiuni[selectedSuboption]}" alt="${selectedSuboption}" class="dropdown-option-img"> ${selectedSuboption}</div> ';
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");

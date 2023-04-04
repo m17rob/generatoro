@@ -805,6 +805,7 @@ margin-right: 0;
            
             img {
                 margin-right: 1.4rem;
+                width: 24px;
             }
 
             .ddarrow {
@@ -894,6 +895,7 @@ margin-right: 0;
 
     img {
         margin-right: 1.4rem;
+        width: 24px;
     }
   }
   
@@ -1953,4 +1955,12 @@ margin-bottom: 1.5rem;
 #pronoReload {
   cursor: pointer;
   position: relative;
+}
+
+.dropdown-option-img {
+  width: 20px;
+}
+
+.arrow {
+  width: 14px !important;
 }
