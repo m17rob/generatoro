@@ -1070,10 +1070,13 @@ margin-right: 0;
     width: 100vw;
     // background-color: $color-darkBlue;
     margin-top: 2rem;
+    position: relative;
+    z-index: 10;
 
 
     @media only screen and (min-width: 1010px) {
      width: 1010px;
+     margin-top: 10rem;
        }
 
        @media only screen and (min-width: 1440px) {
@@ -1089,8 +1092,7 @@ margin-right: 0;
     justify-content: space-between;
     align-items: center;
     padding: .9rem 1.2rem .9rem 2rem;
-    position: relative;
-    z-index: -1;
+
 
     &:not(:last-child) {
         border-bottom: 1px $color-white solid;
@@ -1155,7 +1157,17 @@ margin-right: 0;
       &__two {
         display: flex;
         align-items: center;
+        position: relative;
         cursor: pointer;
+
+        z-index: 1000;
+
+        #pronoReload {
+          position: relative;
+          z-index: 1000;
+          cursor: pointer !important;
+
+        }
       }
     }
 
@@ -1227,7 +1239,7 @@ margin-right: 0;
     justify-content: center;
     align-self: flex-end;
     margin-right: 2rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     background: rgba(43, 52, 103, 0.4);
 border-radius: 100px;
 padding: .3rem 1.2rem;
@@ -1236,6 +1248,9 @@ color: $color-white;
 font-size: 1.1rem;
 display: none;
 cursor: pointer;
+width: max-content;
+margin-left: auto;
+margin-bottom: 1.5rem;
 
 &__txt {
     margin-right: .8rem;
@@ -1924,4 +1939,9 @@ cursor: pointer;
   margin-left: 1rem;
   border-bottom:1px solid $color-white ;
 
+}
+
+#pronoReload {
+  cursor: pointer;
+  position: relative;
 }
