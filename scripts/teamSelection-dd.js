@@ -393,19 +393,19 @@ function validateForm() {
       // console.log(randomElement);
       var probabilitateTotala = pronos.reduce((acc, curr) => acc + curr.probabilitate, 0);
 var numarAleator = Math.random() * probabilitateTotala;
-var pronumeAleator;
+var pronosticAleator;
 
 for (var i = 0; i < pronos.length; i++) {
   if (numarAleator < pronos[i].probabilitate) {
-    pronumeAleator = pronos[i].prono;
+    pronosticAleator = pronos[i].prono;
     break;
   }
   numarAleator -= pronos[i].probabilitate;
 }
 
-console.log(pronumeAleator);
+console.log(pronosticAleator);
 
-      var resultText = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div><div class=containerRes__container--R><div id=randomProno class=containerRes__container--R__one>"+ pronumeAleator +"</div> <div class=containerRes__container--R__two><img id=pronoReload src=img/iconreload.svg alt=iconReload></div></div>";
+      var resultText = "<div class=containerRes__container--L><div class=containerRes__container--L__one>"+ subSelect1Value + "</div><div class=containerRes__container--L__two>"+ subSelect2Value +"</div></div><div class=containerRes__container--R><div id=randomProno class=containerRes__container--R__one>"+ pronosticAleator +"</div> <div class=containerRes__container--R__two><img id=pronoReload src=img/iconreload.svg alt=iconReload></div></div>";
             delIcon.classList.add('showFlex');
 
 var newDiv = document.createElement("div");
@@ -451,17 +451,17 @@ pronoReloadButtons.forEach(function(button) {
     // se seteaza textul elementului "randomProno"
     var probabilitateTotala = pronos.reduce((acc, curr) => acc + curr.probabilitate, 0);
     var numarAleator = Math.random() * probabilitateTotala;
-    var pronumeAleator;
+    var pronosticAleator;
 
 for (var i = 0; i < pronos.length; i++) {
   if (numarAleator < pronos[i].probabilitate) {
-    pronumeAleator = pronos[i].prono;
+    pronosticAleator = pronos[i].prono;
     break;
   }
   numarAleator -= pronos[i].probabilitate;
 }
-    randomPronoElement.innerText = pronumeAleator;
-    console.log(pronumeAleator)
+    randomPronoElement.innerText = pronosticAleator;
+    console.log(pronosticAleator)
   });
 });
 
@@ -480,16 +480,16 @@ randomPronoButtons.forEach(function(button) {
 
     var probabilitateTotala = pronos.reduce((acc, curr) => acc + curr.probabilitate, 0);
 var numarAleator = Math.random() * probabilitateTotala;
-var pronumeAleator;
+var pronosticAleator;
 
 for (var i = 0; i < pronos.length; i++) {
   if (numarAleator < pronos[i].probabilitate) {
-    pronumeAleator = pronos[i].prono;
+    pronosticAleator = pronos[i].prono;
     break;
   }
   numarAleator -= pronos[i].probabilitate;
 }
-    randomPronoElement.innerText = pronumeAleator;
+    randomPronoElement.innerText = pronosticAleator;
   });
 });
 
