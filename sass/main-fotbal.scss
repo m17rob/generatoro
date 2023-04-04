@@ -923,6 +923,8 @@ margin-right: 0;
   }
 
 
+
+
   .subdropdown-options {
     position: absolute;
     top: 50%;
@@ -970,7 +972,7 @@ margin-right: 0;
 
   .subdropdown-options2 {
     position: absolute;
-    top: 40%;
+    top: 50%;
     width: 100%;
     max-height: 24.5rem;
     overflow: auto;
@@ -984,8 +986,9 @@ margin-right: 0;
     outline: none;
     border-radius: 0 0 5px 5px;
     display: none;
-    z-index: 1;
+    z-index: 3;
   }
+
 
   .subdropdown-options2::-webkit-scrollbar {
     width: 8px; /* lățimea barei de scroll */
@@ -1028,7 +1031,7 @@ margin-right: 0;
     display: flex;
     align-items: center;
     justify-content: start;
-    z-index: 2;
+    z-index: 4;
 
     @media only screen and (min-width: 430px) {
       margin: 0;

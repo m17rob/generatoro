@@ -222,6 +222,8 @@ options.forEach(option => {
     subdropdown.appendChild(subdropdownBtn);
     const subdropdownOptions = document.createElement("div");
     subdropdownOptions.classList.add("subdropdown-options");
+    subdropdownOptions.style.zIndex = '3';
+
     subdropdown.appendChild(subdropdownOptions);
     for (const suboption in dict[option].suboptiuni) {
       const suboptionImg = dict[option].suboptiuni[suboption];
@@ -262,6 +264,7 @@ subdropdownBtn2.innerHTML = ' <div id="justCont"><div class="teamTxt">Alege echi
 subdropdown2.appendChild(subdropdownBtn2);
 const subdropdownOptions2 = document.createElement("div");
 subdropdownOptions2.classList.add("subdropdown-options2");
+subdropdownOptions2.style.zIndex = '3';
 subdropdown2.appendChild(subdropdownOptions2);
 for (const suboption2 in dict[option].suboptiuni) {
   const suboptionImg2 = dict[option].suboptiuni[suboption2];
