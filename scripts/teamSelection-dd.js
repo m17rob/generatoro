@@ -149,7 +149,32 @@ var dict = {
         "Schalke": "img/bundesliga/t17.png",
         "Stuttgart": "img/bundesliga/t18.png"
       }
-    }
+    },
+    "Serie A": {
+      "img": "img/serieA/serieA.png",
+      "suboptiuni": {
+        "Napoli": "img/serieA/t1.png",
+        "Lazio": "img/serieA/t2.png",
+        "AC Milan": "img/serieA/t3.png",
+        "Inter": "img/serieA/t4.png",
+        "AS Roma": "img/serieA/t5.png",
+        "Atalanta": "img/serieA/t6.png",
+        "Juventus": "img/serieA/t7.png",
+        "Bologna": "img/serieA/t8.png",
+        "Fiorentina": "img/serieA/t9.png",
+        "Torino": "img/serieA/t10.png",
+        "Udinese": "img/serieA/t11.png",
+        "Sassuolo": "img/serieA/t12.png",
+        "Monza": "img/serieA/t13.png",
+        "Empoli": "img/serieA/t14.png",
+        "Salernitana": "img/serieA/t15.png",
+        "Lecce": "img/serieA/t16.png",
+        "Spezia": "img/serieA/t17.png",
+        "Verona": "img/serieA/t18.png",
+        "Sampdoria": "img/serieA/t19.png",
+        "Cremonese": "img/serieA/t20.png"
+      }
+    },
   };
 
 
