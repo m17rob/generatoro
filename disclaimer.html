@@ -38,13 +38,11 @@
 
 
       <script>
-        const closeContent = document.querySelector("#btnHomeD");
-
-closeContent.addEventListener("click", () => {
-  setTimeout(() => {
-    window.location.href = "/";
-  }, 300); // 500ms = 0.5s
+var btnHome = document.getElementById("btnHomeD");
+btnHome.addEventListener("click", function() {
+  window.history.back();
 });
+
       </script>
 </body>
 </html>
