@@ -689,11 +689,11 @@ body {
   width: 100vw;
   margin-top: 2rem;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  margin-top: 10rem; }
   @media only screen and (min-width: 1010px) {
     #containerRes {
-      width: 1010px;
-      margin-top: 10rem; } }
+      width: 1010px; } }
   @media only screen and (min-width: 1440px) {
     #containerRes {
       width: 1420px; } }
