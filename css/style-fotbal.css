@@ -502,7 +502,7 @@ body {
     align-items: center; }
     .leagueSelection__selector .dropdown-btn {
       position: relative;
-      max-width: 29rem;
+      width: 29rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
