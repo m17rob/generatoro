@@ -526,7 +526,7 @@ body {
       display: flex;
       align-items: center; }
       .leagueSelection__selector .pOne img {
-        width: 20px; }
+        width: 28px; }
 
 #dropdown {
   position: relative;
@@ -570,7 +570,10 @@ body {
   width: 18rem;
   border-radius: 10px; }
   #subSelect1 .pOne img, #subSelect2 .pOne img {
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    width: 20px; }
+  #subSelect1 .teamArrow img, #subSelect2 .teamArrow img {
+    width: 14px; }
 
 #subdropdown {
   position: relative; }
@@ -1319,3 +1322,6 @@ footer {
 
 .arrow {
   width: 14px !important; }
+
+.w20 img {
+  width: 20px !important; }

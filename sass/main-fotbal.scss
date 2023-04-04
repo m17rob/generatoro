@@ -819,7 +819,7 @@ margin-right: 0;
             align-items: center;
             
             img {
-              width: 20px;
+              width: 28px;
             }
           }
     }
@@ -920,6 +920,15 @@ margin-right: 0;
     .pOne {
       img {
         margin-right: 1rem;
+        width: 20px;
+      }
+
+
+    }
+
+    .teamArrow {
+      img {
+        width: 14px;
       }
     }
   }
@@ -1967,4 +1976,13 @@ margin-bottom: 1.5rem;
 
 .arrow {
   width: 14px !important;
+}
+
+
+.w20 {
+
+  img {
+    width: 20px !important;
+  }
+ 
 }
