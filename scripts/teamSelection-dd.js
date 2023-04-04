@@ -175,6 +175,27 @@ var dict = {
         "Cremonese": "img/serieA/t20.png"
       }
     },
+    "Liga 1 RO": {
+      "img": "img/liga1/liga1.png",
+      "suboptiuni": {
+        "Farul Constanța": "img/liga1/t1.png",
+        "CFR Cluj": "img/liga1/t2.png",
+        "FCSB": "img/liga1/t3.png",
+        "Univ. Craiova": "img/liga1/t4.png",
+        "Rapid București": "img/liga1/t5.png",
+        "Sepsi": "img/liga1/t6.png",
+        "U Craiova 1948": "img/liga1/t7.png",
+        "Petrolul Ploiești": "img/liga1/t8.png",
+        "'U' Cluj": "img/liga1/t9.png",
+        "FC Voluntari": "img/liga1/t10.png",
+        "FC Botoșani": "img/liga1/t11.png",
+        "Chindia Târgoviște": "img/liga1/t12.png",
+        "FC Hermannstadt": "img/liga1/t13.png",
+        "FC Argeș": "img/liga1/t14.png",
+        "UTA Arad": "img/liga1/t15.png",
+        "CS Mioveni": "img/liga1/t16.png"
+      }
+    },
   };
 
 
