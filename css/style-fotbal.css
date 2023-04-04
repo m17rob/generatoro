@@ -519,7 +519,7 @@ body {
       margin-bottom: 4rem; }
       .leagueSelection__selector .dropdown-btn img {
         margin-right: 1.4rem;
-        width: 24px; }
+        width: 28px; }
       .leagueSelection__selector .dropdown-btn .ddarrow {
         margin: 0 0 0 1.4rem; }
     .leagueSelection__selector .pOne {
@@ -557,7 +557,7 @@ body {
   color: #2B3467; }
   .dropdown-option img {
     margin-right: 1.4rem;
-    width: 24px; }
+    width: 28px; }
 
 .dropdown-option:hover {
   background-color: #f2f2f2; }
