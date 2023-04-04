@@ -986,8 +986,9 @@ margin-right: 0;
     outline: none;
     border-radius: 0 0 5px 5px;
     display: none;
-    z-index: 3;
+    z-index: 1;
   }
+
 
 
   .subdropdown-options2::-webkit-scrollbar {
@@ -1031,7 +1032,7 @@ margin-right: 0;
     display: flex;
     align-items: center;
     justify-content: start;
-    z-index: 4;
+    z-index: 2;
 
     @media only screen and (min-width: 430px) {
       margin: 0;
