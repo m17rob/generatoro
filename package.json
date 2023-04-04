@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main-index.scss css/style-index.css -w",
+    "watch:sass": "node-sass sass/main-fotbal.scss css/style-fotbal.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "prefix:css": "postcss css/style.css --use=autoprefixer --map-false --output=css/style.prefix.css",
