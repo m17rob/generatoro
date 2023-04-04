@@ -525,6 +525,8 @@ body {
     .leagueSelection__selector .pOne {
       display: flex;
       align-items: center; }
+      .leagueSelection__selector .pOne img {
+        width: 20px; }
 
 #dropdown {
   position: relative;
