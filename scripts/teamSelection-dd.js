@@ -334,12 +334,12 @@ function validateForm() {
     if (subSelect1.querySelector('div[class="teamTxt"]') || subSelect2.querySelector('div[class="teamTxt"]')) {
       // alert("Selectează echipele");
 
-      animateBubbleBtn('Selecteaza echipele', 'img/avertizare.svg', '#FF8B13', bubbleContainer);
+      animateBubbleBtn('Selectează echipele', 'img/avertizare.svg', '#FF8B13', bubbleContainer);
     } else if (subSelect1.innerText === subSelect2.innerText) {
       // alert("Nu poți selecta aceleași echipe");
       animateBubbleBtn('Nu poți selecta aceleași echipe', 'img/err.svg', '#FF8B13', bubbleContainer);
     } else {
-      animateBubbleBtn('Meci generat cu succes ', 'img/succes.svg', '#5D9C59', bubbleContainer);
+      animateBubbleBtn('Meci generat cu succes (Vezi mai jos👇)', 'img/succes.svg', '#5D9C59', bubbleContainer);
       // var randomElement = pronos[Math.floor(Math.random() * pronos.length)];
       // console.log(randomElement);
       var probabilitateTotala = pronos.reduce((acc, curr) => acc + curr.probabilitate, 0);
